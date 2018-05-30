@@ -31,14 +31,14 @@
   <default target-element="Activity" target-attr="sync-e" value="10" />
 
   <!-- トリガ スペスペに登録してもいい TLロード時のみ有効 -->
-  <t text="不要看石像"     sync="starts using 惰眠的神气 on"             notice="背对石像" />
+  <t text="不要看石像"     sync="starts using 惰眠的神气 on"    notice="背对石像" />
   <t text="看石像"       sync="starts using 圣母颂 on"         notice="面对石像" />
-  <t text="球在左半场"       sync="starts using 扑杀的神气"   notice="球在左半场" />
+  <t text="球在左半场"       sync="starts using 扑杀的神气"    notice="球在左半场" />
   <t text="球在右半场"       sync="starts using 重力波"       notice="球在右半场" />
 
   <!-- 名前部分をDPSの誰かに変更して使う -->
-  <t text="DPS中央・TN外周"   sync="starts using 睡魔的神气 on [DPS1]" />
-  <t text="DPS外周・TN中央"   sync="starts using 圣母的神气 on [DPS1]" />
+  <t text="DPS中央・TN外周"   sync="starts using 睡魔的神气 on [DPS1]" notice="auto"/>
+  <t text="DPS外周・TN中央"   sync="starts using 圣母的神气 on [DPS1]" notice="auto"/>
 
   <!-- 前半/後半識別用のトリガ begin -->
   <t sync="全都破坏掉！" sync-count="1">
