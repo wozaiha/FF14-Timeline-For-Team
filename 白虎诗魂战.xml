@@ -8,7 +8,7 @@
         if (Regex.IsMatch(data.Zone,reg)) {
 		loc = "白帝竹林";
 	}
-	else {loc = "Stom Stoa";}
+	else {loc = "The Jade Stoa (Extreme)";}
 }
 <timeline>
 	<name>白虎诗魂战</name>

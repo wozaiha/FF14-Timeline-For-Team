@@ -31,14 +31,14 @@
   <default target-element="Activity" target-attr="sync-e" value="10" />
 
   <!-- トリガ スペスペに登録してもいい TLロード時のみ有効 -->
-  <t text="不要看石像"     sync="starts using 惰眠的神气 on"    notice="背对石像" />
-  <t text="看石像"       sync="starts using 圣母颂 on"         notice="面对石像" />
-  <t text="球在左半场"       sync="starts using 扑杀的神气"    notice="球在左半场" />
-  <t text="球在右半场"       sync="starts using 重力波"       notice="球在右半场" />
+  <t text="不要看石像"     sync="starts using (懒惰的神气|Indolent Will)"    notice="背对石像" />
+  <t text="看石像"       sync="starts using (圣母颂|Ave Maria)"         notice="面对石像" />
+  <t text="去左半场"       sync="starts using (扑杀的神气|Intemperate Will)"    notice="去左半场" />
+  <t text="去右半场"       sync="starts using (重力波|Gravitational Wave)"       notice="去右半场" />
 
   <!-- 名前部分をDPSの誰かに変更して使う -->
-  <t text="DPS中央・TN外周"   sync="starts using 睡魔的神气 on [DPS1]" notice="auto"/>
-  <t text="DPS外周・TN中央"   sync="starts using 圣母的神气 on [DPS1]" notice="auto"/>
+  <t text="DPS中央・TN外周"   sync="starts using (睡魔的神气|Idyllic Will) on [DPS1]" notice="auto"/>
+  <t text="DPS外周・TN中央"   sync="starts using (圣母的神气|Indulgent Will) on [DPS1]" notice="auto"/>
 
   <!-- 前半/後半識別用のトリガ begin -->
   <t sync="全都破坏掉！" sync-count="1">
@@ -58,7 +58,7 @@
   <!-- ケフカの定義 begin -->
   <s name="门神">
     <!-- 10秒目 魔法储存 からの相対 -->
-		<a time="10" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
+	<a time="10" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
     <a time="15" text="呼啦啦爆炎" sync="正在发动“呼啦啦爆炎”" notice="注意真假" icon="真偽.png" />
     <a time="23" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
     <a time="32" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
