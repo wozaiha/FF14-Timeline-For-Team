@@ -31,15 +31,43 @@
   <default target-element="Activity" target-attr="sync-e" value="10" />
 
   <!-- トリガ スペスペに登録してもいい TLロード時のみ有効 -->
-  <t text="不要看石像"     sync="starts using (懒惰的神气|Indolent Will)"    notice="背对石像" />
-  <t text="看石像"       sync="starts using (圣母颂|Ave Maria)"         notice="面对石像" />
-  <t text="去左半场"       sync="starts using (扑杀的神气|Intemperate Will)"    notice="去左半场" />
-  <t text="去右半场"       sync="starts using (重力波|Gravitational Wave)"       notice="去右半场" />
-
+  <t text="背对看石像"     sync="starts using (懒惰的神气|Indolent Will)"    notice="背对石像" >
+      <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="眼.png" />
+  </t>
+  <t text="正对石像"       sync="starts using (圣母颂|Ave Maria)"         notice="面对石像" >
+        <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="眼.png" />
+  </t>
+  <t text="去左半场"       sync="starts using (扑杀的神气|Intemperate Will)"    notice="去左半场" >
+          <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="左9点集合.png" />
+  </t>
+  <t text="去右半场"       sync="starts using (重力波|Gravitational Wave)"       notice="去右半场" >
+          <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="右3点集合.png" />
+  </t>
   <!-- 名前部分をDPSの誰かに変更して使う -->
-  <t text="DPS中央・TN外周"   sync="starts using (睡魔的神气|Idyllic Will) on [DPS1]" notice="auto"/>
-  <t text="DPS外周・TN中央"   sync="starts using (圣母的神气|Indulgent Will) on [DPS1]" notice="auto"/>
-
+  <t text="去中场"   sync="starts using (睡魔的神气|Idyllic Will) on [me]" notice="auto">
+            <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="集合.png" />
+  </t>
+  <t text="去外圈"   sync="starts using (圣母的神气|Indulgent Will) on [me]" notice="auto">
+          <v-notice 
+      duration="5" 
+	  style="NOTICE"
+      icon="分散.png" />
+  </t>
   <!-- 前半/後半識別用のトリガ begin -->
   <t sync="全都破坏掉！" sync-count="1">
     <load target="门神" truncate="true"/>
@@ -65,7 +93,7 @@
     <a time="39" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="注意真假" icon="真偽.png" />
     <a time="46" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
 
-    <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="背面集合.png" />
+    <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="在BOSS背面集合.png" />
     <a time="66" text="HOT" notice="奶挂hot" notice-o="0" icon="HOT.png" />
     <a time="75" text="注意直线" />
     <a time="78" text="连线4人击退" icon="ノックバック.png" />
@@ -217,7 +245,7 @@
     <a time="90" text="究极" notice="3" icon="全体攻撃.png" />
     <a time="98" text="究极" notice="4" icon="全体攻撃.png" />
     <a time="106" text="制裁之光" notice="即将狂暴" icon="全体強攻撃.png" />
-    <a time="116" text="狂暴" notice="去抠DPS去" icon="時間切れ.png" />
+    <a time="116" text="狂暴" notice="" icon="時間切れ.png" />
   </s>
   <!-- ゴッドケフカの定義 end -->
 </timeline>
