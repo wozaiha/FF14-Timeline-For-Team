@@ -2,12 +2,16 @@
 @using ACT.SpecialSpellTimer.RaidTimeline
 @using System.Text.RegularExpressions
 @{
-
-	var 	loc = "欧米茄零式时空狭缝 (西格玛幻境4)";
-
+	var loc = "";
+	var data = Model as TimelineRazorModel;
+	var reg= @"^[\u4e00-\u9fa5]";
+        if (Regex.IsMatch(data.Zone,reg)) {
+		loc = "欧米茄零式时空狭缝 (西格玛幻境4)";
+	}
+	else {loc = "Sigmascape V4.0 (Savage)";}
 }
 <timeline>
-  <name>欧米茄零式时空狭缝 (西格玛幻境4)</name>
+  <name>Sigmascape 4</name>
   <rev>rev3</rev>
   <zone>Sigmascape V4.0 (Savage)</zone>
   <description>
@@ -65,7 +69,7 @@
       icon="分散.png" />
   </t>
   <!-- 前半/後半識別用のトリガ begin -->
-  <t sync="全都破坏掉！" sync-count="1">
+  <t sync="全都破坏掉！" sync-count="1" notice="铁壁">
     <load target="门神" truncate="true"/>
   </t>
 
@@ -87,7 +91,7 @@
     <a time="23" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
     <a time="32" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
     <a time="39" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="注意真假" icon="真偽.png" />
-    <a time="46" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
+    <a time="46" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="摆脱后，直觉" icon="3551_Raw Intuition.png" />
 
     <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="在BOSS背面集合.png" />
     <a time="66" text="HOT" notice="奶挂hot" notice-o="0" icon="HOT.png" />
@@ -96,23 +100,23 @@
     <a time="82" text="击退分摊" icon="頭割り.png" />
     <a time="83" text="跳蹦蹦传送" sync="正在发动“跳蹦蹦传送”" notice="找BOSS背面" />
     <a time="87" text="恶狠狠毁荡" />
-    <a time="98" text="制裁之光" notice="AOE" icon="全体強攻撃.png" />
+    <a time="98" text="制裁之光" notice="雪仇" icon="7535_Reprisal.png" />
     <a time="105" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
     <a time="109" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="记住真假" icon="真偽.png" />
     <a time="116" text="滴溜溜冰封" sync="正在发动“滴溜溜冰封”" notice="记住内外" icon="真偽.png" />
 
     <a time="124" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="上盾上Hot" icon="HOT.png" />
     <a time="130" text="左/右侧击退" notice="注意防击退" icon="ノックバック.png" />
-    <a time="134" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
-    <a time="151" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
+    <a time="134" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出，铁壁" icon="7531_Rampart.png"  />
+    <a time="151" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="7388_Shake It Off.png" />
     <a time="158" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
 
     <a time="172" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="记得上Hot" icon="HOT.png" />
     <a time="177" text="处理连线" />
     <a time="188" text="半场即死" />
     <a time="190" text="处理连线" />
-    <a time="195" text="疼飕飕暴风" sync="正在发动“疼飕飕暴风”" notice="防击退" icon="ノックバック.png" />
-    <a time="202" text="制裁之光" notice="AOE" icon="全体強攻撃.png" />
+    <a time="195" text="疼飕飕暴风" sync="正在发动“疼飕飕暴风”" notice="贴近，盾墙" icon="0044_Vengeance.png" />
+    <a time="202" text="制裁之光" notice="雪仇" icon="7535_Reprisal.png" />
     <a time="216" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
     <a time="219" text="呼啦啦爆炎" sync="正在发动“呼啦啦爆炎”" notice="注意真假" icon="真偽.png" />
     <a time="228" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
@@ -120,7 +124,7 @@
     <a time="235" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="躲开球半场" />
     <a time="242" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
     <a time="250" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="注意真假" icon="真偽.png" />
-    <a time="257" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
+    <a time="257" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="摆脱" icon="7388_Shake It Off.png" />
     <a time="264" text="超驱动" notice="T大伤害" icon="単体強攻撃.png" />
 
     <a time="273" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="中央集合" icon="集合.png" />
@@ -137,11 +141,11 @@
 
     <a time="342" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="确认角色面向" icon="視線.png" />
     <a time="345" text="确认角色面向" icon="視線.png" />
-    <a time="349" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
-    <a time="362" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
-    <a time="369" text="扑腾腾究极" notice="AOE3连" icon="全体攻撃.png" />
+    <a time="349" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出，全减伤，盾姿" icon="9458_Defiance.png"/>
+    <a time="362" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害，原初之魂" icon="9460_Inner Beast.png" />
+    <a time="369" text="扑腾腾究极" notice="AOE3连，摆脱" icon="7388_Shake It Off.png" />
     <a time="377" text="扑腾腾究极" icon="全体攻撃.png" />
-    <a time="385" text="扑腾腾究极" notice="即将狂暴" icon="全体攻撃.png" />
+    <a time="385" text="扑腾腾究极" notice="雪仇，即将狂暴" icon="全体攻撃.png" />
     <a time="390" text="制裁之光" icon="時間切れ.png" />
 		<a time="401" text="昇天" />
   </s>

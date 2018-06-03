@@ -11,13 +11,13 @@
 	else {loc = "Sigmascape V3.0 (Savage)";}
 }
 <timeline>
-  <name>Sigmascape 3</name>
+  <name>欧米茄零式时空狭缝 (西格玛幻境3)</name>
   <rev>rev5</rev>
   <description>
     シグマ3層向けの実用可能なタイムラインです。
     notice, notice-o などは自分の好みに合せて使用してください。
 
-    designed by Hojoring Forum 
+    designed by Hojoring Forum
     https://discord.gg/n6Mut3F
 	翻译BY：旋羽翼@神意之地
   </description>
@@ -28,45 +28,45 @@
 
   <default target-element="Activity" target-attr="notice-d" value="Both" />
   <default target-element="Activity" target-attr="notice-o" value="-5" />
-  
+
   <!-- 重要なアクティビティを通知するトリガ begin -->
   <t text="臂锤\n ➜ ${_mex}" sync="starts using (Arm And Hammer|臂锤) on [mex]" notice="臂锤">
-    <v-notice 
-      duration="4" 
+    <v-notice
+      duration="4"
       icon="HardAttack.png" />
   </t>
    <t text="病毒\n ➜ ${_pc}" sync="[pc]陷入了“以太病毒”效果" >
     <v-notice
-	  style="NOTICE" 
+	  style="NOTICE"
       duration="15"
 	  sync-to-hide="${_pc}陷入了“以太病毒抗体”效果"
       icon="计时器.png" />
   </t>
    <t text="红球点名\n ➜ ${_nex}" sync="[nex]陷入了“猎物”效果" notice="红球">
     <v-notice
-	  style="NOTICE_NORMAL" 
+	  style="NOTICE_NORMAL"
       duration="5"
       icon="标记.png" />
   </t>
    <t text="蓝球点名\n ➜ ${_mex}" sync="[mex]:0000:(.{4}):000E:" notice="出人群">
     <v-notice
-	  style="NOTICE_NORMAL" 
+	  style="NOTICE_NORMAL"
       duration="5"
       icon="标记.png" />
   </t>
     <t text="热风" sync="[me]陷入了“(灼热|Searing Wind)”效果" notice="远离中场">
     <v-notice
-	  style="NOTICE" 
+	  style="NOTICE"
       duration="15"
       icon="连线.png" />
   </t>
      <t text="孤独感" sync="[me]陷入了“(孤独感|Abandonment)”效果" notice="中场靠近">
     <v-notice
-	  style="NOTICE" 
+	  style="NOTICE"
       duration="20"
       icon="分散.png" />
   </t>
-  
+
   <!-- 重要なアクティビティを通知するトリガ end -->
 
   <s name="開幕">
