@@ -9,7 +9,6 @@
 <timeline>
   <name>欧米茄零式时空狭缝 (西格玛幻境4)</name>
   <rev>rev3</rev>
-  <zone>Sigmascape V4.0 (Savage)</zone>
   <description>
     シグマ零式4層の実用可能なタイムラインです。
     notice, notice-o,icon などは自分の好みに合せて使用してください。
@@ -27,7 +26,7 @@
   <default target-element="Activity" target-attr="sync-e" value="10" />
 
   <!-- トリガ スペスペに登録してもいい TLロード時のみ有効 -->
-  <t text="背对看石像"     sync="starts using (懒惰的神气|Indolent Will)"    notice="背对石像" >
+  <t text="背对石像"     sync="starts using (懒惰的神气|Indolent Will)"    notice="背对石像" >
       <v-notice
       duration="5"
 	  style="NOTICE"
@@ -52,13 +51,13 @@
       icon="右3点集合.png" />
   </t>
   <!-- 名前部分をDPSの誰かに変更して使う -->
-  <t text="去中场"   sync="starts using (睡魔的神气|Idyllic Will) on [me]" notice="auto">
+  <t text="去中场"   sync="starts using (睡魔的神气|Idyllic Will) on [mex]" notice="auto">
             <v-notice
       duration="5"
 	  style="NOTICE"
       icon="集合.png" />
   </t>
-  <t text="去外圈"   sync="starts using (圣母的神气|Indulgent Will) on [me]" notice="auto">
+  <t text="去外圈"   sync="starts using (圣母的神气|Indulgent Will) on [mex]" notice="auto">
           <v-notice
       duration="5"
 	  style="NOTICE"
@@ -90,7 +89,7 @@
     <a time="46" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
 
     <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="在BOSS背面集合.png" />
-    <a time="66" text="HOT" notice="奶挂hot" notice-o="0" icon="HOT.png" />
+    <a time="66" text="HOT" notice="即将无敌" notice-o="0" icon="HOT.png" />
     <a time="75" text="注意直线" />
     <a time="78" text="连线4人击退" icon="ノックバック.png" />
     <a time="82" text="击退分摊" icon="頭割り.png" />
@@ -107,42 +106,41 @@
     <a time="151" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="158" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
 
-    <a time="172" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="记得上Hot" icon="HOT.png" />
+    <a time="172" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="即将无敌" icon="HOT.png" />
     <a time="177" text="处理连线" />
     <a time="188" text="半场即死" />
     <a time="190" text="处理连线" />
-    <a time="195" text="疼飕飕暴风" sync="正在发动“疼飕飕暴风”" notice="防击退" icon="ノックバック.png" />
+    <a time="195" text="疼飕飕暴风" sync="正在发动“疼飕飕暴风”" notice="防击退" notice-o="0" icon="ノックバック.png" />
     <a time="202" text="制裁之光" notice="AOE" icon="全体強攻撃.png" />
     <a time="216" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
     <a time="219" text="呼啦啦爆炎" sync="正在发动“呼啦啦爆炎”" notice="注意真假" icon="真偽.png" />
     <a time="228" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
 
-    <a time="235" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="躲开球半场" />
+    <a time="235" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" />
     <a time="242" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
     <a time="250" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="注意真假" icon="真偽.png" />
     <a time="257" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="264" text="超驱动" notice="T大伤害" icon="単体強攻撃.png" />
 
-    <a time="273" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="中央集合" icon="集合.png" />
-    <a time="280" text="集合放圈" notice="集合注意面向" icon="重ね捨て.png" />
-    <a time="284" text="注意角色面向" notice="面向" icon="視線.png" />
+    <a time="283" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="中央集合" icon="集合.png" />
+    <a time="290" text="集合放圈" notice="集合" icon="重ね捨て.png" />
     <a time="293" text="注意角色面向" notice="面向" icon="視線.png" />
-    <a time="295" text="跳蹦蹦传送" sync="正在发动“跳蹦蹦传送”" notice="处理完成后找背" />
-    <a time="300" text="恶狠狠毁荡" notice="爆发药" icon="薬.png" />
-    <a time="305" text="制裁之光" notice="AOE" icon="全体強攻撃.png" />
-    <a time="315" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="323" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
-    <a time="327" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="记住真假" icon="真偽.png" />
-    <a time="334" text="滴溜溜冰封" notice="记住真假" icon="真偽.png" />
+    <a time="305" text="跳蹦蹦传送" sync="正在发动“跳蹦蹦传送”" notice="处理完成后找背" />
+    <a time="310" text="恶狠狠毁荡" notice="爆发药" icon="薬.png" />
+    <a time="315" text="制裁之光" notice="AOE" icon="全体強攻撃.png" />
+    <a time="325" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
+    <a time="333" text="魔法储存" sync="正在发动“魔法储存”" notice="魔法储存" />
+    <a time="337" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="记住真假" icon="真偽.png" />
+    <a time="344" text="滴溜溜冰封" notice="记住真假" icon="真偽.png" />
 
-    <a time="342" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="确认角色面向" icon="視線.png" />
-    <a time="345" text="确认角色面向" icon="視線.png" />
-    <a time="349" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
-    <a time="362" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
-    <a time="369" text="扑腾腾究极" notice="AOE3连" icon="全体攻撃.png" />
-    <a time="377" text="扑腾腾究极" icon="全体攻撃.png" />
-    <a time="385" text="扑腾腾究极" notice="即将狂暴" icon="全体攻撃.png" />
-    <a time="390" text="制裁之光" icon="時間切れ.png" />
+    <a time="352" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="确认角色面向" icon="視線.png" />
+    <a time="355" text="确认角色面向" icon="視線.png" />
+    <a time="359" text="魔法放出" sync="正在发动“魔法放出”" notice="魔法放出" />
+    <a time="372" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
+    <a time="379" text="扑腾腾究极" notice="AOE3连" icon="全体攻撃.png" />
+    <a time="387" text="扑腾腾究极" icon="全体攻撃.png" />
+    <a time="395" text="扑腾腾究极" notice="即将狂暴" icon="全体攻撃.png" />
+    <a time="400" text="制裁之光" icon="時間切れ.png" />
 		<a time="401" text="昇天" />
   </s>
   <!-- ケフカの定義 end -->
@@ -151,7 +149,7 @@
   <s name="PHASE1 无心大天使" >
     <a time="0" text="无心天使" sync="正在发动“无心天使”" notice-o="1" notice="HP1" icon="HP1強制.png" />
     <a time="6" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="13" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
+    <a time="13" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
     <a time="21" text="三星" sync="正在发动“三星”" notice="三星" />
     <a time="31" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="42" text="遗弃末世" sync="正在发动“遗弃末世”" notice="遗弃末世" icon="全体強攻撃.png" />
@@ -170,7 +168,7 @@
     <a time="35" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="42" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
     <a time="53" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
-    <a time="60" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
+    <a time="60" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
     <a time="67" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="83" text="遗弃末世" sync="正在发动“遗弃末世”" notice="减伤，准备妖星乱舞" icon="全体強攻撃.png" />
     <t text="PHASE3 妖星乱舞へ" sync="正在发动“妖星乱舞”" goto="PHASE3 妖星乱舞" />
@@ -192,7 +190,7 @@
     <a time="40" text="未来/过去破灭" sync="正在发动“(未来|过去破灭)”" notice="背面集合" icon="背面集合.png" />
     <a time="53" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀" />
     <a time="58" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
-    <a time="66" text="超驱动" sync="正在发动“超驱动”" notice="T大伤害" icon="単体強攻撃.png" />
+    <a time="66" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
     <a time="74" text="究极" sync="正在发动“究极”" notice="AOE接遗弃末世" icon="全体攻撃.png" />
     <t text="PHASE5 众神雕像" sync="正在发动“遗弃末世”" goto="PHASE5 众神雕像" />
   </s>
