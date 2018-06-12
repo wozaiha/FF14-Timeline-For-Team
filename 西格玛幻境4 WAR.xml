@@ -67,6 +67,30 @@
 	  style="NOTICE"
       icon="分散.png" />
   </t>
+    <t text="穿BOSS"   sync="starts using (未来|Futures Numbered) on" notice="auto">
+          <v-notice
+      duration="5"
+	  style="NOTICE"
+      icon="在BOSS背面集合.png" />
+  </t>
+      <t text="站原地"   sync="starts using (过去|Pasts Forgotten) on" notice="auto">
+          <v-notice
+      duration="5"
+	  style="NOTICE"
+      icon="在BOSS正面集合.png" />
+  </t>
+        <t text="穿BOSS"   sync="starts using (过去|Past's End) on" notice="auto">
+          <v-notice
+      duration="5"
+	  style="NOTICE"
+      icon="躲避.png" />
+  </t>
+        <t text="站原地"   sync="starts using (未来|Future's End) on" notice="auto">
+          <v-notice
+      duration="5"
+	  style="NOTICE"
+      icon="禁止移动.png" />
+  </t>
   <!-- 前半/後半識別用のトリガ begin -->
   <t sync="全都破坏掉！" sync-count="1" notice="铁壁">
     <load target="门神" truncate="true"/>

@@ -24,41 +24,41 @@
 
   <!-- 重要なアクティビティを通知するトリガ begin -->
   <t text="恶魔斩\n ➜ ${_pc}" sync="starts using (Demonic Shear|恶魔斩) on [pc]">
-    <v-notice 
-      duration="4" 
+    <v-notice
+      duration="4"
       icon="HardAttack.png" />
   </t>
 
   <t text="鬼连线" sync="03:Added new combatant 骚灵">
-    <v-notice 
+    <v-notice
       duration="15"
       duration-visible="false"
       icon="Attention.png" />
   </t>
 
   <t text="女神的诱惑" sync="正在发动“女神的诱惑”" notice="誘惑">
-    <v-notice 
-      duration="5" 
+    <v-notice
+      duration="5"
 	  style="NOTICE_NORMAL"
       icon="Eye.png" />
   </t>
 
   <t text="死亡之吻\n ➜ ${_PLD}" sync="1A:[PLD] gains the effect of (Last Kiss|死亡之吻)" >
-    <v-notice 
-      duration="5" 
-      style="NOTICE_NORMAL" 
+    <v-notice
+      duration="5"
+      style="NOTICE_NORMAL"
       icon="Marker.png" />
   </t>
 
   <t text="摇篮曲" sync="正在发动“摇篮曲”" notice="摇篮曲，激活塞壬">
-    <v-notice 
-      duration="6" 
-	  style="NOTICE" 
+    <v-notice
+      duration="6"
+	  style="NOTICE"
       icon="Explosion.png" />
   </t>
   <!-- 重要なアクティビティを通知するトリガ end -->
-	
-	
+
+
 	<!-- -4为提前4秒播报，可按需更改 -->
 	<default target-element="Activity" target-attr="notice-o" value="-5"/>
 	<default target-element="Activity" target-attr="notice-d" value="Both"/>
@@ -72,7 +72,7 @@
 		<a time="010" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 		<a time="020" text="恶魔斩" sync="发动了“恶魔斩”" notice="恶魔斩" style="TANK" icon="死刑.png"/>
 		<!-- 第一次入画 -->
-		<a time="036" text="入画:火+风\n➜ 蓝瀑布+ST无敌单吃" sync="(Demon Chadarnook|恶魔查达路库) (Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)" notice="蓝色" icon="火.png"/>
+		<a time="036" text="入画:火+风\n➜ 蓝瀑布+ST无敌单吃" sync="(Demon Chadarnook|恶魔查达奴克) (Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)" notice="蓝色" icon="火.png"/>
 		<a time="50" text="闪光焰(蓝瀑布)" sync="发动了“闪光焰”" icon="火.png"/>
 		<a time="59" text="闪光风(ST无敌)" sync="发动了“闪光风”" notice="ST无敌单吃" style="TANK" icon="无敌.png"/>
 		<!-- -->
@@ -86,12 +86,12 @@
 		<a time="91" text="恶魔痛(DT连线)\n➜ DPS拉开" sync="正在发动“恶魔痛”" notice="T,DPS拉开" notice-o="0" style="DPS" icon="连线.png"/>
 		<a time="110" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 			<a time="120" text="P2" />
-		<t sync="(Demon Chadarnook|恶魔查达路库) starts using (Release|附身解除)" goto="P2(粉)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)" goto="P2(粉)"/>
 	</s>
 
 	<s name="P2(粉)">
 		<!-- 第二次入画 -->
-		<a time="5" text="恶魔风暴(D诗)\n➜ 提丰吹羽毛" sync="(Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)" icon="击退.png"/>
+		<a time="5" text="恶魔风暴(D诗)\n➜ 提丰吹羽毛" sync="(Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)" icon="击退.png"/>
 		<a time="15" text="入画:岩+风\n➜ 粉提丰+B点放AOE" sync="狂风大作的“风之画作”" notice="B点放AOE" notice-o="0" icon="B点.png"/>
 		<a time="20" text="去A点" notice="去A点" notice-o="-1" icon="A点.png"/>
 		<a time="26" text="恶魔斩" sync="发动了“恶魔斩" notice="恶魔斩" style="TANK" icon="死刑.png"/>
@@ -109,12 +109,12 @@
 		<a time="87" text="恶魔风暴" sync="发动了“恶魔风暴" notice="分摊" notice-o="-2" icon="分摊.png"/>
 		<a time="96" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 			<a time="107" text="P3" />
-		<t sync="(Demon Chadarnook|恶魔查达路库) starts using (Release|附身解除)" goto="P3(蓝黑)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)" goto="P3(蓝黑)"/>
 	</s>
 
 	<s name="P3(蓝黑)">
 		<!-- 第三次入画 -->
-		<a time="005" text="入画:岩火+海\n➜ 蓝瀑布黑飞机-C集合" sync="(Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)" notice="蓝加黑,C集合" icon="C点.png"/>
+		<a time="005" text="入画:岩火+海\n➜ 蓝瀑布黑飞机-C集合" sync="(Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)" notice="蓝加黑,C集合" icon="C点.png"/>
 		<a time="020" text="恶魔地震" icon="C点.png"/>
 		<a time="026" text="C点躲避大范围AOE" icon="C点.png"/>
 		<!-- -->
@@ -127,17 +127,17 @@
 		<a time="54" text="恶魔啸" style="HEAL" icon="治疗.png"/>
 		<a time="58" text="恶魔啸" style="HEAL" icon="治疗.png"/>
 		<a time="69" text="恶魔斩" sync="发动了“恶魔斩" notice="恶魔斩" style="TANK" icon="死刑.png"/>
-		<a time="082" text="恶魔飞石(D)" sync="恶魔查达路库发动了“恶魔飞石" notice="5连地火" style="DPS" icon="躲避.png"/>
+		<a time="082" text="恶魔飞石(D)" sync="恶魔查达奴克发动了“恶魔飞石" notice="5连地火" style="DPS" icon="躲避.png"/>
 		<!-- -->
 		<a time="094" text="死亡之吻(D)\n➜ D点传给ST(减伤)" notice="死亡之吻,D点传给ST" style="DPS" icon="D点.png"/>
 		<a time="095" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 			<a time="120" text="P4" />
-		<t sync="(Demon Chadarnook|恶魔查达路库) starts using (Release|附身解除)" goto="P4(黄粉)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)e" goto="P4(黄粉)"/>
 	</s>
 
 	<s name="P4(黄粉)">
 		<!-- 第四次入画 -->
-		<a time="005" text="入画:海风+岩\n➜ (白魔)岩石+诗(提丰)\n➜ A叠AOE" sync="(Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)" notice="黄加粉，A集合" notice-o="5" icon="A点.png"/>
+		<a time="005" text="入画:海风+岩\n➜ (白魔)岩石+诗(提丰)\n➜ A叠AOE" sync="(Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)" notice="黄加粉，A集合" notice-o="5" icon="A点.png"/>
 		<a time="015" text="恶魔风暴➜A点叠AOE,吹羽毛" icon="A点.png" />
 		<a time="020" text="恶魔海啸➜岩石后" icon="1号.png" notice="吹羽毛" notice-o="0" />
 		<a time="025" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
@@ -154,19 +154,19 @@
 		<a time="095" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 		<a time="110" text="恶魔斩" sync="发动了“恶魔斩" notice="恶魔斩" style="TANK" icon="死刑.png"/>
 			<a time="120" text="P5" />
-		<t sync="(Demon Chadarnook|恶魔查达路库) starts using (Release|附身解除)" goto="P5(蓝黒)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)" goto="P5(蓝黒)"/>
 	</s>
 
 	<s name="P5(蓝黒)">
 		<!-- 第五次入画 -->
-		<a time="005" text="入画:火岩+风\n➜ 蓝瀑布黑飞机" sync="(Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)"/>
+		<a time="005" text="入画:火岩+风\n➜ 蓝瀑布黑飞机" sync="(Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)"/>
 		<a time="020" text="恶魔地震"/>
 		<a time="025" text="闪光风(ST无敌)" sync="发动了“闪光风”" notice="ST无敌单吃" style="TANK" icon="无敌.png"/>
 		<a time="028" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 		<a time="038" text="恶魔斩" sync="发动了“恶魔斩" notice="恶魔斩" style="TANK" icon="死刑.png"/>
 		<!-- -->
 		<a time="046" text="实体化" sync="发动了“实体化”"/>
-		<a time="053" text="恶魔飞石(D)" sync="恶魔查达路库发动了“恶魔飞石" notice="5连地火" style="DPS" icon="躲避.png"/>
+		<a time="053" text="恶魔飞石(D)" sync="恶魔查达奴克发动了“恶魔飞石" notice="5连地火" style="DPS" icon="躲避.png"/>
 		<!-- -->
 		<a time="064" text="死神连线(H)\n➜ 盯-背对-盯" notice="死神连线" style="HEAL" icon="连线.png"/>
 		<a time="069" text="女神的诱惑" notice="背对" icon="背对.png"/>
@@ -174,12 +174,12 @@
 		<a time="077" text="恶魔斩" sync="发动了“恶魔斩" notice="恶魔斩" style="TANK" icon="死刑.png"/>
 		<a time="087" text="恶魔痛(DT连线)\n➜ DPS拉开" sync="正在发动“恶魔痛”" notice="T,DPS拉开" notice-o="0" style="DPS" icon="连线.png"/>
 		<a time="097" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
-		<t sync="(Demon Chadarnook|恶魔查达路库) starts using (Release|附身解除)" goto="P6(黄粉)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)" goto="P6(黄粉)"/>
 	</s>
 
 	<s name="P6(黄粉)">
 		<!-- 第六次入画 -->
-		<a time="005" text="入画:海风+岩\n➜ (白魔)岩石+诗(提丰)\n➜ A叠AOE" sync="(Demon Chadarnook|恶魔查达路库) starts using (Possession|附身画像)" notice="黄加粉，A集合" notice-o="5" icon="A点.png"/>
+		<a time="005" text="入画:海风+岩\n➜ (白魔)岩石+诗(提丰)\n➜ A叠AOE" sync="(Demon Chadarnook|恶魔查达奴克) starts using (Possession|附身画像)" notice="黄加粉，A集合" notice-o="5" icon="A点.png"/>
 		<a time="015" text="恶魔风暴➜A点叠AOE,吹羽毛" icon="A点.png" />
 		<a time="020" text="恶魔海啸➜岩石后" icon="1号.png" notice="吹羽毛" notice-o="0" />
 		<a time="031" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
