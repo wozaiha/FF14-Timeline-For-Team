@@ -69,25 +69,25 @@
   </t>
     <t text="穿BOSS"   sync="starts using (未来|Futures Numbered) on" notice="auto">
           <v-notice
-      duration="5"
+      duration="7"
 	  style="NOTICE"
       icon="在BOSS背面集合.png" />
   </t>
       <t text="站原地"   sync="starts using (过去|Pasts Forgotten) on" notice="auto">
           <v-notice
-      duration="5"
+      duration="7"
 	  style="NOTICE"
       icon="在BOSS正面集合.png" />
   </t>
         <t text="穿BOSS"   sync="starts using (过去|Past's End) on" notice="auto">
           <v-notice
-      duration="5"
+      duration="7"
 	  style="NOTICE"
       icon="躲避.png" />
   </t>
         <t text="站原地"   sync="starts using (未来|Future's End) on" notice="auto">
           <v-notice
-      duration="5"
+      duration="7"
 	  style="NOTICE"
       icon="禁止移动.png" />
   </t>
@@ -173,101 +173,101 @@
   </s>
   <!-- ケフカの定義 end -->
 
-  <!-- ゴッドケフカの定義 begin -->
-  <s name="PHASE1 无心大天使" >
-    <a time="0" text="无心天使" sync="正在发动“无心天使”" notice-o="1" notice="HP1" icon="HP1強制.png" />
-    <a time="6" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="13" text="超驱动" sync="正在发动“超驱动”" notice="流血" icon="単体強攻撃.png" />
-    <a time="21" text="三星" sync="正在发动“三星”" notice="三星" />
-    <a time="31" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="42" text="遗弃末世" sync="正在发动“遗弃末世”" notice="雪仇盾墙，遗弃末世" icon="全体強攻撃.png" />
-    <a time="53" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
-    <a time="67" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，死斗" />
-    <a time="73" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="83" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
-    <a time="98" text="制裁之光" sync="正在发动“制裁之光”" notice="直觉防爆" icon="全体強攻撃.png" />
-    <t text="PHASE2 三角" sync="正在发动“异三角”" goto="PHASE2 三角" />
-  </s>
+	  <!-- ゴッドケフカの定義 begin -->
+	  <s name="PHASE1 无心大天使" >
+	    <a time="0" text="无心天使" sync="正在发动“无心天使”" notice-o="1" notice="HP1" icon="HP1強制.png" />
+	    <a time="6" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="13" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
+	    <a time="21" text="三星" sync="正在发动“三星”" notice="三星" />
+	    <a time="31" text="究极" sync="正在发动“究极”" notice="AOE，铁壁" icon="7531_Rampart.png" />
+	    <a time="42" text="遗弃末世" sync="正在发动“遗弃末世”" notice="遗弃末世" icon="全体強攻撃.png" />
+	    <a time="53" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
+	    <a time="67" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，死斗" icon="0043_Holmgang.png"/>
+	    <a time="73" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="83" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
+	    <a time="98" text="制裁之光" sync="正在发动“制裁之光”" notice="减伤" icon="全体強攻撃.png" />
+	    <t text="PHASE2 三角" sync="正在发动“异三角”" goto="PHASE2 三角" />
+	  </s>
 
-  <s name="PHASE2 三角" >
-    <a time="0" text="三角1" notice="找安全点" notice-o="1" />
-    <a time="6" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="单翅膀" />
-    <a time="18" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，盾姿战栗" />
-    <a time="35" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="42" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
-    <a time="53" text="終末双腕" sync="正在发动“終末双腕”" notice="双腕，无敌" icon="単体強攻撃.png" />
-    <a time="60" text="超驱动" sync="正在发动“超驱动”" notice="流血" icon="単体強攻撃.png" />
-    <a time="67" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="83" text="遗弃末世" sync="正在发动“遗弃末世”" notice="减伤，准备妖星乱舞" icon="全体強攻撃.png" />
-    <t text="PHASE3 妖星乱舞へ" sync="正在发动“妖星乱舞”" goto="PHASE3 妖星乱舞" />
-  </s>
+	  <s name="PHASE2 三角" >
+	    <a time="0" text="三角1" notice="找安全点" notice-o="1" />
+	    <a time="6" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="单翅膀" />
+	    <a time="18" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，盾姿战栗" />
+	    <a time="35" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="42" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
+	    <a time="53" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
+	    <a time="60" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
+	    <a time="67" text="究极" sync="正在发动“究极”" notice="AOE，直觉防爆" icon="3551_Raw Intuition.png" />
+	    <a time="83" text="遗弃末世" sync="正在发动“遗弃末世”" notice="减伤，准备妖星乱舞" icon="全体強攻撃.png" />
+	    <t text="PHASE3 妖星乱舞へ" sync="正在发动“妖星乱舞”" goto="PHASE3 妖星乱舞" />
+	  </s>
 
-  <s name="PHASE3 妖星乱舞" >
-    <a time="0" text="妖星乱舞" />
-    <a time="5" text="未来/过去终结" notice="注意读条" />
-    <a time="14" text="消灭之脚" sync="正在发动“消灭之脚”" notice="引导面向" />
-    <a time="23" text="制裁之光" sync="正在发动“制裁之光”" notice="减伤，直觉防爆" icon="全体強攻撃.png" />
-    <t text="PHASE4 大三角" sync="正在发动“三星”" goto="PHASE4 大三角" />
-  </s>
+	  <s name="PHASE3 妖星乱舞" >
+	    <a time="0" text="妖星乱舞" />
+	    <a time="5" text="未来/过去终结" notice="注意读条" />
+	    <a time="14" text="消灭之脚" sync="正在发动“消灭之脚”" notice="铁壁" notice-o="5" icon="7531_Rampart.png"/>
+	    <a time="23" text="制裁之光" sync="正在发动“制裁之光”" notice="AOE减伤" icon="全体強攻撃.png" />
+	    <t text="PHASE4 大三角" sync="正在发动“三星”" goto="PHASE4 大三角" />
+	  </s>
 
-  <s name="PHASE4 大三角" >
-    <a time="0" text="三星" sync="正在发动“三星”" notice="三星" notice-o="1" />
-    <a time="9" text="破坏之翼(片翼)" notice="单翅膀" />
-    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="33" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
-    <a time="40" text="未来/过去破灭" sync="正在发动“(未来|过去破灭)”" notice="背面集合" icon="背面集合.png" />
-    <a time="53" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，盾墙" />
-    <a time="58" text="終末双腕" sync="正在发动“終末双腕”" notice="双腕，铁壁" icon="単体強攻撃.png" />
-    <a time="66" text="超驱动" sync="正在发动“超驱动”" notice="流血" icon="単体強攻撃.png" />
-    <a time="74" text="究极" sync="正在发动“究极”" notice="AOE接遗弃末世" icon="全体攻撃.png" />
-    <t text="PHASE5 众神雕像" sync="正在发动“遗弃末世”" notice="直觉" goto="PHASE5 众神雕像" />
-  </s>
+	  <s name="PHASE4 大三角" >
+	    <a time="0" text="三星" sync="正在发动“三星”" notice="三星" notice-o="1" />
+	    <a time="9" text="破坏之翼(片翼)" notice="单翅膀" />
+	    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="33" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
+	    <a time="40" text="未来/过去破灭" sync="正在发动“(未来|过去破灭)”" notice="背面集合" icon="背面集合.png" />
+	    <a time="53" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀,盾墙" />
+	    <a time="58" text="終末双腕" sync="正在发动“終末双腕”" notice="直觉防爆" icon="3551_Raw Intuition.png" />
+	    <a time="66" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
+	    <a time="74" text="究极" sync="正在发动“究极”" notice="AOE接遗弃末世" icon="全体攻撃.png" />
+	    <t text="PHASE5 众神雕像" sync="正在发动“遗弃末世”" goto="PHASE5 众神雕像" />
+	  </s>
 
-  <s name="PHASE5 众神雕像" >
-    <a time="0" text="遗弃末世" notice="准备石像" notice-o="1" />
-    <a time="10" text="众神雕像POP" notice="连线偏北或防击飞" />
-    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="21" text="終末双腕" sync="正在发动“終末双腕”" notice="双腕，死斗" icon="単体強攻撃.png" />
-    <a time="27" text="睡眠混乱処理" />
-    <a time="34" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="42" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
-    <a time="55" text="破坏之翼(両翼)" notice="盾姿战栗，ST远离DPS踩塔" />
-    <a time="60" text="究极" sync="正在发动“究极”" notice="AOE后BOSS面向BD" icon="全体攻撃.png" />
-    <a time="67" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" />
-    <a time="73" text="制裁之光" sync="正在发动“制裁之光”" notice="AOE减伤，直觉防爆" icon="全体強攻撃.png" />
-    <t text="PHASE6 三角" sync="正在发动“异三角”" goto="PHASE6 三角" />
-  </s>
+	  <s name="PHASE5 众神雕像" >
+	    <a time="0" text="遗弃末世" notice="准备石像" notice-o="1" />
+	    <a time="10" text="众神雕像POP" notice="连线偏北或防击飞" />
+	    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="21" text="終末双腕" sync="正在发动“終末双腕”" notice="死斗" icon="単体強攻撃.png" />
+	    <a time="27" text="睡眠混乱処理" />
+	    <a time="34" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="42" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
+	    <a time="55" text="破坏之翼(両翼)" notice="铁壁战栗" />
+	    <a time="60" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="67" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="BOSS面向BD" />
+	    <a time="73" text="制裁之光" sync="正在发动“制裁之光”" notice="AOE减伤" icon="全体強攻撃.png" />
+	    <t text="PHASE6 三角" sync="正在发动“异三角”" goto="PHASE6 三角" />
+	  </s>
 
-  <s name="PHASE6 三角" >
-    <a time="0" text="三角" notice="找安全点" notice-o="1"/>
-    <a time="6" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="单翅膀" />
-    <a time="17" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀，盾墙" />
-    <a time="23" text="終末双腕" sync="正在发动“終末双腕”" notice="双腕，铁壁" icon="単体強攻撃.png" />
-    <a time="40" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
-    <a time="48" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
-    <a time="60" text="超驱动" sync="正在发动“超驱动”" icon="単体強攻撃.png" />
-    <a time="67" text="究极" sync="正在发动“究极”" notice="AOE2連" icon="全体攻撃.png" />
-    <a time="75" text="究极" sync="正在发动“究极”" notice="2" icon="全体攻撃.png" />
-    <t text="PHASE7 最終へ" sync="正在发动“遗弃末世”" notice="直觉" goto="PHASE7 最終" />
-  </s>
+	  <s name="PHASE6 三角" >
+	    <a time="0" text="三角" notice="找安全点" notice-o="1"/>
+	    <a time="6" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="单翅膀" />
+	    <a time="17" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀,盾墙" />
+	    <a time="23" text="終末双腕" sync="正在发动“終末双腕”" notice="直觉防爆" icon="3551_Raw Intuition.png" />
+	    <a time="40" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
+	    <a time="48" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
+	    <a time="60" text="超驱动" sync="正在发动“超驱动”" icon="単体強攻撃.png" />
+	    <a time="67" text="究极" sync="正在发动“究极”" notice="AOE2連，铁壁" notice-o="0" icon="7531_Rampart.png" />
+	    <a time="75" text="究极" sync="正在发动“究极”" icon="全体攻撃.png" />
+	    <t text="PHASE7 最終へ" sync="正在发动“遗弃末世”" goto="PHASE7 最終" />
+	  </s>
 
-  <s name="PHASE7 最終" >
-    <a time="0" text="遗弃末世" notice="准备石像" notice-o="1" />
-    <a time="10" text="众神雕像POP" notice="连线偏北或防击飞" />
-    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="21" text="終末双腕" sync="正在发动“終末双腕”" notice="双腕，死斗" icon="単体強攻撃.png" />
-    <a time="27" text="睡眠混乱処理" />
-    <a time="34" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="42" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
-    <a time="55" text="破坏之翼(両翼)" notice="盾墙，ST远离DPS踩塔" />
-    <a time="60" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="67" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="BOSS面向BD" />
-    <a time="74" text="究极" notice="全体攻撃5連続" icon="全体攻撃.png" />
-    <a time="82" text="究极" notice="2" icon="全体攻撃.png" />
-    <a time="90" text="究极" notice="3" icon="全体攻撃.png" />
-    <a time="98" text="究极" notice="4" icon="全体攻撃.png" />
-    <a time="106" text="制裁之光" notice="即将狂暴" icon="全体強攻撃.png" />
-    <a time="116" text="狂暴" notice="" icon="時間切れ.png" />
-  </s>
+	  <s name="PHASE7 最終" >
+	    <a time="0" text="遗弃末世" notice="准备石像" notice-o="1" />
+	    <a time="10" text="众神雕像POP" notice="连线偏北或防击飞" />
+	    <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="21" text="終末双腕" sync="正在发动“終末双腕”" notice="死斗" icon="単体強攻撃.png" />
+	    <a time="27" text="睡眠混乱処理" />
+	    <a time="34" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="42" text="无心大天使" sync="正在发动“无心大天使”" notice="无心大天使" />
+	    <a time="55" text="破坏之翼(両翼)" notice="盾墙" />
+	    <a time="60" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
+	    <a time="67" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="BOSS面向BD" />
+	    <a time="74" text="究极" notice="全体攻撃5連続" notice-o="0" icon="全体攻撃.png" />
+	    <a time="82" text="究极" notice="2" notice-o="0" icon="全体攻撃.png" />
+	    <a time="90" text="究极" notice="3" notice-o="0" icon="全体攻撃.png" />
+	    <a time="98" text="究极" notice="4" notice-o="0" icon="全体攻撃.png" />
+	    <a time="106" text="制裁之光" notice="即将狂暴" icon="全体強攻撃.png" />
+	    <a time="116" text="狂暴" notice="" icon="時間切れ.png" />
+	  </s>
   <!-- ゴッドケフカの定義 end -->
 </timeline>
