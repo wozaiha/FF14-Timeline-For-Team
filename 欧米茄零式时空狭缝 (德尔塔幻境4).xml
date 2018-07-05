@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+	<name>欧米茄零式时空狭缝 (德尔塔幻境4)</name>
+	<rev>v0.1</rev>
+	<description></description>
+	<zone>欧米茄零式时空狭缝 (德尔塔幻境4)</zone>
+	<locale>CN</locale>
+	<entry>分支判断</entry>
+	<start>0039:战斗开始|正在发动“至高无上”|你们也消失于“虚无”吧</start>
+
+
+	<default target-element="Activity" target-attr="notice-o" value="-4"/>
+	<default target-element="Activity" target-attr="notice-d" value="Both"/>
+	<default target-element="Activity" target-attr="sync-s" value="-10"/>
+	<default target-element="Activity" target-attr="sync-e" value="10"/>
+
+<t sync="你们也消失于“虚无”吧" sync-count="1">
+		<load target="门神" truncate="true"/>
+</t>
+<t sync="正在发动“至高无上”" sync-count="1">
+	<load target="Alpha" truncate="true"/>
+	<load target="Delta" />
+	<load target="Omega" />
+	<load target="Delta" />
+	<load target="Final" />
+</t>
+
+<s name="分支判断">
+	<a time="10" text="分支判断: 门神/本体" icon="分岐.png"/>
+</s>
+
+<!-- 门神触发器 -->
+
+
+
+
+<!-- 本体触发器 -->
+<t text="中央激光" sync="240E:新生艾克斯迪司" notice="auto">
+	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
+</t>
+
+<t text="两侧激光" sync="240F:新生艾克斯迪司" notice="auto">
+	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
+</t>
+
+<t text="鸳鸯锅" sync="(2411|2412):新生艾克斯迪司" notice="auto">
+	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
+</t>
+
+<t text="生者之伤" sync="[mex] gains the effect of 生者之伤">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 生者之伤" duration-visible="false" style="Default" order="-2" icon="D点.png"/>
+</t>
+<t text="死者之伤" sync="[mex] gains the effect of 死者之伤">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 死者之伤" duration-visible="false" style="Default" order="-2"  icon="C点.png"/>
+</t>
+<t text="受伤击退" sync="[mex] gains the effect of 弱不禁风" notice-o="2" notice="注意击退">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 弱不禁风" duration-visible="false" style="Default" order="-1" icon="击退.png"/>
+</t>
+<t text="加速度炸弹" sync="[mex] gains the effect of 加速度炸弹" notice-o="12" notice="停手">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 加速度炸弹" duration-visible="false" style="Default" icon="禁止攻击.png"/>
+</t>
+<t text="超越死亡" sync="[mex] gains the effect of 超越死亡" notice-o="12" notice="送死">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 超越死亡" duration-visible="false" style="Default"  order="1"  icon="注意.png"/>
+</t>
+<t text="亚拉戈领域" sync="[mex] gains the effect of 亚拉戈领域">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 亚拉戈领域" duration-visible="false" style="Default" order="-1" icon=""/>
+</t>
+<t text="叉形闪电" sync="[mex] gains the effect of 叉形闪电" notice-o="2" notice="放雷">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 叉形闪电" duration-visible="false" style="Default" icon="躲避.png"/>
+</t>
+<t text="水属性压缩" sync="[mex] gains the effect of 水属性压缩" notice-o="2" notice="分摊">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 水属性压缩" duration-visible="false" style="Default" icon="分摊.png"/>
+</t>
+<t text="诅咒之嚎" sync="[mex] gains the effect of 诅咒之嚎" notice-o="5" notice="石化">
+	<v-notice duration="999" sync-to-hide="[mex] loses the effect of 诅咒之嚎" duration-visible="false" style="Default" icon="背对.png"/>
+</t>
+
+
+
+<!-- 门神 -->
+<s name="门神">
+	<a time="013" text="冰封" sync="艾克斯迪司正在咏唱“冰封”" notice="二连冰" icon="冰.png"/>
+	<a time="026" text="暴雷" sync="艾克斯迪司正在咏唱“暴雷”" notice="二连雷" icon="电.png"/>
+	<a time="039" text="爆炎" sync="艾克斯迪司正在咏唱“爆炎”" notice="二连火" icon="火.png"/>
+	<a time="047" text="白洞" sync="艾克斯迪司正在发动“白洞”" notice="白洞" notice-o="0" icon="治疗.png"/>
+
+	<a time="061" text="决战" sync="艾克斯迪司正在发动“决战”" notice="决战" icon=""/>
+	<a time="070" text="神圣" sync="艾克斯迪司正在咏唱“神圣”" notice="分摊" icon="分摊.png"/>
+	<a time="074" text="起跑" sync="发动了“横扫”" icon="躲避.png"/>
+	<a time="076" text="核爆" notice="核爆点名" notice-o="-1" icon="分散.png"/>
+	<a time="070" text="吐息" sync="艾克斯迪司发动了“死亡吐息”" notice="吐息" notice-o="-1" icon=""/>
+
+	<a time="085" text="随机强化" notice="auto" icon="注意.png"/>
+	<a time="090" text="真空波" sync="艾克斯迪司正在发动“真空波”" notice="防击退" icon="击退.png"/>
+	<a time="095" text="白洞" sync="艾克斯迪司正在发动“白洞”" notice="白洞" notice-o="0" icon="治疗.png"/>
+
+	<a time="112" text="黑洞" sync="艾克斯迪司正在发动“黑洞”" notice="auto" icon="散开B.png"/>
+	<a time="121" text="爆炎" sync="艾克斯迪司正在咏唱“爆炎”" notice="二连火" icon="火.png"/>
+	<a time="128" text="神圣" sync="艾克斯迪司正在咏唱“神圣”" notice="分摊" icon="分摊.png"/>
+	<a time="135" text="白洞" sync="艾克斯迪司正在发动“白洞”" notice="白洞" notice-o="0" icon="治疗.png"/>
+	<a time="155" text="暴雷" sync="艾克斯迪司正在咏唱“暴雷”" notice="二连雷，换T" icon="换T.png"/>
+	<a time="160" text="陨石" sync="艾克斯迪司正在咏唱“陨石”" notice="auto" icon="爆炸.png"/>
+
+	<a time="177" text="决战" sync="艾克斯迪司正在发动“决战”" notice="决战" icon=""/>
+	<a time="185" text="神圣" sync="艾克斯迪司正在咏唱“神圣”" notice="分摊" icon="分摊.png"/>
+	<a time="189" text="起跑" sync="发动了“横扫”" icon="躲避.png"/>
+	<a time="193" text="核爆" notice="核爆点名" notice-o="-1" icon="分散.png"/>
+	<a time="194" text="吐息" sync="艾克斯迪司发动了“死亡吐息”" notice="吐息" notice-o="-1" icon=""/>
+
+	<a time="199" text="随机强化" notice="auto" icon="注意.png"/>
+	<a time="205" text="真空波" sync="艾克斯迪司正在发动“真空波”" notice="防击退" icon="击退.png"/>
+	<a time="212" text="白洞" sync="艾克斯迪司正在发动“白洞”" notice="白洞" notice-o="0" icon=""/>
+
+	<a time="227" text="黑洞" sync="艾克斯迪司正在发动“黑洞”" notice="auto" icon="散开B.png"/>
+	<a time="235" text="冰封" sync="艾克斯迪司正在咏唱“冰封”" notice="二连冰" icon="冰.png"/>
+	<a time="244" text="核爆" notice="核爆点名" notice-o="-1" icon="分散.png"/>
+	<a time="248" text="白洞" sync="艾克斯迪司正在发动“白洞”" notice="白洞" notice-o="0" icon="治疗.png"/>
+	<a time="270" text="暴雷" sync="艾克斯迪司正在咏唱“暴雷”" notice="二连雷" icon="电.png"/>
+	<a time="275" text="陨石" sync="艾克斯迪司正在咏唱“陨石”" notice="狂暴" notice-o="2" icon="时间结束.png"/>
+</s>
+
+
+
+<!-- 本体 -->
+<s name="Alpha">
+	<a time="000" text="至高无上" sync="正在发动“至高无上”" notice="auto" notice-o="1" icon="治疗.png"/>
+	<a time="011" text="暴风" sync="正在咏唱“暴风”" notice="auto" icon="死刑.png"/>
+	<a time="020" text="三角攻击" sync="正在发动“三角攻击”" notice="auto" icon="堆叠AOE.png"/>
+	<a time="036" text="大十字·阿尔法" sync="正在发动“大十字·阿尔法”" notice="中场集合" notice-o="1" icon="集合.png"/>
+	<a time="047" text="排队" sync="正在发动“无之泛滥”" notice="auto" icon="在BOSS正面集合.png"/>
+	<a time="055" text="鸳鸯锅" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+	<a time="067" text="双重攻击" sync="正在发动“双重攻击”" notice="双重攻击" icon="无敌.png"/>
+</s>
+
+<s name="Delta">
+	<a time="012" text="无之失控" sync="正在发动“无之失控”" notice="auto" notice-o="1" icon=""/>
+	<a time="017" text="激光" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+	<a time="027" text="暴风" sync="正在咏唱“暴风”" notice="auto" icon="死刑.png"/>
+	<a time="040" text="大十字·德尔塔" sync="正在发动“大十字·德尔塔”" notice="德尔塔" notice-o="1" icon=""/>
+	<a time="054" text="无之泛滥" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+	<a time="062" text="至高无上" sync="正在发动“至高无上”" notice="auto" notice-o="-1" icon="治疗.png"/>
+
+	<a time="075" text="暴风" sync="新生艾克斯迪司正在咏唱“暴风”" notice="auto" icon="死刑.png"/>
+	<a time="085" text="大地摇动" sync="正在发动“大地摇动”" notice="auto" icon=""/>
+	<a time="092" text="真空波" sync="正在发动“真空波”" notice="auto" notice-o="0" icon="下6点集合.png"/>
+	<a time="106" text="无之失控" sync="正在发动“无之失控”" notice="auto" notice-o="1" icon=""/>
+	<a time="113" text="光与暗" sync="正在咏唱“光与暗”" notice="auto" icon=""/>
+	<a time="123" text="激光" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+	<a time="138" text="陨石" sync="正在咏唱“陨石”" notice="auto" icon=""/>
+	<a time="151" text="鸳鸯锅" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+
+	<a time="164" text="大漩涡" sync="正在发动“大漩涡”" notice="auto" notice-o="0" icon="强制HP为1.png"/>
+	<a time="172" text="双重攻击" sync="正在发动“双重攻击”" notice="双重攻击" icon="无敌.png"/>
+	<a time="187" text="至高无上" sync="正在发动“至高无上”" notice="auto" notice-o="1" icon="治疗.png"/>
+	<a time="196" text="真空波" sync="正在发动“真空波”" notice="auto" notice-o="0" icon="下6点集合.png"/>
+	<a time="201" text="暴风" sync="正在咏唱“暴风”" notice="auto" icon="死刑.png"/>
+
+	<a time="219" text="无之失控" sync="正在发动“无之失控”" notice="auto" notice-o="1" icon=""/>
+	<a time="225" text="大十字·阿尔法" sync="正在发动“大十字·阿尔法”" notice="中场集合" notice-o="1" icon="集合.png"/>
+	<a time="236" text="排队" sync="正在发动“无之泛滥”" notice="auto" icon="在BOSS正面集合.png"/>
+	<a time="244" text="鸳鸯锅" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+	<a time="261" text="三角攻击" sync="正在发动“三角攻击”" notice="auto" icon="堆叠AOE.png"/>
+	<a time="270" text="激光" sync="正在发动“无之泛滥”" notice="auto" icon=""/>
+</s>
+
+<s name="Omega">
+	<a time="009" text="大十字·欧米茄" sync="正在发动“大十字·欧米茄”" notice="auto" notice-o="1" icon="集合.png"/>
+	<a time="017" text="最终之战" sync="正在发动“最终之战”" icon=""/>
+	<a time="024" text="无之泛滥1" sync="正在发动“无之泛滥”" notice="auto" notice-o="0" icon=""/>
+	<a time="029" text="无之泛滥2" sync="正在发动“无之泛滥”" notice="auto" notice-o="0" icon=""/>
+	<a time="034" text="石化" notice="auto" notice-o="0" icon="眼.png"/>
+	<a time="035" text="无之泛滥3" sync="正在发动“无之泛滥”" notice="auto" notice-o="0" icon=""/>
+	<a time="049" text="排队" sync="正在发动“无之泛滥”" notice="auto" icon="在BOSS正面集合.png"/>
+	<a time="058" text="至高无上" sync="正在发动“至高无上”" notice="auto" notice-o="1" icon="治疗.png"/>
+</s>
+
+<s name="Final">
+	<a time="009" text="规律崩坏" sync="正在发动“规律崩坏”" notice="auto" notice-o="1" icon=""/>
+	<a time="017" text="大漩涡" sync="正在发动“大漩涡”" notice="auto" notice-o="0" icon="强制HP为1.png"/>
+	<a time="033" text="狂乱领域" sync="发动了“狂乱领域”" notice="auto" notice-o="0" icon=""/>
+	<a time="108" text="至高无上" sync="正在发动“至高无上”" notice="狂暴" notice-o="1" icon="时间结束.png"/>
+</s>
+
+</timeline>

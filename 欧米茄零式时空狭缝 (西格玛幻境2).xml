@@ -132,7 +132,7 @@
 		<a time="094" text="死亡之吻(D)\n➜ D点传给ST(减伤)" notice="死亡之吻,D点传给ST" style="DPS" icon="D点.png"/>
 		<a time="095" text="恶魔啸" sync="发动了“恶魔啸”" notice="准备AOE" style="HEAL" icon="治疗.png"/>
 			<a time="120" text="P4" />
-		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)e" goto="P4(黄粉)"/>
+		<t sync="(Demon Chadarnook|恶魔查达奴克) starts using (Release|附身解除)" goto="P4(黄粉)"/>
 	</s>
 
 	<s name="P4(黄粉)">
