@@ -21,7 +21,7 @@
     https://discord.gg/n6Mut3F
   </description>
   <zone>@loc</zone>
-  <locale>CN</locale>
+  <locale>@Model.Locale</locale>
   <start>(0039:战斗开始！|我要破坏一切！)</start>
 
   <default target-element="Activity" target-attr="notice-d" value="Both" />

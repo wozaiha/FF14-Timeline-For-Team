@@ -15,7 +15,7 @@
 	<rev>v1.0.8</rev>
 	<description>作者: CanisMinor | ID: 男孩纸榨汁机(紫水) | 讨论群: 246243038</description>
 	<zone>@loc</zone>
-	<locale>CN</locale>
+	<locale>@Model.Locale</locale>
 	<entry>P1</entry>
 	<start>0039:战斗开始</start>
 

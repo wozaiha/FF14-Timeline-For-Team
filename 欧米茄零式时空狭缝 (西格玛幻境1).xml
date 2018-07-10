@@ -21,7 +21,7 @@
     https://discord.gg/n6Mut3F
   </description>
   <zone>@loc</zone>
-  <locale>CN</locale>
+  <locale>@Model.Locale</locale>
   <entry>P1</entry>
   <start>0039:战斗开始！</start>
 

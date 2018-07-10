@@ -18,7 +18,7 @@
 	修改: 旋羽翼@神意之地
 	</description>
 	<zone>@loc</zone>
-	<locale>CN</locale>
+	<locale>@Model.Locale</locale>
 	<entry>P1(蓝)</entry>
 	<start>好久没遇上过这么好的画作了</start>
 

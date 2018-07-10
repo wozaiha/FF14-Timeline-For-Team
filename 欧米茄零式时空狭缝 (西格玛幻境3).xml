@@ -22,7 +22,7 @@
 	翻译BY：旋羽翼@神意之地
   </description>
   <zone>@loc</zone>
-  <locale>CN</locale>
+  <locale>@Model.Locale</locale>
   <entry>開幕</entry>
   <start>(开始交战！|战斗开始！)</start>
 
