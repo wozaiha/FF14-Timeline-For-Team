@@ -46,19 +46,19 @@
 
 
 <!-- 本体触发器 -->
-<t text="中央激光" sync="begins casting (中核暗黑光|Inner Antilight)" notice="auto">
+<t text="中央激光" sync="starts using (中核暗黑光|Inner Antilight)" notice="auto">
 	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
 </t>
 
-<t text="两侧激光" sync="begins casting (外围暗黑光|Outer Antilight)" notice="auto">
+<t text="两侧激光" sync="starts using (外围暗黑光|Outer Antilight)" notice="auto">
 	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
 </t>
 
-<t text="左紫右蓝" sync="begins casting (生者暗黑光|White Antilight)" notice="auto">
+<t text="左紫右蓝" sync="starts using (生者暗黑光|White Antilight)" notice="auto">
 	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
 </t>
 
-<t text="左蓝右紫" sync="begins casting (死者暗黑光|Black Antilight)" notice="auto">
+<t text="左蓝右紫" sync="starts using (死者暗黑光|Black Antilight)" notice="auto">
 	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
 </t>
 

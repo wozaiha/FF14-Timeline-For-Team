@@ -71,23 +71,23 @@
 <!-- 触发器 -->
 
 <s name="P1-双塔尼亚">
-  	<a time="07" text="下压" notice="auto" notice-o="0" icon=""/>
-  	<a time="10" text="旋风" notice="auto" icon=""/>
-    <a time="15" text="分摊" notice="auto" icon="" name="0.9"/>
-    <a time="19" text="死刑" notice="auto" icon=""/>
-    <a time="28" text="下压" notice="auto" notice-o="0" icon=""/>
-    <a time="30" text="旋风" notice="auto" icon=""/>
-    <a time="35" text="分摊" notice="auto" icon="" goto="0.9"/>
+  	<a time="07" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+  	<a time="10" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="1" icon=""/>
+    <a time="15" text="分摊" sync="发动了“火球”" notice="auto" icon="" name="0.9"/>
+    <a time="19" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="28" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="30" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="1" icon=""/>
+    <a time="35" text="分摊" sync="发动了“火球”" icon="" goto="0.9"/>
     <a time="50" text="75%前" notice="auto" icon=""/>
 </s>
 <s name="拘束器2">
     <a time="08" text="5连火" notice="auto" icon=""/>
     <a time="14" text="黑球" notice="auto" icon=""/>
     <a time="21" text="5连火" notice="auto" icon=""/>
-    <a time="28" text="死刑" notice="auto" icon=""/>
+    <a time="28" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
     <a time="36" text="黑球" notice="auto" icon=""/>
-  	<a time="40" text="旋风" notice="auto" icon=""/>
-  	<a time="50" text="下压" notice="auto" notice-o="0" icon=""/>
+  	<a time="40" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+  	<a time="50" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
     <a time="55" text="5连火" notice="auto" icon=""/>
     <a time="61" text="黑球" notice="auto" icon=""/>
     <a time="68" text="5连火" notice="auto" icon=""/>
@@ -97,18 +97,18 @@
     <a time="08" text="5连火" notice="auto" icon=""/>
     <a time="13" text="双黑球" notice="auto" icon=""/>
     <a time="20" text="5连火" notice="auto" icon=""/>
-    <a time="20" text="分摊" notice="auto" icon=""/>
-    <a time="32" text="死刑" notice="auto" icon=""/>
-    <a time="41" text="下压" notice="auto" notice-o="0" icon=""/>
+    <a time="20" text="分摊" sync="发动了“火球”" icon=""/>
+    <a time="32" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="41" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
     <a time="44" text="双黑球" notice="auto" icon=""/>
-    <a time="48" text="旋风" notice="auto" icon=""/>
-    <a time="56" text="下压" notice="auto" notice-o="0" icon=""/>
+    <a time="48" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+    <a time="56" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
     <a time="58" text="5连火" notice="auto" icon=""/>
     <a time="64" text="双黑球" notice="auto" icon=""/>
     <a time="70" text="5连火" notice="auto" icon=""/>
-    <a time="70" text="分摊" notice="auto" icon=""/>
-    <a time="82" text="死刑" notice="auto" icon=""/>
-    <a time="90" text="下压" notice="auto" notice-o="0" icon=""/>
+    <a time="70" text="分摊" sync="发动了“火球”" icon=""/>
+    <a time="82" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="90" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
     <a time="100" text="狂暴前" notice="auto" notice-o="-2" icon=""/>
   </s>
 
@@ -129,7 +129,7 @@
     <a time="50" text="巴哈姆特之爪" notice="auto" icon=""/>
     <a time="52" text="火2点名" notice="auto" icon=""/>
     <a time="55" text="雷点名" notice="auto" icon=""/>
-    <a time="65" text="分摊" notice="auto" icon=""/>
+    <a time="65" text="分摊" sync="发动了“火球”" icon=""/>
     <a time="67" text="随机台词b+白圈1" notice="auto" icon=""/>
     <a time="70" text="死亡宣告+白圈2" notice="auto" icon=""/>
     <a time="75" text="雷点名+白圈3" notice="auto" icon=""/>
@@ -150,7 +150,7 @@
 		<a time="154" text="巴哈姆特之爪" notice="auto" icon=""/>
 		<a time="180" text="随机台词e" notice="auto" icon=""/>
 		<a time="190" text="随机台词f" notice="auto" icon=""/>
-		<a time="202" text="死刑" notice="auto" icon=""/>
+		<a time="202" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
 		<a time="213" text="巴哈姆特之爪" notice="auto" icon=""/>
 		<a time="224" text="狂暴" notice="auto" icon=""/>
   </s>
@@ -226,18 +226,18 @@
 		<a time="13" text="巴哈姆特之爪+顺劈" notice="auto" icon=""/>
 		<a time="16" text="5连火" notice="auto" icon=""/>
 		<a time="22" text="魔力炼成" notice="auto" icon=""/>
-		<a time="27" text="旋风" notice="auto" icon=""/>
+		<a time="27" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
 		<a time="31" text="随机台词1" notice="auto" icon=""/>
-		<a time="44" text="旋风" notice="auto" icon=""/>
+		<a time="44" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
 		<a time="52" text="百万核爆" notice="auto" icon=""/>
 		<a time="60" text="双死刑" notice="auto" icon=""/>
 
 		<a time="69" text="巴哈姆特之爪+顺劈" notice="auto" icon=""/>
 		<a time="78" text="5连火" notice="auto" icon=""/>
 		<a time="83" text="魔力炼成" notice="auto" icon=""/>
-		<a time="88" text="旋风" notice="auto" icon=""/>
+		<a time="88" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
 		<a time="92" text="随机台词2" notice="auto" icon=""/>
-		<a time="105" text="旋风" notice="auto" icon=""/>
+		<a time="105" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
 		<a time="115" text="双死刑" notice="auto" icon=""/>
 		<a time="126" text="百万核爆" notice="auto" icon=""/>
 	</s>
