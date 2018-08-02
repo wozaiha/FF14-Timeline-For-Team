@@ -30,38 +30,38 @@
       <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="眼.png" />
+      icon="Eye.png" />
   </t>
   <t text="正对石像"       sync="starts using (圣母颂|Ave Maria)"         notice="面对石像" >
         <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="眼.png" />
+      icon="Eye.png" />
   </t>
   <t text="去左半场"       sync="starts using (扑杀的神气|Intemperate Will)"    notice="去左半场" >
           <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="左9点集合.png" />
+      icon="West.png" />
   </t>
   <t text="去右半场"       sync="starts using (重力波|Gravitational Wave)"       notice="去右半场" >
           <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="右3点集合.png" />
+      icon="East.png" />
   </t>
   <!-- 名前部分をDPSの誰かに変更して使う -->
   <t text="去中场"   sync="starts using (睡魔的神气|Idyllic Will) on [mex]" notice="auto">
             <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="集合.png" />
+      icon="Stack.png" />
   </t>
   <t text="去外圈"   sync="starts using (圣母的神气|Indulgent Will) on [mex]" notice="auto">
           <v-notice
       duration="5"
 	  style="NOTICE"
-      icon="分散.png" />
+      icon="Leave.png" />
   </t>
   <!-- 前半/後半識別用のトリガ begin -->
   <t sync="全都破坏掉！" sync-count="1">
@@ -75,7 +75,7 @@
 
   <!-- 前半/後半の識別用エントリフェーズ -->
   <s name="ENTRY" >
-    <a time="10" text="门神本体判定" icon="分岐.png" />
+    <a time="10" text="门神本体判定" icon="Branch.png" />
   </s>
 
   <!-- ケフカの定義 begin -->
@@ -88,7 +88,7 @@
     <a time="39" text="劈啪啪暴雷" sync="正在发动“劈啪啪暴雷”" notice="注意真假" icon="真偽.png" />
     <a time="46" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
 
-    <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="在BOSS背面集合.png" />
+    <a time="66" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="背后集中后散开" icon="StackBack.png" />
     <a time="66" text="HOT" notice="即将无敌" notice-o="0" icon="HOT.png" />
     <a time="75" text="注意直线" />
     <a time="78" text="连线4人击退" icon="ノックバック.png" />
@@ -122,7 +122,7 @@
     <a time="257" text="扑腾腾究极" sync="正在发动“扑腾腾究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="264" text="超驱动" notice="T大伤害" icon="単体強攻撃.png" />
 
-    <a time="283" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="中央集合" icon="集合.png" />
+    <a time="283" text="众神雕像" sync="正在发动“(Graven Image|众神雕像)”" notice="中央集合" icon="Stack.png" />
     <a time="290" text="集合放圈" notice="集合" icon="重ね捨て.png" />
     <a time="293" text="注意角色面向" notice="面向" icon="視線.png" />
     <a time="305" text="跳蹦蹦传送" sync="正在发动“跳蹦蹦传送”" notice="处理完成后找背" />
@@ -166,7 +166,7 @@
     <a time="6" text="破坏之翼(片翼)" sync="正在发动“破坏之翼”" notice="单翅膀" />
     <a time="18" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀" />
     <a time="35" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
-    <a time="42" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
+    <a time="42" text="未来/过去破灭" notice="背面集合" icon="背面Stack.png" />
     <a time="53" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
     <a time="60" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
     <a time="67" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
@@ -187,7 +187,7 @@
     <a time="9" text="破坏之翼(片翼)" notice="单翅膀" />
     <a time="15" text="究极" sync="正在发动“究极”" notice="AOE" icon="全体攻撃.png" />
     <a time="33" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
-    <a time="40" text="未来/过去破灭" sync="正在发动“(未来|过去破灭)”" notice="背面集合" icon="背面集合.png" />
+    <a time="40" text="未来/过去破灭" sync="正在发动“(未来|过去破灭)”" notice="背面集合" icon="背面Stack.png" />
     <a time="53" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀" />
     <a time="58" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
     <a time="66" text="超驱动" sync="正在发动“超驱动”" notice="超驱动" icon="単体強攻撃.png" />
@@ -216,7 +216,7 @@
     <a time="17" text="破坏之翼(両翼)" sync="正在发动“破坏之翼”" notice="双翅膀" />
     <a time="23" text="終末双腕" sync="正在发动“終末双腕”" notice="死刑" icon="単体強攻撃.png" />
     <a time="40" text="大三角" sync="正在发动“异三角”" notice="确认中央" />
-    <a time="48" text="未来/过去破灭" notice="背面集合" icon="背面集合.png" />
+    <a time="48" text="未来/过去破灭" notice="背面集合" icon="背面Stack.png" />
     <a time="60" text="超驱动" sync="正在发动“超驱动”" icon="単体強攻撃.png" />
     <a time="67" text="究极" sync="正在发动“究极”" notice="AOE2連" icon="全体攻撃.png" />
     <a time="75" text="究极" sync="正在发动“究极”" notice="2" icon="全体攻撃.png" />

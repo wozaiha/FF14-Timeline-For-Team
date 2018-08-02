@@ -40,31 +40,31 @@
 	  style="NOTICE"
       duration="15"
 	  sync-to-hide="${_pc}陷入了“以太病毒抗体”效果"
-      icon="计时器.png" />
+      icon="Timer.png" />
   </t>
    <t text="红球点名\n ➜ ${_nex}" sync="[nex]陷入了“猎物”效果" notice="红球">
     <v-notice
 	  style="NOTICE_NORMAL"
       duration="5"
-      icon="标记.png" />
+      icon="Marker.png" />
   </t>
    <t text="蓝球点名\n ➜ ${_mex}" sync="[mex]:0000:(.{4}):000E:" notice="出人群">
     <v-notice
 	  style="NOTICE_NORMAL"
       duration="5"
-      icon="标记.png" />
+      icon="Marker.png" />
   </t>
     <t text="热风" sync="[me]陷入了“(灼热|Searing Wind)”效果" notice="远离中场">
     <v-notice
 	  style="NOTICE"
       duration="15"
-      icon="连线.png" />
+      icon="Avoid.png" />
   </t>
      <t text="孤独感" sync="[me]陷入了“(孤独感|Abandonment)”效果" notice="中场靠近">
     <v-notice
 	  style="NOTICE"
       duration="20"
-      icon="分散.png" />
+      icon="Stack.png" />
   </t>
 
   <!-- 重要なアクティビティを通知するトリガ end -->
