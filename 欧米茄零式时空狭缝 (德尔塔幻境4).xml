@@ -94,7 +94,7 @@
 
 <!-- 门神 -->
 <s name="门神">
-	<a time="013" text="冰封" sync="(艾克斯迪司|Exdeath)正在咏唱“(冰封|Blizzard III)”" notice="二连冰" icon="冰.png"/>
+	<a time="013" text="冰封" sync="(艾克斯迪司|Exdeath)正在咏唱“(冰封|Blizzard III)”" notice="二连冰" icon="Ice.png"/>
 	<a time="026" text="暴雷" sync="(艾克斯迪司|Exdeath)正在咏唱“(暴雷|Thunder III)”" notice="二连雷" icon="电.png"/>
 	<a time="039" text="爆炎" sync="(艾克斯迪司|Exdeath)正在咏唱“(爆炎|Fire III)”" notice="二连火" icon="火.png"/>
 	<a time="047" text="白洞" sync="(艾克斯迪司|Exdeath)正在发动“(白洞|White Hole)”" notice="白洞" notice-o="0" icon="治疗.png"/>
@@ -127,7 +127,7 @@
 	<a time="212" text="白洞" sync="(艾克斯迪司|Exdeath)正在发动“(白洞|White Hole)”" notice="白洞" notice-o="0" icon=""/>
 
 	<a time="227" text="黑洞" sync="(艾克斯迪司|Exdeath)正在发动“(黑洞|Black Hole)”" notice="auto" icon="散开B.png"/>
-	<a time="235" text="冰封" sync="(艾克斯迪司|Exdeath)正在咏唱“(冰封|Blizzard III)”" notice="二连冰" icon="冰.png"/>
+	<a time="235" text="冰封" sync="(艾克斯迪司|Exdeath)正在咏唱“(冰封|Blizzard III)”" notice="二连冰" icon="Ice.png"/>
 	<a time="244" text="核爆" notice="核爆点名" notice-o="-1" icon="分散.png"/>
 	<a time="248" text="白洞" sync="(艾克斯迪司|Exdeath)正在发动“(白洞|White Hole)”" notice="白洞" notice-o="0" icon="治疗.png"/>
 	<a time="270" text="暴雷" sync="(艾克斯迪司|Exdeath)正在咏唱“(暴雷|Thunder III)”" notice="二连雷" icon="电.png"/>
