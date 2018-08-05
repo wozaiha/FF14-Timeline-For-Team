@@ -17,7 +17,7 @@
 	<zone>@loc</zone>
 	<locale>@Model.Locale</locale>
 	<entry>P1-迦楼达</entry>
-	<start>0039:战斗开始！</start>
+	<start>0039:战斗开始！|你们这些蝼蚁只有被我的狂风吹散的下场</start>
 
   <default target-element="Activity" target-attr="notice-o" value="0"/>
 	<default target-element="Activity" target-attr="notice-d" value="Both"/>
@@ -26,7 +26,7 @@
 
   <s name="P1-迦楼达">
     	<a time="06" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
-    	<a time="09" text="突风" sync="" notice=""  icon="Stack.png"/>
+    	<a time="09" text="寒风之歌" sync="" notice=""  icon="Stack.png"/>
       <a time="21" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon=""/>
       <a time="27" text="下行突风" sync="" notice="auto" icon=""/>
       <a time="34" text="飞翎雨" sync="" icon=""/>
@@ -37,7 +37,7 @@
       <a time="76" text="大气爆发 " sync="正在发动“大气爆发”" notice="auto" icon="HardAllRangeAttack.png"/>
       <a time="90" text="飞翎雨" sync="" icon=""/>
       <a time="96" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="auto" icon="Avoid.png"/>
-      <a time="100" text="突风" sync="" notice="" icon=""/>
+      <a time="100" text="寒风之歌" sync="" notice="" icon=""/>
       <a time="102" text="飞翎雨" sync="" icon=""/>
       <a time="119" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon=""/>
       <a time="120" text="接线" sync="" icon=""/>
@@ -172,7 +172,7 @@
 
       <a time="184" text="运动会4" icon="Avoid.png"/>
       <a time="193" text="地火" sync="" icon=""/>
-      <a time="194" text="突风" sync="" notice=""  icon="Stack.png"/>
+      <a time="194" text="寒风之歌" sync="" notice=""  icon="Stack.png"/>
       <a time="195" text="地火" sync="" icon=""/>
       <a time="196" text="石牢点名" sync="" notice="auto" icon=""/>
       <a time="197" text="地火" sync="" icon=""/>
