@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+@using ACT.SpecialSpellTimer.RaidTimeline
+@using System.Text.RegularExpressions
+@{
+	var loc = " ";
+	var data = Model as TimelineRazorModel;
+	var reg= @"^[\u4e00-\u9fa5]";
+        if (Regex.IsMatch(data.Zone,reg)) {
+		loc = "绝究极神兵";
+	}
+	else {loc = "the Unending Coil of Bahamut (Ultimate)";}
+}
+<timeline>
+	<name>绝究极神兵</name>
+	<rev>v0.1</rev>
+	<description></description>
+	<zone>@loc</zone>
+	<locale>@Model.Locale</locale>
+	<entry>P1-迦楼达</entry>
+	<start>0039:战斗开始！</start>
+
+  <default target-element="Activity" target-attr="notice-o" value="0"/>
+	<default target-element="Activity" target-attr="notice-d" value="Both"/>
+	<default target-element="Activity" target-attr="sync-s" value="-10"/>
+	<default target-element="Activity" target-attr="sync-e" value="10"/>
+
+  <s name="P1-迦楼达">
+    	<a time="06" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
+    	<a time="09" text="突风" sync="" notice=""  icon="Stack.png"/>
+      <a time="21" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon=""/>
+      <a time="27" text="下行突风" sync="" notice="auto" icon=""/>
+      <a time="34" text="飞翎雨" sync="" icon=""/>
+      <a time="39" text="寒风之啸" sync="正在发动“寒风之啸”" notice="auto" notice-o="-1" icon="HardAllRangeAttack.png"/>
+      <a time="49" text="烈风刃" sync="正在发动“烈风刃”" icon="" />
+      <a time="55" text="烈风刃" sync="正在发动“烈风刃”" icon="" />
+      <a time="69" text="飞翎雨" sync="" icon=""/>
+      <a time="76" text="大气爆发 " sync="正在发动“大气爆发”" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="90" text="飞翎雨" sync="" icon=""/>
+      <a time="96" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="auto" icon="Avoid.png"/>
+      <a time="100" text="突风" sync="" notice="" icon=""/>
+      <a time="102" text="飞翎雨" sync="" icon=""/>
+      <a time="119" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon=""/>
+      <a time="120" text="接线" sync="" icon=""/>
+      <a time="125" text="下行突风" sync="" notice="auto" icon=""/>
+      <a time="126" text="超级气旋" sync="" notice="auto" icon=""/>
+      <a time="128" text="飞翎雨" sync="" icon=""/>
+      <a time="140" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon=""/>
+      <a time="148" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="接月环注意" icon="Avoid.png"/>
+      <a time="156" text="扇形分摊" sync="分摊" notice-o="-2" icon=""/>
+      <a time="160" text="狂暴" notice="狂暴" icon="Timeout.png" />
+      <a time="161" text="" notice="" sync="怎……怎么可能……区区蝼蚁" sync-s="-50" goto="P2-伊弗利特"/>
+  </s>
+
+  <s name="P2-伊弗利特">
+    	<a time="06" text="光辉炎柱" icon="Avoid.png"/>
+    	<a time="08" text="冲锋" icon="Avoid.png"/>
+
+      <a time="12" text="地狱业火" sync="永垂不朽" notice="auto" icon=""/>
+      <a time="24" text="火神爆裂" sync="" notice="击飞" notice-o="-3" icon="KnockBack.png"/>
+      <a time="27" text="灼热咆哮" sync="" notice="死刑3连" icon="Targetaoe03.png"/>
+      <a time="30" text="灼热咆哮" sync="" icon="Targetaoe03.png"/>
+      <a time="34" text="灼热咆哮" sync="" icon="Targetaoe03.png"/>
+      <a time="37" text="" sync="兵贵神速" />
+      <a time="40" text="火神柱" icon="" />
+      <a time="45" text="炎狱之锁" sync="" icon="Pair.png" />
+      <a time="48" text="热风" sync="" icon=""/>
+      <a time="50" text="地火" sync="" icon=""/>
+
+      <a time="74" text="地狱业火" sync="因果报应" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="85" text="热风" sync="" icon=""/>
+      <a time="88" text="地火" sync="" icon=""/>
+      <a time="99" text="十字龙车" sync="" notice="" icon=""/>
+      <a time="104" text="热风" sync="" icon=""/>
+      <a time="112" text="分摊" sync="" icon=""/>
+      <a time="118" text="运动会" sync="" icon=""/>
+      <a time="132" text="boss下地" sync="" notice="auto" icon=""/>
+      <a time="139" text="灼热咆哮" sync="" notice="死刑3连" icon="Targetaoe03.png"/>
+      <a time="142" text="灼热咆哮" sync="" icon="Targetaoe03.png"/>
+      <a time="147" text="灼热咆哮" sync="" icon="Targetaoe03.png"/>
+      <a time="152" text="地火" sync="" icon=""/>
+      <a time="160" text="分摊" sync="" icon=""/>
+      <a time="165" text="狂暴" notice="狂暴" icon="Timeout.png" />
+      <a time="166" text="" notice="" sync="不共戴天" sync-s="-50" goto="P3-泰坦"/>
+  </s>
+
+
+  <s name="P3-泰坦">
+    	<!-- <a time="06" text="校准" icon="Avoid.png"/> -->
+    	<a time="10" text="大地粉碎" icon="HoT.png"/>
+
+      <a time="12" text="大地之怒" sync="跪倒在大地的愤怒之下吧" notice="auto" icon=""/>
+      <a time="20" text="校准" sync="你们竟敢屠杀我的孩子" notice="" icon=""/>
+      <a time="27" text="(╯‵□′)╯︵┻━━┻" icon="" />
+      <a time="28" text="双流沙" sync="正在发动“大地之重”" notice="auto" icon="Avoid.png"/>
+      <a time="34" text="泰坦上天" sync="" />
+
+      <a time="39" text="大地粉碎" icon="HoT.png" />
+      <a time="44" text="大怒震" sync="正在发动“大怒震”" icon="Stack.png" />
+      <a time="51" text="石牢点名" sync="" icon=""/>
+      <a time="52" text="冲拳" sync="正在发动“地裂”|14:2B6F" notice="auto" icon="Avoid.png"/>
+      <a time="57" text="冲拳" sync="正在发动“地裂”|14:2B6F" notice="auto" icon="Avoid.png"/>
+      <a time="62" text="激震*8" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="75" text="流沙" sync="正在发动“大地之重”" notice="auto" icon="Avoid.png"/>
+      <a time="80" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="89" text="泰坦上天" sync="" />
+
+      <a time="105" text="大地粉碎" icon="HoT.png" />
+      <a time="107" text="石牢" sync="我的愤怒之血在沸腾" notice="auto" icon=""/>
+      <a time="119" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="126" text="激震*6" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="139" text="(╯‵□′)╯︵┻━━┻" icon="" />
+      <a time="143" text="三连流沙" sync="正在发动“大地之重”" notice="auto" icon="Avoid.png"/>
+      <a time="149" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="153" text="(╯‵□′)╯︵┻━━┻" icon="" />
+      <a time="156" text="三连流沙" sync="正在发动“大地之重”" notice="auto" icon="Avoid.png"/>
+      <a time="167" text="激震*8" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="170" text="狂暴" notice="狂暴" icon="Timeout.png" />
+      <a time="172" text="" notice="" sync="我的……孩子们……终有一日" sync-s="-50" goto="P3.5"/>
+  </s>
+
+  <s name="P3.5">
+    	<!-- <a time="06" text="校准" icon="Avoid.png"/> -->
+    	<a time="12" text="浮游炮" icon=""/>
+      <a time="25" text="死亡宣告" sync="消失吧！光之使徒" notice="auto" icon=""/>
+      <a time="34" text="拉哈布雷亚登场" sync="正在发动“冥暗|Dark IV”" notice="" icon=""/>
+      <a time="47" text="拉哈布雷亚死亡" sync="究极神兵的真正力量吧" notice="" icon=""/>
+      <a time="52" text="究极神兵登场" sync="生命之色涡旋流转" notice="" icon=""/>
+      <a time="57" text="究极" icon="" />
+      <a time="100" text="" notice="" sync="" sync-s="0" goto="P4-究极神兵"/>
+  </s>
+
+  <s name="P4-究极神兵">
+    	<a time="00" text="以太波动" sync="正在发动“以太波动|Tank Purge”"  icon="HardAllRangeAttack.png"/>
+    	<a time="07" text="吸附式以太炸弹" icon="Explosion.png"/>
+      <a time="09" text="诱导射线" sync="正在发动“诱导射线|Homing Lazers”" notice="auto" icon=""/>
+
+
+      <a time="21" text="运动会" icon="Avoid.png"/>
+      <a time="33" text="机制开始" sync="" icon=""/>
+      <a time="36" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="38" text="冲锋" icon="Avoid.png"/>
+      <a time="41" text="风神月环" icon="" />
+
+      <a time="57" text="地火" sync="" icon=""/>
+      <a time="67" text="光辉炎柱" icon="" />
+
+      <a time="70" text="运动会2" icon="Avoid.png"/>
+      <a time="81" text="激震*7" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="89" text="寒风之啸" sync="正在发动“寒风之啸”" notice="auto" notice-o="-1" icon="HardAllRangeAttack.png"/>
+      <a time="91" text="飞翎雨" sync="" icon=""/>
+      <a time="92" text="诱导射线" sync="正在发动“诱导射线|Homing Lazers”" notice="auto" icon=""/>
+      <a time="95" text="飞翎雨" sync="" icon=""/>
+
+      <a time="102" text="运动会3" icon="Avoid.png"/>
+      <a time="111" text="三连流沙" sync="正在发动“大地之重”" notice="auto" icon="Avoid.png"/>
+      <a time="113" text="分摊" sync="" icon=""/>
+      <a time="115" text="接线" sync="" icon=""/>
+      <a time="116" text="青磷炸弹1" notice="auto" icon="" />
+      <a time="120" text="热风" sync="" icon=""/>
+      <a time="122" text="飞翎雨" sync="" icon=""/>
+      <a time="125" text="龙车双冲拳接线" icon="" />
+      <a time="138" text="飞翎雨" sync="" icon=""/>
+
+      <a time="139" text="以太波动" sync="正在发动“以太波动|Tank Purge”"  icon="HardAllRangeAttack.png"/>
+      <a time="147" text="台风眼" icon="" />
+      <a time="151" text="诱导射线" sync="正在发动“诱导射线|Homing Lazers”" notice="auto" icon=""/>
+      <a time="159" text="台风眼" icon="" />
+      <a time="161" text="光辉炎柱" icon="" />
+      <a time="171" text="台风眼" icon="" />
+      <a time="172" text="地狱业火" notice="auto" icon=""/>
+      <a time="176" text="诱导射线" sync="正在发动“诱导射线|Homing Lazers”" notice="auto" icon=""/>
+
+      <a time="184" text="运动会4" icon="Avoid.png"/>
+      <a time="193" text="地火" sync="" icon=""/>
+      <a time="194" text="突风" sync="" notice=""  icon="Stack.png"/>
+      <a time="195" text="地火" sync="" icon=""/>
+      <a time="196" text="石牢点名" sync="" notice="auto" icon=""/>
+      <a time="197" text="地火" sync="" icon=""/>
+      <a time="199" text="地火" sync="" icon=""/>
+      <a time="202" text="飞翎雨" sync="" icon=""/>
+      <a time="204" text="飞翎雨" sync="" icon=""/>
+      <a time="212" text="双冲拳分摊接线" icon="" />
+      <a time="220" text="飞翎雨" sync="" icon=""/>
+      <a time="224" text="以太波动" sync="正在发动“以太波动|Tank Purge”"  icon="HardAllRangeAttack.png"/>
+      <a time="229" text="究极" sync="正在发动“究极|Ultima”" icon="" />
+
+      <a time="241" text="以太炸弹" sync="正在发动“以太炸弹|Aetheric Boom”" icon="" />
+
+      <a time="263" text="吸附式以太炸弹" icon="" />
+      <!-- 随机三神 -->
+
+
+      <!-- 随机三神 -->
+      <a time="999" text="狂暴" notice="狂暴" icon="Timeout.png" />
+  </s>
+</timeline>
