@@ -2,7 +2,7 @@
 @using ACT.SpecialSpellTimer.RaidTimeline
 @using System.Text.RegularExpressions
 @{
-	var loc = " ";
+	var loc = "The Weapon's Refrain (Ultimate)";
 	var data = Model as TimelineRazorModel;
 	var reg= @"^[\u4e00-\u9fa5]";
         if (Regex.IsMatch(data.Zone,reg)) {
