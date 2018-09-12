@@ -180,7 +180,7 @@
       <a time="49" text="烈风刃" sync="正在发动“烈风刃|Friction”" icon="targetaoe.png" />
       <a time="55" text="烈风刃" sync="正在发动“烈风刃|Friction”" icon="targetaoe.png" />
       <a time="69" text="飞翎雨" sync="" icon="AOE.png"/>
-      <a time="76" text="大气爆发 " sync="正在发动“大气爆发|Aerial Blast”" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="76" text="大气爆发" sync="正在发动“大气爆发|Aerial Blast”" notice="auto" icon="HardAllRangeAttack.png"/>
       <a time="90" text="飞翎雨" sync="" icon="AOE.png"/>
       <a time="96" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="auto" icon="Avoid.png"/>
       <a time="100" text="寒风之歌" sync="" notice="" icon="Stack.png"/>
@@ -252,11 +252,11 @@
 
       <a time="105" text="大地粉碎" sync="发动了“Geocrush”" icon="Distance.png" />
       <a time="107" text="石牢" sync="我的愤怒之血在沸腾" notice="auto" icon="Bomb.png"/>
-      <a time="119" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
-      <a time="126" text="激震*6" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
-      <a time="139" text="(╯‵□′)╯︵┻━━┻" icon="Targetaoe03.png" />
-      <a time="143" text="三连流沙" sync="正在发动“大地之重|Weight Of The Land”" notice="auto" icon="StackAOE.png"/>
-      <a time="149" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="110" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
+      <a time="118" text="激震*6" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="128" text="(╯‵□′)╯︵┻━━┻" icon="Targetaoe03.png" />
+      <a time="130" text="三连流沙" sync="正在发动“大地之重|Weight Of The Land”" notice="auto" icon="StackAOE.png"/>
+      <a time="139" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
       <a time="153" text="(╯‵□′)╯︵┻━━┻" icon="Targetaoe03.png" />
       <a time="156" text="三连流沙" sync="正在发动“大地之重|Weight Of The Land”" notice="auto" icon="StackAOE.png"/>
       <a time="167" text="激震*8" sync="" notice="auto" icon="HardAllRangeAttack.png"/>
