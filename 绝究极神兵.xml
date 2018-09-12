@@ -39,7 +39,7 @@
 		/>
 	</t>
 	<!-- 泰坦用触发 -->
-	<t text="羽翼" sync="([DRK]|[WAR]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="MT" sync="([DRK]|[WAR]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -48,7 +48,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="包子" sync="[PLD]:[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="ST" sync="[PLD]:[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -57,7 +57,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="滴涛" sync="[NIN]:[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="忍者" sync="[NIN]:[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -66,7 +66,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="行长" sync="([SAM]|[DRG]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="龙骑" sync="([SAM]|[DRG]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -75,7 +75,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="浅笑" sync="([SUM]|[BLM]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="召唤" sync="([SUM]|[BLM]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -84,7 +84,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="远敏" sync="([BRD]|[MCH]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="诗人" sync="([BRD]|[MCH]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -93,7 +93,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="小 F" sync="([WHM]|[AST]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="白膜" sync="([WHM]|[AST]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -102,7 +102,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="烟妹/丸子" sync="[SCH]:[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="学者" sync="[SCH]:[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -113,7 +113,7 @@
 	</t>
 	<!-- 泰坦结束 -->
 	<!-- 本体触发 -->
-	<t text="滴涛" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="忍者" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="[NIN]:[id4]:[id4]:[id4]:"
@@ -122,7 +122,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="行长" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="龙骑" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="([SAM]|[DRG]):[id4]:[id4]:[id4]:"
@@ -131,7 +131,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="浅笑" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="召唤" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="([SUM]|[BLM]):[id4]:[id4]:[id4]:"
@@ -140,7 +140,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="远敏" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="诗人" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="([BRD]|[MCH]):[id4]:[id4]:[id4]:"
@@ -149,7 +149,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="小 F" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="白膜" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="([WHM]|[AST]):[id4]:[id4]:[id4]:"
@@ -158,7 +158,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="烟妹/丸子" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="学者" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="[SCH]:[id4]:[id4]:[id4]:"
