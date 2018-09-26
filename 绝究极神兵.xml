@@ -24,7 +24,7 @@
 	<default target-element="Activity" target-attr="sync-s" value="-10"/>
 	<default target-element="Activity" target-attr="sync-e" value="10"/>
 		<!-- 自我触发通报 -->
-	<t text="寒风之歌" sync="[mex]:[id4]:[id4]:[id4]:" notice="寒风之歌">
+	<t text="寒风之歌" sync="[mex]:[id4]:E0CF:0010:" notice="寒风之歌">
 		<v-notice
 			duration="0"
 			order="1"
@@ -93,7 +93,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="白膜" sync="([WHM]|[AST]):[id4]:[id4]:[id4]:" sync-count="1" >
+	<t text="占星" sync="([WHM]|[AST]):[id4]:[id4]:[id4]:" sync-count="1" >
 		<v-notice
 			duration="10"
 			sync-to-hide=""
@@ -149,7 +149,7 @@
 			job-icon="true"
 		/>
 	</t>
-	<t text="白膜" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="占星" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
 		<v-notice
 			duration="30"
 			sync-to-hide="([WHM]|[AST]):[id4]:[id4]:[id4]:"
@@ -171,28 +171,29 @@
 
 
   <s name="P1-迦楼达">
-    	<a time="05" text="螺旋气流" sync="正在发动“螺旋气流|Slipstream”" notice="auto" icon="Avoid.png"/>
-    	<a time="06" text="寒风之歌" sync="" notice=""  icon="Stack.png"/>
-      <a time="21" text="螺旋气流" sync="正在发动“螺旋气流|Slipstream”" notice="auto" icon="Avoid.png"/>
-      <a time="27" text="下行突风" sync="发动了“Downburst”" notice="auto" icon="Targetaoe03.png"/>
+    	<a time="05" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
+    	<a time="06" text="寒风之歌" sync="" notice="发动了“寒风之歌”"  icon="Stack.png"/>
+      <a time="21" text="螺旋气流" sync="正在发动“螺旋气流”" notice="螺旋气流" icon="Avoid.png"/>
+      <a time="27" text="下行突风" sync="发动了“下行突风”" notice="auto" icon="Targetaoe03.png"/>
       <a time="34" text="飞翎雨" sync="" icon="AOE.png"/>
       <a time="37" text="寒风之啸" sync="正在发动“寒风之啸”" notice="auto" notice-o="-1" icon="HardAllRangeAttack.png"/>
-      <a time="49" text="烈风刃" sync="正在发动“烈风刃|Friction”" icon="targetaoe.png" />
-      <a time="55" text="烈风刃" sync="正在发动“烈风刃|Friction”" icon="targetaoe.png" />
+      <a time="48" text="烈风刃" sync="正在发动“烈风刃”" icon="targetaoe.png" />
+      <a time="57" text="烈风刃" sync="正在发动“烈风刃”" icon="targetaoe.png" />
       <a time="69" text="飞翎雨" sync="" icon="AOE.png"/>
-      <a time="76" text="大气爆发" sync="正在发动“大气爆发|Aerial Blast”" notice="auto" icon="HardAllRangeAttack.png"/>
+      <a time="72" text="大气爆发" sync="正在发动“大气爆发”" notice="auto" icon="HardAllRangeAttack.png"/>
       <a time="90" text="飞翎雨" sync="" icon="AOE.png"/>
-      <a time="96" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="auto" icon="Avoid.png"/>
-      <a time="100" text="寒风之歌" sync="" notice="" icon="Stack.png"/>
+      <a time="95" text="邪轮旋风" sync="正在发动“邪轮旋风|邪轮Tsumuji-kaze”" notice="auto" icon="Avoid.png"/>
+      <a time="98" text="寒风之歌" sync="" notice="" icon="Stack.png"/>
       <a time="102" text="飞翎雨" sync="" icon="AOE.png"/>
-      <a time="118" text="螺旋气流" sync="正在发动“螺旋气流|Slipstream”" notice="auto" icon="Avoid.png"/>
+      <a time="118" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
       <a time="119" text="接线" sync="" icon="Flag.png"/>
-      <a time="123" text="下行突风" sync="发动了“Downburst”" notice="auto" icon="Targetaoe03.png"/>
+      <a time="123" text="下行突风" sync="发动了“下行突风”" notice="auto" icon="Targetaoe03.png"/>
       <a time="123" text="超级气旋" sync="" notice="auto" icon="Twister.png"/>
       <a time="126" text="飞翎雨" sync="" icon="AOE.png"/>
-      <a time="140" text="螺旋气流" sync="正在发动“螺旋气流|Slipstream”" notice="auto" icon="Avoid.png"/>
-      <a time="145" text="邪轮旋风" sync="正在发动“邪轮旋风”" notice="接月环注意" icon="Avoid.png"/>
-      <a time="155" text="下行突风" sync="分摊" notice-o="-2" icon="StackFront.png"/>
+      <a time="137" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
+      <a time="145" text="邪轮旋风" sync="正在发动“邪轮旋风|邪轮Tsumuji-kaze”" notice="接月环注意" icon="Avoid.png"/>
+      <a time="153" text="下行突风" notice="分摊" notice-o="-2" icon="StackFront.png"/>
+			<a time="158" text="螺旋气流" sync="正在发动“螺旋气流”" notice="auto" icon="Avoid.png"/>
       <a time="170" text="狂暴" notice="狂暴" icon="Timeout.png" />
       <a time="171" text="" notice="" sync="怎……怎么可能……区区蝼蚁" sync-s="-50" goto="P2-伊弗利特"/>
   </s>
@@ -281,7 +282,7 @@
       <a time="09" text="诱导射线" sync="正在发动“诱导射线|Homing Lazers”" notice="auto" icon="targetaoe.png"/>
 
 
-      <a time="21" text="运动会" sync="begins casting Ultimate Predation" icon="Avoid.png"/>
+      <a time="21" text="运动会1" sync="begins casting Ultimate Predation" icon="Avoid.png"/>
       <a time="33" text="机制开始"  icon=""/>
       <a time="36" text="双冲拳" sync="正在发动“地裂”|14:2B71" notice="auto" icon="Avoid.png"/>
       <a time="38" text="冲锋" icon="Avoid.png"/>
