@@ -6,9 +6,8 @@
 	var data = Model as TimelineRazorModel;
 	var reg= @"^[\u4e00-\u9fa5]";
         if (Regex.IsMatch(data.Zone,reg)) {
-		loc = "绝究极神兵";
+		loc = "究极神兵绝境战";
 	}
-	else {loc = "the Unending Coil of Bahamut (Ultimate)";}
 }
 <timeline>
 	<name>绝究极神兵</name>
