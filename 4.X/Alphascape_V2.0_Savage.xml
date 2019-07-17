@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>欧米茄零式时空狭缝 (阿尔法幻境2)</name>
+  <rev>rev0</rev>
+  <zone>欧米茄零式时空狭缝 (阿尔法幻境2)</zone>
+  <description>
+    次元の狭間オメガ零式：アルファ編2 タイムライン
+    実行には v5.19.2 以降が必要です。
+    タイムラインを追加。
+    noticeは、タンクに最適化されているので、必要に応じて変更してください。
+  </description>
+  <locale>CN</locale>
+  <entry>P1</entry>
+  <start>0039:战斗开始！|我乃尘世幻龙</start>
+
+  <default target-element="Activity" target-attr="notice-d" value="Both" />
+  <default target-element="Activity" target-attr="notice-o" value="-3" />
+  <default target-element="Activity" target-attr="sync-s" value="-10" />
+  <default target-element="Activity" target-attr="sync-e" value="10" />
+
+  <!-- 重要なアクティビティを通知するトリガ スペスペに登録してもいい TLロード時のみ有効 begin -->
+  <!--
+  <t text="自身标记" sync="^1B:[id8]:[mex]:" notice="你被标记">
+    <v-notice
+      duration="5"
+      duration-visible="false"
+      icon="Marker.png" />
+  </t>
+
+  <t text="标记\n ➜ ${_nex}" sync="^1B:[id8]:[nex]:">
+    <v-notice
+      duration="5"
+      duration-visible="false"
+      style="NOTICE_NORMAL"
+      icon="Marker.png" />
+  </t>
+
+  <t text="你被点名" sync="[mex]陷入了“猎物”效果。" notice="你被点名">
+    <v-notice
+      duration="5"
+      duration-visible="false"
+      icon="Marker.png" />
+  </t>
+
+  <t text="点名\n ➜ ${_nex}" sync="[nex]陷入了“猎物”效果。">
+    <v-notice
+      duration="5"
+      duration-visible="false"
+      style="NOTICE_NORMAL"
+      icon="Marker.png" />
+  </t>
+  -->
+  <!-- 重要なアクティビティを通知するトリガ end -->
+
+  <!-- 回転トリガ begin -->
+  <!-- 1回転目の定義 start -->
+  <t text="横回転 ➔靠近/远离" sync="^15:[id8]:尘世幻龙:31AC" notice="靠近远离">
+    <expressions>
+      <set name="take1_yoko" value="true" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      order="-1"
+      icon=""
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+
+  <t text="縦回転 ➔正斜点" sync="^15:[id8]:尘世幻龙:31AD" notice="正点角落">
+    <expressions>
+      <set name="take1_yoko" value="false" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      order="-1"
+      icon=""
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+  <!-- 1回転目の定義 end -->
+
+  <!-- 2回転目の定義 start -->
+  <!-- 横→横 -->
+  <t text="横回転 ➔远离" sync="^15:[id8]:尘世幻龙:31AE" notice="远离">
+    <expressions>
+      <pre name="take1_yoko" value="true" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      icon="Leave.png"
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+
+  <!-- 縦→横 -->
+  <t text="横回転 ➔正点" sync="^15:[id8]:尘世幻龙:31AE" notice="去正点">
+    <expressions>
+      <pre name="take1_yoko" value="false" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      icon="AOECross.png"
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+
+  <!-- 横→縦 -->
+  <t text="縦回転 ➔靠近" sync="^15:[id8]:尘世幻龙:31B0" notice="靠近">
+    <expressions>
+      <pre name="take1_yoko" value="true" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      icon="DamageShare.png"
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+
+  <!-- 縦→縦 -->
+  <t text="縦回転 ➔去角落" sync="^15:[id8]:尘世幻龙:31B0" notice="去角落">
+    <expressions>
+      <pre name="take1_yoko" value="false" />
+    </expressions>
+    <v-notice
+      sync-to-hide="尘世幻龙释放了自身的魔力！"
+      icon="AOEPlus.png"
+      duration="25"
+      duration-visible="false"
+      style="NOTICE_NORMAL" />
+  </t>
+  <!-- 2回転目の定義 end -->
+  <!-- 回転トリガ end -->
+
+  <s name="P1">
+    <a time="15"   text="縦回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="X範囲攻撃" />
+    <a time="27"   text="縦回転（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="X範囲攻撃" />
+    <a time="38"   text="横回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="内周範囲攻撃" />
+    <a time="42"   text="阿卡萌" sync="尘世幻龙正在发动“死亡轮回”。" notice="" icon="頭割り" />
+    <a time="57"   text="横回転（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="内周範囲攻撃" />
+    <a time="65"   text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑" icon="単体強攻撃" />
+    <a time="81"   text="横回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="93"   text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="105"  text="縦回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="108"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑" icon="単体強攻撃" />
+    <a time="114"  text="闪雷风暴" sync="尘世幻龙 starts using 闪雷风暴 on" notice="闪电" />
+    <a time="118"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="126"  text="开天辟地" sync="尘世幻龙正在发动“开天辟地”。" notice="黄色T挑衅" icon="スイッチ" />
+    <a time="137"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑" icon="単体強攻撃" />
+    <a time="153"  text="横回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="156"  text="冰冻" sync="尘世幻龙正在咏唱“北十字星”。" notice="冰冻" />
+    <a time="166"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="170"  text="天光轮回" sync="尘世幻龙正在发动“天光轮回”。" notice="" />
+    <a time="182"  text="横回転（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="192"  text="恐惧咆哮" sync="尘世幻龙 starts using 恐惧咆哮 on Unknown." notice="黄圈注意" />
+    <a time="194"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="203"   text="" sync="我的眷属啊…… 向傲慢的人类露出你的尖牙吧！" notice="换T" goto="P2" />
+  </s>
+
+  <s name="P2">
+    <a time="16"   text="寒霜吐息" sync="远古之龙发动了“寒霜吐息”。" notice="" />
+    <a time="26"   text="寒霜吐息" sync="远古之龙发动了“寒霜吐息”。" notice="" />
+    <a time="40"   text="寒霜吐息" sync="远古之龙发动了“寒霜吐息”。" notice="" />
+    <a time="51"   text="寒霜吐息" sync="远古之龙发动了“寒霜吐息”。" notice="" />
+    <a time="61"   text="寒霜吐息" sync="远古之龙发动了“寒霜吐息”。" notice="" />
+    <a time="70"   text="" sync="这就是原初之星所拥有的毁灭之光……" notice="" />
+    <a time="94"   text="原恒星" sync="尘世幻龙正在发动“原恒星" notice="" />
+    <a time="105"  text="原恒星" sync="尘世幻龙正在发动“原恒星" notice="" />
+    <a time="115"  text="空降" sync="尘世幻龙发动了“空降”" notice="地阶段" icon="スイッチ" goto="P3" />
+  </s>
+
+  <s name="P3">
+    <a time="0"  text="空降"/>
+    <a time="5"  text="开天辟地" sync="尘世幻龙正在发动“开天辟地”。" notice="蓝T挑衅" icon="スイッチ" />
+    <a time="22"  text="深红吐息" sync="尘世幻龙发动了“深红吐息" notice="" />
+    <a time="30"  text="深红吐息" sync="尘世幻龙发动了“深红吐息" notice="" />
+    <a time="37"  text="深红吐息" sync="尘世幻龙发动了“深红吐息" notice="" />
+    <a time="44"  text="深红吐息" sync="尘世幻龙发动了“深红吐息" notice="" />
+    <a time="69"  text="燃烧之尾" sync="尘世幻龙发动了“燃烧之尾" notice="" icon="単体強攻撃" />
+    <a time="81"  text="原恒星" sync="尘世幻龙正在发动“原恒星" notice="" />
+    <a time="86"  text="原恒星" sync="尘世幻龙发动了“原恒星" notice="" />
+    <a time="92"  text="原恒星" sync="尘世幻龙正在发动“原恒星" notice="" />
+    <a time="97"  text="原恒星" sync="尘世幻龙发动了“原恒星" notice="" />
+    <a time="111"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑1" icon="スイッチ" />
+    <a time="122"  text="阿卡萌" sync="尘世幻龙正在发动“死亡轮回”。" notice="" icon="頭割り" />
+    <a time="134"  text="闪雷风暴" sync="Unknown starts using 闪雷风暴 on" notice="指定位置に散開" icon="散開B" />
+    <a time="133"  text="恐惧咆哮" sync="尘世幻龙は「恐惧咆哮」の構え。" notice="" />
+    <a time="148"  text="随机旋转（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="152"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑2" icon="単体強攻撃" />
+    <a time="161"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="168"  text="开天辟地" sync="尘世幻龙正在发动“开天辟地”。" notice="黄T挑衅" icon="スイッチ" />
+    <a time="179"  text="百京核爆" sync="远古之龙正在发动“百京核爆" notice="" />
+    <a time="187"  text="阿卡萌" sync="尘世幻龙正在发动“死亡轮回”。" notice="" icon="頭割り" />
+    <a time="211"  text="随机旋转（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="214"  text="冰冻" sync="尘世幻龙正在咏唱“北十字星”。" notice="冰冻" />
+    <a time="222"  text="闪雷风暴" sync="尘世幻龙 starts using 闪雷风暴 on" notice="" />
+    <a time="225"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="230"  text="恐惧咆哮" sync="尘世幻龙は「恐惧咆哮」の構え。" notice="黄圈注意" />
+    <a time="242"  text="天光轮回" sync="尘世幻龙正在发动“天光轮回”。" notice="" />
+    <a time="245"  text="天光轮回" sync="尘世幻龙发动了“天光轮回" notice="" />
+    <a time="247"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="2连死刑" icon="単体強攻撃" />
+    <a time="251"  text="煞尾" sync="尘世幻龙发动了“煞尾”" notice="死刑1" icon="単体強攻撃" />
+    <a time="262"  text="随机旋转（1）" sync="尘世幻龙的魔力已经充满！" notice="" icon="注意" />
+    <a time="265"  text="煞尾" sync="尘世幻龙正在发动“煞尾”。" notice="死刑2" icon="単体強攻撃" />
+    <a time="275"  text="随机旋转（2）" sync="尘世幻龙释放了自身的魔力！" notice="" icon="注意" />
+    <a time="282"  text="开天辟地" sync="尘世幻龙正在发动“开天辟地”。" notice="天ならシャーク、地なら挑発" icon="スイッチ" />
+    <a time="293"  text="百京核爆" sync="远古之龙正在发动“百京核爆" notice="" />
+    <a time="300"  text="阿卡萌" sync="尘世幻龙正在发动“死亡轮回”。" notice="" icon="タイマー" />
+    <a time="321"   text="See U later" sync="無益な抵抗も、もはやこれまで…… 我が咆哮にて終焉を告げようぞ！"  />
+  </s>
+</timeline>

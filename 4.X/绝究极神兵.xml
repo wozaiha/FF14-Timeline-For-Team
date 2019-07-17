@@ -112,60 +112,15 @@
 	</t>
 	<!-- 泰坦结束 -->
 	<!-- 本体触发 -->
-	<t text="忍者" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
+	<t text="活死人" sync="Viscous Aetheroplasm:[id8]:[pc]" sync-count="1" notice="炸弹" notice-o="6">
 		<v-notice
-			duration="30"
-			sync-to-hide="[NIN]:[id4]:[id4]:[id4]:"
-			order="-6"
+			duration="10"
+			order="1"
 			style="NOTICE_NORMAL"
 			job-icon="true"
 		/>
 	</t>
-	<t text="龙骑" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
-		<v-notice
-			duration="30"
-			sync-to-hide="([SAM]|[DRG]):[id4]:[id4]:[id4]:"
-			order="-5"
-			style="NOTICE_NORMAL"
-			job-icon="true"
-		/>
-	</t>
-	<t text="召唤" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
-		<v-notice
-			duration="30"
-			sync-to-hide="([SUM]|[BLM]):[id4]:[id4]:[id4]:"
-			order="-4"
-			style="NOTICE_NORMAL"
-			job-icon="true"
-		/>
-	</t>
-	<t text="诗人" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
-		<v-notice
-			duration="30"
-			sync-to-hide="([BRD]|[MCH]):[id4]:[id4]:[id4]:"
-			order="-3"
-			style="NOTICE_NORMAL"
-			job-icon="true"
-		/>
-	</t>
-	<t text="占星" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
-		<v-notice
-			duration="30"
-			sync-to-hide="([WHM]|[AST]):[id4]:[id4]:[id4]:"
-			order="-2"
-			style="NOTICE_NORMAL"
-			job-icon="true"
-		/>
-	</t>
-	<t text="学者" sync="Notice from TL. name=, text=运动会4" sync-count="1" >
-		<v-notice
-			duration="30"
-			sync-to-hide="[SCH]:[id4]:[id4]:[id4]:"
-			order="-1"
-			style="NOTICE_NORMAL"
-			job-icon="true"
-		/>
-	</t>
+
 	<!-- 本体结束 -->
 
 

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-@using ACT.SpecialSpellTimer.RaidTimeline
-@using System.Text.RegularExpressions
-@{
-	var loc = "";
-	var data = Model as TimelineRazorModel;
-	var reg= @"^[\u4e00-\u9fa5]";
-        if (Regex.IsMatch(data.Zone,reg)) {
-		loc = "欧米茄零式时空狭缝 (德尔塔幻境4)";
-	}
-	else {loc = "Deltascape V4.0 (Savage)";}
-}
+
 <timeline>
 	<name>欧米茄零式时空狭缝 (德尔塔幻境4)</name>
 	<rev>v0.1</rev>
 	<description></description>
-	<zone>@loc</zone>
-	<locale>@Model.Locale</locale>
+	<zone>欧米茄零式时空狭缝 (德尔塔幻境4)</zone>
+	<locale>CN</locale>
 	<entry>分支判断</entry>
 	<start>0039:战斗开始|正在发动“(至高无上|Almagest)”|你们也消失于“虚无”吧</start>
 

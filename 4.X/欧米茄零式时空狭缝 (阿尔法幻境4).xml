@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>欧米茄零式时空狭缝 (阿尔法幻境4)</name>
+  <zone>欧米茄零式时空狭缝 (阿尔法幻境4)</zone>
+  <rev>Beta 0.1</rev>
+  <description>欧米茄零式时空狭缝 (阿尔法幻境4)</description>
+  <author>
+	NGA不死王整合版，感谢摩杜纳Queens，sheeva (with RINGS)，aqua cat，anoyetta
+  </author>
+  
+  <locale>CN</locale>
+  <entry>ENTRY</entry>
+  <start>0039:战斗开始</start>
+
+  <default target-element="Activity" target-attr="notice-d" value="Both" />
+  <default target-element="Activity" target-attr="notice-o" value="-5" />
+
+  <!-- 门神/本体分支-->
+  <s name="ENTRY">
+    <!-- 门神/本体分支-->
+    <t sync="欧米茄M starts using 合成盾" sync-count="1">
+      <load target="门神" truncate="true" />
+    </t>
+
+    <t sync="欧米茄 starts using 目标识别" sync-count="1">
+      <load target="本体" truncate="true" />
+    </t>
+	
+    <a time="10" text="门神/本体" icon="分支" />
+  </s>
+  
+<!--门神-->
+<s name="门神">
+
+	<t text="M跳跃目标" sync="[mex] gains the effect of 魔法受伤加重" notice="易伤" />
+
+    <!--男阶段-->
+    <a time="000" text="门神" />
+    <a time="009" text="合成盾" sync="欧米茄M starts using 合成盾"  sync-s="-20" />
+    <a time="016" text="援护程序f" sync="欧米茄M starts using 援护程序f" sync-s="-30" />
+    <a time="020" text="光学射线f" sync="视觉组 starts using 光学射线f" icon="背对" />
+    <a time="021" text="盾连击s" sync="欧米茄M starts using 盾连击s" notice="盾连击" icon="分散" />
+    <a time="030" text="能量投射"  notice="分摊，铁壁" icon="铁壁" />
+    <!--女阶段-->
+    <a time="047" text="变形f" sync="欧米茄M starts using 变形f" notice="变性换位置" />
+    <a time="062" text="能量放出" sync="能量放出"  icon="Pull" notice="复仇" />
+    <a time="072" text="合成剑" sync="欧米茄F starts using 合成剑" />
+    <a time="083" text="光学射线s" sync="视觉组 starts using 光学射线s" notice="半场AOE" icon="下6点集合" />
+    <a time="085" text="剑连击F" sync="欧米茄F starts using 剑连击F" notice="背后集合" icon="集合" />
+    <a time="092" text="欧米茄烈炎"  notice="散开" icon="散開A" />
+    <a time="110" text="变性" sync="欧米茄F starts using 变形m" goto="混合双打" sync-s="-40" icon="集合" />
+  </s>
+
+  <s name="混合双打">
+    <!-- 共鸣触发器 -->
+    <t text="远离" sync="^1A:欧米茄 gains the effect of 共鸣程序：近" notice="拉开拉开" style="TANK">
+      <v-notice duration="8" icon="Avoid" notice="拉开" duration-visible="false" />
+    </t>
+
+    <t text="靠近" sync="^1A:欧米茄 gains the effect of 共鸣程序：远" notice="靠近靠近" style="TANK">
+      <v-notice duration="8" icon="Stack" notice="靠近" duration-visible="false" />
+    </t>
+    <!-- 共鸣触发器 结束 -->
+	
+	<t text="1号去对面" sync="^1B:[id8]:[mex]:0000:[id4]:(0091|0095)" notice="一号去对面">
+      <v-notice duration="10" icon="1" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="2号别动" sync="^1B:[id8]:[mex]:0000:[id4]:(0092|0096)" notice="二号不动">
+      <v-notice duration="10" icon="2" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="3号去对面" sync="^1B:[id8]:[mex]:0000:[id4]:(0093|0097)" notice="三号去对面">
+      <v-notice duration="10" icon="3" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="4号别动" sync="^1B:[id8]:[mex]:0000:[id4]:(0094|0098)" notice="四号不动">
+      <v-notice duration="10" icon="4" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+	
+
+    <a time="014" text="欧米茄滑跃" sync="欧米茄滑跃" notice="分摊" sync-s="-20" icon="分摊" />
+    <a time="022" text="能量放出" sync="能量放出"  icon="爆炸" />
+    <a time="028" text="防御程序" sync="欧米茄F starts using 防御程序" notice="防火墙，直感" icon="直感" />
+    <a time="037" text="共鸣" sync="欧米茄F starts using 共鸣" notice="共鸣" icon="真假" />
+    <a time="049" text="协作程序c" sync="欧米茄F starts using 协作程序c" icon="散开" />
+    <a time="060" text="光学射线s" sync="视觉组 starts using 光学射线s" icon="下6点集合" />
+    <a time="074" text="激光骤雨" sync="欧米茄F starts using 激光骤雨"  icon="爆炸" />
+    <a time="082" text="太阳射线" sync="欧米茄F starts using 太阳射线" notice="铁壁复仇" icon="复仇" />
+	
+    <!--分支-->
+    <a time="100" text="运动会分支" icon="分支" />
+    <t text="分支＞女运" sync="欧米茄 starts using 合成剑" notice="女运">
+      <load target="女运" truncate="true" />
+      <load target="2循环" />
+      <load target="男运" />
+      <load target="门神最终" />
+    </t>
+    <t text="分支＞男运" sync="欧米茄M starts using 合成盾" notice="男运">
+      <load target="男运" truncate="true" />
+      <load target="2循环" />
+      <load target="女运" />
+      <load target="门神最终" />
+    </t>
+  </s>
+
+  <s name="女运">
+    <a time="020" text="女运開始" sync="欧米茄 starts using 协作程序W" notice="女运" sync-s="-30" />
+    <a time="027" text="剑连击b" sync="欧米茄F starts using 剑连击b" notice="集合" icon="集合" />
+    <a time="028" text="能量投射" sync="欧米茄M starts using 能量投射" icon="分摊" />
+    <a time="034" text="欧米茄冰封"  notice="十字" icon="冰" />
+    <a time="036" text="剑连击F" sync="欧米茄F starts using 剑连击F" notice="背面集合" icon="背面集合" />
+    <a time="039" text="钢铁"  icon="散开" />
+    <a time="043" text="欧米茄烈炎"  notice="散开" icon="散开" />
+    <a time="047" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光雨" icon="全体攻撃" />
+  </s>
+
+  <s name="男运">
+	<t text="M跳跃目标" sync="[mex] gains the effect of 魔法受伤加重" notice="别去分摊有易伤" />
+	
+    <a time="030" text="男运開始" sync="欧米茄 starts using 协作程序W" notice="男运" sync-s="-30" />
+    <a time="037" text="盾连击s" sync="欧米茄M starts using 盾连击s" notice="分散" icon="分散" />
+    <a time="039" text="欧米茄冰封" sync="欧米茄F starts using 欧米茄冰封" notice="十字" icon="冰" notice-o="-3" />
+    <a time="045" text="欧米茄烈炎" sync="欧米茄F starts using 欧米茄烈炎" notice="散开" icon="散开" notice-o="-3" />
+    <a time="046" text="能量投射" notice="分摊" icon="分摊" notice-o="-3" />
+    <a time="050" text="钢铁"  notice="钢铁" icon="分散" notice-o="-3" />
+    <a time="053" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光雨" icon="全体攻撃" notice-o="-3" />
+    <a time="060" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光雨" icon="爆炸" />
+  </s>
+
+  <s name="2循环">
+    <!-- 共鸣触发器 -->
+    <t text="远离" sync="^1A:欧米茄 gains the effect of 共鸣程序：近" notice="拉开拉开" style="TANK">
+      <v-notice duration="8" icon="Avoid" notice="拉开" duration-visible="false" />
+    </t>
+
+    <t text="靠近" sync="^1A:欧米茄 gains the effect of 共鸣程序：远" notice="靠近靠近" style="TANK">
+      <v-notice duration="8" icon="Stack" notice="靠近" duration-visible="false" />
+    </t>
+    <!-- 共鸣触发器 结束 -->
+	
+	<t text="1号去对面" sync="^1B:[id8]:[mex]:0000:[id4]:(0091|0095)" notice="一号去对面">
+      <v-notice duration="10" icon="1" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="2号别动" sync="^1B:[id8]:[mex]:0000:[id4]:(0092|0096)" notice="二号不动">
+      <v-notice duration="10" icon="2" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="3号去对面" sync="^1B:[id8]:[mex]:0000:[id4]:(0093|0097)" notice="三号去对面">
+      <v-notice duration="10" icon="3" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+
+    <t text="4号别动" sync="^1B:[id8]:[mex]:0000:[id4]:(0094|0098)" notice="四号不动">
+      <v-notice duration="10" icon="4" duration-visible="false" sync-to-hide="[mex] gains the effect of 魔法受伤加重 from 欧米茄 for 5.99 Seconds." />
+    </t>
+    <a time="020" text="防御程序" sync="欧米茄F starts using 防御程序" notice="防火墙换T" sync-s="-20"  />
+    <a time="029" text="共鸣" sync="欧米茄F starts using 共鸣" notice="共鸣，万有" icon="真假" />
+    <a time="041" text="协作程序c" sync="欧米茄F starts using 协作程序c" icon="分散" />
+    <a time="052" text="光学射线s" sync="视觉组 starts using 光学射线s" icon="爆炸" />
+    <a time="066" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光雨，铁壁" icon="铁壁" />
+    <a time="075" text="太阳射线" sync="欧米茄F starts using 太阳射线" notice="死刑，复仇" icon="复仇" />
+  </s>
+
+  <s name="门神最终">
+	<t text="男人死" sync="欧米茄M附加了“超越界限”效果" notice="男人已死，注意转火" />
+	<t text="女人死" sync="欧米茄F附加了“超越界限”效果" notice="女人已死，注意转火" />
+
+    <a time="020" text="援护程序f" sync="欧米茄M starts using 援护程序f" notice="援护程序f" sync-s="-20" />
+    <a time="024" text="光学射线f" sync="视觉组 starts using 光学射线f" notice="直线AOE" icon="Eye" />
+    <a time="025" text="欧米茄LB" sync="欧米茄F starts using 欧米茄陨石流星" notice="LB" icon="爆炸" />
+    <a time="036" text="宇宙记忆" sync="欧米茄F starts using 宇宙记忆" notice="宇宙记忆" icon="全体攻撃" />
+    <a time="045" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光雨" icon="爆炸" />
+    <a time="053" text="欧米茄刀光剑舞" sync="欧米茄F starts using 欧米茄刀光剑舞" notice="群挑双死刑"  sync-s="-10"/>
+    <a time="065" notice="眼睛位置" />
+    <!--2循环-->
+    <a time="073" text="援护程序s" sync="欧米茄F starts using 援护程序s" notice="半场AOE" />
+    <a time="077" text="光学射线s" sync="视觉组 starts using 光学射线s" icon="上12安置" />
+    <a time="078" text="欧米茄LB" sync="欧米茄F starts using 欧米茄陨石流星" notice="LB" icon="爆炸" />
+    <a time="089" text="宇宙记忆" sync="欧米茄F starts using 宇宙记忆" notice="宇宙记忆" icon="全体攻撃" />
+    <a time="098" text="激光骤雨" sync="欧米茄F starts using 激光骤雨" notice="激光骤雨" icon="全体攻撃" />
+    <a time="106" text="欧米茄刀光剑舞" sync="欧米茄F starts using 欧米茄刀光剑舞" notice="群挑双死刑"  sync-s="-10"/>
+    <a time="128" text="狂暴" notice="狂暴" />
+  </s>
+
+
+  <!-- 扩散波动炮触发 begin -->
+  <t text="前后安全" sync="3368:欧米茄 starts using 扩散波动炮" notice="不动" />
+
+  <t text="左右安全" sync="3367:欧米茄 starts using 扩散波动炮" notice="转转转" />
+  <!-- 扩散波动炮触发 end -->
+
+  <s name="本体">
+	
+	<t text="回归方程：近" sync="[mex] gains the effect of 回归方程：近" notice="靠近爆炸" />
+	<t text="回归方程：远" sync="[mex] gains the effect of 回归方程：远" notice="远离爆炸" />
+  
+    <a time="000" text="目标识别" sync="欧米茄 starts using 目标识别" notice="死刑" icon="Marker" />
+    <a time="015" text="零式波动炮"  sync-s="-30" icon="TankShare" />
+    <a time="023" text="补丁" sync="欧米茄 starts using 补丁" notice="补丁" icon="Pair" />
+    <a time="029" text="扩散波动炮" sync="欧米茄 starts using 扩散波动炮" notice="扩散波动炮" icon="Thunder" />
+    <a time="037" text="探测式波动炮" sync="欧米茄 starts using 探测式波动炮" notice="探测式波动炮" icon="Targetaoe01" />
+    <a time="048" text="离子流出" sync="欧米茄 starts using 离子流出" notice="AOE" icon="HardAllRangeAttack" />
+    <a time="064" text="你好，世界" sync="欧米茄 starts using 你好，世界" notice="你好世界" icon="AllRangeAttack" goto="HW" />
+  </s>
+
+  <s name="HW">	
+    <a time="000" name="初期化">
+      <expressions>
+        <set name="share1" value="false" />      <!-- true:短D-->
+        <set name="share2" value="false" />      <!-- true:长D -->
+        <set name="is_no_debuff" value="true" />      <!-- true:闲D -->
+        <set name="debuff_origin" value="true" />      <!-- true:第一轮buff-->
+      </expressions>
+    </a>
+    <!-- 你好，世界 触发器 begin -->
+    <!-- DNA begin -->
+    <t text="潜在错误" sync="^1A:[mex] gains the effect of 潜在错误 from" notice="DNA">
+      <expressions>
+        <set name="debuff_origin" value="false" />
+        <set name="is_no_debuff" value="false" />
+      </expressions>
+    </t>
+    <!-- DNA end -->
+
+    <!-- 严重错误：上溢 begin -->
+    @if (Model.Player.InRole("TANK")) {
+    <t text="严重错误：上溢" sync="^1A:[mex] gains the effect of 严重错误：上溢" notice="大圈" sync-count="1">
+      <expressions>
+        <pre name="debuff_origin" value="true" />
+        <set name="debuff_origin" value="false" />
+        <set name="is_no_debuff" value="false" />
+      </expressions>
+    </t>
+    }
+    <t text="严重错误：上溢" sync="1A:[mex] gains the effect of 严重错误：上溢" notice="大圈">
+      <expressions>
+        <pre name="debuff_origin" value="false" />
+      </expressions>
+      <v-notice text="大圈" duration="8" order="-1" />
+    </t>
+    <!-- 严重错误：上溢 end -->
+
+    <!-- 严重错误：同步の処理 begin -->
+    @if (Model.Player.InRole("DPS")) {
+    <t text="短D" sync="^1A:[mex] gains the effect of 严重错误：同步 from  for 8.00 Seconds." notice="短D">
+      <expressions>
+        <pre name="debuff_origin" value="true" />
+        <set name="debuff_origin" value="false" />
+        <set name="is_share1" value="true" />
+        <set name="is_no_debuff" value="false" />
+      </expressions>
+    </t>
+
+    <t text="长D" sync="^1A:[mex] gains the effect of 严重错误：同步 from  for 13.00 Seconds." notice="长D">
+      <expressions>
+        <pre name="debuff_origin" value="true" />
+        <set name="debuff_origin" value="false" />
+        <set name="is_share2" value="true" />
+        <set name="is_no_debuff" value="false" />
+      </expressions>
+    </t>
+    }
+    <!-- 严重错误：同步 end -->
+
+    <!-- 严重错误：下溢 begin -->
+    @if (Model.Player.InRole("Healer")) {
+    <t text="严重错误：下溢" sync="^1A:[mex] gains the effect of 严重错误：下溢" notice="带毒">
+      <expressions>
+        <pre name="debuff_origin" value="true" />
+        <set name="debuff_origin" value="false" />
+        <set name="is_no_debuff" value="false" />
+      </expressions>
+      <v-notice text="带毒" duration="15" icon="注意" order="-1" />
+    </t>
+    }
+    <t text="严重错误：下溢" sync="^1A:[mex] gains the effect of 严重错误：下溢" notice="接毒">
+      <expressions>
+        <pre name="debuff_origin" value="false" />
+      </expressions>
+      <v-notice text="接毒" duration="15" icon="注意" order="-1" />
+    </t>
+    <!-- 严重错误：下溢 end -->
+
+    
+    <!-- 你好，世界 触发器 end -->
+    <a time="010" text="Dubuff" sync="你好，世界" icon="Virus" />
+    <a time="018" text="第一个大圈" />
+    <a time="026" text="第二个大圈" />
+    <a time="032" text="严重错误" sync="欧米茄 starts using 严重错误" notice="最后一轮大圈" notice-o="-3" icon="AllRangeAttack" />
+    <a time="034" text="第三次大圈" />
+    <a time="048" text="第四次大圈" />
+    <a time="049" text="离子流出" sync="欧米茄 starts using 离子流出" notice="离子流出" icon="HardAllRangeAttack" />
+    <a time="059" text="手臂归档" notice="手臂归档" icon="Attention" goto="手臂归档" />
+  </s>
+
+  <s name="手臂归档">
+    <!-- 手臂归档 触发器 begin -->
+    <!--
+      Y = Yellow = TurnR (009C)
+      B = Blue   = TurnL (009D)
+    -->
+    <!-- 变量初始化-->
+    <t no="0" sync="欧米茄 starts using 手臂归档">
+      <expressions>
+        <set name="arm_no" count="0" />
+        <set name="is_arm1_Y" value="false" />
+        <set name="is_arm2_Y" value="false" />
+        <set name="is_arm3_Y" value="false" />
+      </expressions>
+    </t>
+
+    <!-- 手臂1 -->
+    <t no="1" sync="^1B:[id8]:右臂组:0000:[id4]:009C:" text="手臂1 Ｙ">
+      <expressions>
+        <pre name="arm_no" count="0" />
+        <set name="is_arm1_Y" value="true" />
+      </expressions>
+      <v-notice order="-5" icon="TurnR" duration="8" duration-visible="false" />
+    </t>
+    <t no="2" sync="^1B:[id8]:右臂组:0000:[id4]:009D:" text="手臂1 Ｂ">
+      <expressions>
+        <pre name="arm_no" count="0" />
+        <set name="is_arm1_Y" value="false" />
+      </expressions>
+      <v-notice order="-5" icon="TurnL" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- 手臂2 -->
+    <t no="3" sync="^1B:[id8]:右臂组:0000:[id4]:009C:" text="手臂2 Ｙ">
+      <expressions>
+        <pre name="arm_no" count="1" />
+        <set name="is_arm2_Y" value="true" />
+      </expressions>
+      <v-notice order="-4" icon="TurnR" duration="8" duration-visible="false" />
+    </t>
+    <t no="4" sync="^1B:[id8]:右臂组:0000:[id4]:009D:" text="手臂2 Ｂ">
+      <expressions>
+        <pre name="arm_no" count="1" />
+        <set name="is_arm2_Y" value="false" />
+      </expressions>
+      <v-notice order="-4" icon="TurnL" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- 手臂3 -->
+    <t no="5" sync="^1B:[id8]:右臂组:0000:[id4]:009C:" text="手臂3 Ｙ">
+      <expressions>
+        <pre name="arm_no" count="2" />
+        <set name="is_arm3_Y" value="true" />
+      </expressions>
+      <v-notice order="-3" icon="TurnR" duration="8" duration-visible="false" />
+    </t>
+    <t no="6" sync="^1B:[id8]:右臂组:0000:[id4]:009D:" text="手臂3 Ｂ">
+      <expressions>
+        <pre name="arm_no" count="2" />
+        <set name="is_arm3_Y" value="false" />
+      </expressions>
+      <v-notice order="-3" icon="TurnL" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- 计算手臂-->
+    <t no="20" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):">
+      <expressions>
+        <set name="arm_no" count="+1" />
+      </expressions>
+    </t>
+
+    <!-- 最终判定 begin -->
+    <!-- All B -->
+    <t no="31" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="西" notice="西">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="false" />
+        <pre name="is_arm2_Y" value="false" />
+        <pre name="is_arm3_Y" value="false" />
+      </expressions>
+      <v-notice icon="Arrow7" order="-1" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- All Y -->
+    <t no="32" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="东" notice="东">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="true" />
+        <pre name="is_arm2_Y" value="true" />
+        <pre name="is_arm3_Y" value="true" />
+      </expressions>
+      <v-notice icon="Arrow3" order="-1" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- BBY -->
+    <t no="33" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="西南" notice="西南">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="false" />
+        <pre name="is_arm2_Y" value="false" />
+        <pre name="is_arm3_Y" value="true" />
+      </expressions>
+      <v-notice icon="Arrow6" order="-1" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- BYY -->
+    <t no="34" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="东南" notice="东南">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="false" />
+        <pre name="is_arm2_Y" value="true" />
+        <pre name="is_arm3_Y" value="true" />
+      </expressions>
+      <v-notice icon="Arrow4" order="-1" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- YBB -->
+    <t no="35" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="西北" notice="西北">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="true" />
+        <pre name="is_arm2_Y" value="false" />
+        <pre name="is_arm3_Y" value="false" />
+      </expressions>
+      <v-notice icon="Arrow8" order="-1" duration="8" duration-visible="false" />
+    </t>
+
+    <!-- YYB -->
+    <t no="36" sync="^1B:[id8]:右臂组:0000:[id4]:(009C|009D):" text="东北" notice="东北">
+      <expressions>
+        <pre name="arm_no" count="3" />
+        <pre name="is_arm1_Y" value="true" />
+        <pre name="is_arm2_Y" value="true" />
+        <pre name="is_arm3_Y" value="false" />
+      </expressions>
+      <v-notice icon="Arrow2" order="-1" duration="8" duration-visible="false" />
+    </t>
+    
+    <!-- 最终判定 end -->
+    
+    
+	<t text="回归方程：近" sync="[mex] gains the effect of 回归方程：近" notice="靠近爆炸" />
+	<t text="回归方程：远" sync="[mex] gains the effect of 回归方程：远" notice="远离爆炸" />
+  
+    <a time="000" text="手臂处理開始" />
+    <a time="010" text="手臂归档" sync="欧米茄 starts using 手臂归档" icon="Attention" />
+    <a time="020" text="光束开始" sync="右臂组 starts using 超能脉冲"  notice-o="-3" icon="Targetaoe02" />
+    <a time="030" text="目标识别" sync="欧米茄 starts using 目标识别" notice="目标识别" icon="Marker" />
+    <a time="038" text="零式波动炮" sync="零式波动炮" notice="零式波动炮" icon="TankShare" />
+    <a time="044" text="扩散波动炮" sync="欧米茄 starts using 扩散波动炮" notice="扩散波动炮" icon="Thunder" />
+    <a time="052" text="探测式波动炮" sync="欧米茄 starts using 探测式波动炮" notice="探测式波动炮" icon="Targetaoe01" />
+
+    <!--アーカイブX-->
+    <a time="070" text="手臂归档x" sync="欧米茄 starts using 手臂归档x" notice="手臂归档x" sync-s="-20" icon="Attention" />
+    <a time="080" text="锁定目标" sync="欧米茄 starts using 波动炮" notice="连线" icon="SpreadB" notice-o="0" />
+    <a time="088" text="波动炮" notice="波动炮" icon="Distance" />
+    <a time="091" text="目标识别" sync="欧米茄 starts using 目标识别" notice="目标识别" icon="Marker" />
+    <a time="100" text="零式波动炮" sync="零式波动炮" notice="零式波动炮" icon="TankShare" />
+    <a time="120" text="补丁" sync="欧米茄 starts using 补丁" notice="补丁" icon="Pair" />
+    <a time="126" text="扩散波动炮" sync="欧米茄 starts using 扩散波动炮" notice="扩散波动炮" icon="Thunder" />
+    <a time="134" text="探测式波动炮" sync="欧米茄 starts using 探测式波动炮" notice="探测式波动炮" icon="Targetaoe01" />
+    <a time="145" text="离子流出" sync="欧米茄 starts using 离子流出" notice="离子流出" icon="HardAllRangeAttack" />
+    <a time="155" text="全归档 " sync="欧米茄 starts using 全归档 " notice="全归档 " goto="全归档 " />
+  </s>
+
+  <s name="全归档 ">
+    <!-- 全归档  begin -->
+    <t text="顺时针旋转" sync="^1B:[id8]:？？？？:[id4]:[id4]:009C" notice="右后方">
+      <v-notice duration="6" icon="TurnR" duration-visible="false" />
+      <v-notice text="右后方" duration="6" icon="Arrow4" duration-visible="false" />
+    </t>
+
+    <t text="逆时针旋转" sync="^1B:[id8]:？？？？:[id4]:[id4]:009D" notice="左后方">
+      <v-notice duration="6" icon="TurnL" duration-visible="false" />
+      <v-notice text="左后方" duration="6" icon="Arrow6" duration-visible="false" />
+    </t>
+
+
+   <!-- 全归档 end -->
+
+    <a time="000" text="全归档 " sync="欧米茄 starts using 全归档 " notice="确认方向" icon="Attention" />
+    <a time="012" text="欧米茄滑跃" sync="欧米茄 starts using 欧米茄滑跃" notice="集合" notice-o="-1" icon="Stack" />
+    <a time="024" text="三角攻击" sync="^15:[id8]:欧米茄:3378:三角攻击" notice="三角攻击" icon="StackAOE" />
+    <a time="025" text="分散分摊" icon="Leave" />
+    <a time="032" text="自爆" notice="自爆" icon="Bomb" />
+    <a time="036" text="扩散波动炮" sync="欧米茄 starts using 扩散波动炮" notice="扩散波动炮" icon="Thunder" />
+    <a time="060" text="载入中" icon="Branch"/>
+
+    <t text="HW2" sync="欧米茄 starts using 你好，世界" notice="HW" goto="HW" />
+    <t text="最終フェーズへ" sync="欧米茄 starts using 程序・欧米茄" goto="PHASE6 最終" />
+  </s>
+
+  <s name="PHASE6 最終">
+    <a time="000" text="程序・欧米茄" sync="欧米茄 starts using 程序・欧米茄" notice="程序・欧米茄" />
+    <a time="007" text="离子流出" sync="离子流出" notice="离子流出" icon="HardAllRangeAttack" />
+    <a time="054" text="狂暴开始" notice="狂暴" icon="HardAllRangeAttack" />
+    <a time="064" text="GG"  icon="Timeout" />
+  </s>
+</timeline>
