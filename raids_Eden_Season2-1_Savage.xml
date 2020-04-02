@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>E5s</name>
+  <rev>rev1.5</rev>
+  <description>
+    伊甸零式希望乐园(共鸣之章1) 时间轴
+  </description>
+  <author>anoyetta, sheeva,Translated by Tsubasa</author>
+  <license>CC BY-SA</license>
+  <zone>伊甸零式希望乐园(共鸣之章1)</zone>
+  <locale>CN</locale>
+  <entry>PHASE1</entry>
+  <start>0039:战斗开始</start>
+
+  <default target-element="Activity" target-attr="notice-o" value="-4" />
+  <default target-element="Activity" target-attr="sync-s" value="-6" />
+  <default target-element="Activity" target-attr="sync-e" value="6" />
+
+  @{ var origin = 0.0; }
+
+  <t text="避雷" sync="^1A:[id8]:[mex] gains the effect of 避雷 from  for [_duration] Seconds.">
+    <v-notice
+      icon="Lightning.png"
+      order="1"
+      sync-to-hide="^1E:[id8]:[mex] loses the effect of 避雷" />
+  </t>
+
+  <t text="雷云" sync="^1B:[id8]:[mex]:0000:[id4]:006E:0000:0000:0000:" notice="放雷云">
+    <v-notice
+      icon="True.png"
+      duration="5"
+      duration-visible="false"
+      order="-1" />
+  </t>
+
+  <t text="混乱" sync="^1B:[id8]:[mex]:0000:[id4]:00D2:0000:0000:0000:" notice="准备混乱">
+    <v-notice
+      icon="True.png"
+      duration="5"
+      duration-visible="false"
+      order="-1" />
+  </t>
+
+  <t text="痛打" sync=" begins casting 痛打 on [mex]" notice="痛打">
+    <v-notice
+      icon="HardAttack.png"
+      duration="4"
+      duration-visible="false"
+      order="-1" />
+  </t>
+
+  <t text="ショックブラスト(小怪死刑)" sync=" begins casting ショックブラスト on [mex]" notice="ショックブラスト">
+    <v-notice
+      icon="HardAttack.png"
+      duration="4"
+      duration-visible="false"
+      order="-1" />
+  </t>
+
+  <t text="電気ショック" sync="^1A:[id8]:[mex] gains the effect of 電気ショック from (.*?) for 9.00" >
+    <v-notice
+      icon="Thunder.png"
+      duration="9"
+      order="-2"
+      sync-to-hide="^1E:[id8]:[mex] loses the effect of 電気ショック" />
+  </t>
+
+  <t text="充能" sync="^1A:[id8]:(.*?) gains the effect of 充能 from (.*?)" notice="充能">
+    <expressions>
+      <set name="is_charge" value="true" />
+    </expressions>
+    <v-notice
+      icon="Thunder.png"
+      duration="120"
+      duration-visible="false"
+      order="-1"
+      sync-to-hide="^1E:[id8]:(.*?) loses the effect of 充能 from (.*?)" />
+  </t>
+
+  <t name="充能解除" sync="^1E:[id8]:(.*?) loses the effect of 充能 from (.*?)">
+    <expressions>
+      <set name="is_charge" value="false" />
+    </expressions>
+  </t>
+
+  <!-- イクシオンPOP位置判定 by suzu -->
+  <t text="左上" notice="左上安全">
+    <p-sync interval="60">
+      <combatant name="^イクシオン・ミラージュ$" X="23.15" Y="23.10" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <t text="左下" notice="左下安全">
+    <p-sync interval="60">
+      <combatant name="^イクシオン・ミラージュ$" X="23.15" Y="23.90" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <t text="右上" notice="右上安全">
+    <p-sync interval="60">
+      <combatant name="^イクシオン・ミラージュ$" X="23.55" Y="23.10" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <t text="右下" notice="右下安全">
+    <p-sync interval="60">
+      <combatant name="^イクシオン・ミラージュ$" X="23.55" Y="23.90" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <!-- (.*?)南北判定 by suzu -->
+  <t text="北" notice-o="4" notice="(.*?)はアルファー">
+    <p-sync interval="60">
+      <combatant name="^(.*?)・ミラージュ$" X="23.50" Y="23.88" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <t text="南" notice-o="4" notice="(.*?)はチャーリー">
+    <p-sync interval="60">
+      <combatant name="^(.*?)・ミラージュ$" X="23.50" Y="23.12" tolerance="0.00"/>
+    </p-sync>
+  </t>
+
+  <s name="PHASE1">
+    <a time="000.0" sync="(.*?):我が名は(.*?)…… そなたらが、新たな世界を拓くに足るか試させてもらおう……。" />
+    <a time="006.0" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="018.0" text="武具生成" sync="(.*?) begins casting 武具生成 on " />
+    <a time="029.0" text="裁きの界雷" sync="(.*?) begins casting 裁きの界雷 on "  />
+
+    <a time="043.0" text="分離体生成" sync="(.*?)の「分離体生成」"  />
+    <a time="049.0" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="057.0" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="065.0" text="ショックブラスト" sync="ライデン begins casting ショックブラスト on "  />
+    <a time="068.0" text="痛打" sync="(.*?) begins casting 痛打 on "  />
+
+    <a time="077.0" text="雷雲生成" sync="(.*?) begins casting 雷雲生成 on "  />
+    <a time="091.0" text="击飞" sync="(.*?) begins casting 击飞 on " notice="击飞。" notice-o="0">
+      <expressions>
+        <set name="is_charge" value="false" />
+      </expressions>
+    </a>
+    <a time="107.0" text="充能？" sync="(.*?) begins casting 充能 on " />
+
+    <a time="114.0" text="击退（实线）" notice="实线安全 notice-o="-1">
+      <expressions>
+        <pre name="is_charge" value="true" />
+      </expressions>
+      <v-notice
+        text="去实线"
+        icon="True.png"
+        duration="4"
+        duration-visible="false"
+        order="-1" />  
+    </a>
+    <a time="114.0" text="击退（虚线）" notice="虚线安全" notice-o="-1">
+      <expressions>
+        <pre name="is_charge" value="false" />
+      </expressions>
+      <v-notice
+        text="去虚线"
+        icon="True.png"
+        duration="4"
+        duration-visible="false"
+        order="-1" />
+    </a>
+
+    <a time="125.0" text="ギャロップ" sync="イクシオン・ミラージュ begins casting ギャロップ on " />
+
+    <a time="133.0" text="痛打" sync="(.*?) begins casting 痛打 on " />
+    <a time="142.0" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+
+    <a time="152.0" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="159.0" text="雷暴" sync="(.*?) begins casting 雷暴 on "  />
+    <a time="194.0" text="痛打" sync="(.*?) begins casting 痛打 on "  />
+
+    <a time="205.0" text="飞翎羽" sync="(.*?) begins casting ステップトリーダー on " notice="飞翎羽。" />
+    <a time="212.0" text="ショックブラスト" sync="ライデン begins casting ショックブラスト on "  />
+    <a time="215.0" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="217.0" text="ショックブラスト" sync="ライデンの「ショックブラスト」" />
+
+    <a time="225.0" text="NEXT" goto="PHASE2" />
+  </s>
+
+  <s name="PHASE2">
+    @* このフェーズの基点秒数 *@
+    @{ origin = 225.0; }
+
+    <a time="@(227.0 - origin)" text="フォーティーン・充能" sync="(.*?) begins casting フォーティーン・充能 on " notice="ST接盾" />
+
+    <a time="@(276.0 - origin)" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="@(283.0 - origin)" text="月环" sync="(.*?) begins casting ステップトリーダー on " notice="月环" />
+    <a time="@(293.0 - origin)" text="传毒" sync="(.*?) begins casting 传毒 on " notice="准备传毒" />
+    <a time="@(300.0 - origin)" text="痛打" sync="(.*?) begins casting 痛打 on "  />
+
+    <a time="@(311.0 - origin)" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="@(325.0 - origin)" text="分離体生成" sync="(.*?) begins casting 分離体生成 on "  />
+    <a time="@(334.0 - origin)" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="@(341.0 - origin)" text="雷暴" sync="(.*?) begins casting 雷暴 on "  />
+    <a time="@(352.0 - origin)" text="ショックブラスト" sync="ライデン begins casting ショックブラスト on "  />
+    <a time="@(362.0 - origin)" text="飞翎羽" sync="(.*?) begins casting ステップトリーダー on " notice="飞翎羽。" />
+    <a time="@(375.0 - origin)" text="痛打" sync="(.*?) begins casting 痛打 on "  />
+    <a time="@(382.0 - origin)" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+
+    <a time="@(389.0 - origin)" text="NEXT" goto="PHASE3" />
+  </s>
+
+  <s name="PHASE3">
+    @* このフェーズの基点秒数 *@
+    @{ origin = 389.0; }
+
+    <a time="@(393.0 - origin)" text="フォーティーン・充能" sync="(.*?) begins casting フォーティーン・充能 on " notice="MT接盾" />
+
+    <a time="@(438.1 - origin)" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="@(445.2 - origin)" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="@(457.0 - origin)" text="雷雲生成" sync="(.*?) begins casting 雷雲生成 on " notice="雷雲生成。" />
+    <a time="@(472.0 - origin)" text="击飞" sync="(.*?) begins casting 击飞 on " notice="击飞。" notice-o="0"/>
+    <a time="@(481.0 - origin)" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE" />
+    <a time="@(497.0 - origin)" text="传毒" sync="(.*?) begins casting 传毒 on " notice="传毒。" />
+    <a time="@(505.0 - origin)" text="痛打" sync="(.*?) begins casting 痛打 on " notice="痛打。" />
+    <a time="@(517.0 - origin)" text="裁きの熱雷" sync="(.*?) begins casting 裁きの熱雷 on " notice="AOE">
+      <expressions>
+        <set name="is_charge" value="false" />
+      </expressions>
+    </a>
+
+    <a time="@(527.0 - origin)" text="充能？" sync="(.*?) begins casting 充能 on " sync-s="-9" />
+
+    <a time="@(534.0 - origin)" text="月环" sync="(.*?) begins casting ステップトリーダー on " notice="月环。">
+      <expressions>
+        <pre name="is_charge" value="true" />
+      </expressions>
+    </a>
+    <a time="@(534.0 - origin)" text="飞翎羽" sync="(.*?) begins casting ステップトリーダー on " notice="飞翎羽。">
+      <expressions>
+        <pre name="is_charge" value="false" />
+      </expressions>
+    </a>
+
+    <a time="@(543.0 - origin)" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="@(549.0 - origin)" text="裁きの熱雷1" sync="(.*?) begins casting 裁きの熱雷 on " notice="全体攻撃、2回" />
+    <a time="@(560.0 - origin)" text="裁きの熱雷2" sync="(.*?) begins casting 裁きの熱雷 on " notice="" />
+    <a time="@(571.0 - origin)" text="充能" sync="(.*?) begins casting 充能 on " />
+    <a time="@(577.0 - origin)" text="裁きの熱雷1" sync="(.*?) begins casting 裁きの熱雷 on " notice="全体攻撃、3回" />
+    <a time="@(588.0 - origin)" text="裁きの熱雷2" sync="(.*?) begins casting 裁きの熱雷 on " notice="" />
+    <a time="@(600.0 - origin)" text="裁きの熱雷3" sync="(.*?) begins casting 裁きの熱雷 on " notice="" />
+
+    <a time="@(609.0 - origin)" text="フォーティーン・充能" sync="(.*?) begins casting フォーティーン・充能 on " notice="フォーティーン。" />
+  </s>
+</timeline>
