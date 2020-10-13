@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+    <name>欧米茄零式时空狭缝 (阿尔法幻境3)</name><!--时间轴名称-->
+    <rev>1.0.0</rev><!--版本号-->
+    <description>NGA不死王整合版，感谢撸猫，sheeva (with RINGS)</description><!--时间轴说明-->
+    <zone>欧米茄零式时空狭缝 (阿尔法幻境3)</zone>
+    <locale>CN</locale>
+    <entry>ENTRY</entry>
+    <start>0039:战斗开始</start>
+
+    <default target-element="Activity" target-attr="notice-d" value="Both" />
+    <default target-element="Activity" target-attr="notice-o" value="-6" />
+    <default target-element="Activity" target-attr="sync-s" value="-10" />
+    <default target-element="Activity" target-attr="sync-e" value="10" />
+
+    <!-- 触发器 -->
+    <t name="火炎放射" sync="欧米茄:325C" notice="分散站位">
+        <v-notice duration="10" icon="注意.png"/>
+    </t>
+
+	<!-- 左右齐射触发器 -->	
+	<!-- 第一发定义 -->
+	<t name="第一发右舷齐射" sync="14:3262:欧米茄 starts using 右舷齐射·波动炮" notice="去左边">
+		<expressions>
+			<set name="take1_right" value="true" ttl="10"/>
+		</expressions>
+	</t>
+	
+	<t name="第一发左舷齐射" sync="14:3264:欧米茄 starts using 左舷齐射·波动炮" notice="去右边">
+		<expressions>
+			<set name="take1_left" value="true" ttl="10"/>
+		</expressions>
+	</t>
+
+	<!-- 第二发定义 -->
+	<t name="右舷->右舷" sync="14:3263:欧米茄 starts using 右舷齐射·波动炮" notice="穿穿穿">
+		<expressions>
+			<pre name="take1_right" value="true" />
+			<set name="take1_left" value="false" />
+			<set name="take1_right" value="false" />
+		</expressions>
+	</t>
+	
+	<t name="左舷->右舷" sync="14:3263:欧米茄 starts using 右舷齐射·波动炮" notice="不动">
+		<expressions>
+			<pre name="take1_right" value="false" />
+			<pre name="take1_left" value="true" />
+			<set name="take1_left" value="false" />
+		</expressions>
+	</t>
+	
+	<t name="右舷->左舷" sync="14:3265:欧米茄 starts using 左舷齐射·波动炮" notice="不动">
+		<expressions>
+			<pre name="take1_right" value="true" />
+			<pre name="take1_left" value="false" />
+			<set name="take1_right" value="false" />
+		</expressions>
+	</t>
+	
+	<t name="左舷->左舷" sync="14:3265:欧米茄 starts using 左舷齐射·波动炮" notice="穿穿穿">
+		<expressions>
+			<pre name="take1_right" value="false" />
+			<pre name="take1_left" value="true" />
+			<set name="take1_left" value="false" />
+		</expressions>
+	</t>
+		
+	<s name="ENTRY">
+        <a time="000" text="开始"/>
+        <a time="003" text="同步"  sync="欧米茄:368" sync-s="3" sync-e="0"/>
+        <a time="011" text="原子射线" sync="欧米茄:326C" sync-s="15" sync-e="15"/>
+        <a time="023" text="芥末爆弹" sync="欧米茄:326D" icon="死刑.png" style="TANK" notice="死刑"/>
+        <a time="029" text="火炎放射" sync="欧米茄:325C" />
+
+        <a time="031" text="燃烧室排热" sync="欧米茄:325E" />
+        <a time="039" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[24]" />
+        <a time="044" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[35]" />
+        <a time="056" text="生成外设" sync="欧米茄:324A" notice="小拳拳"/>
+        <a time="072" text="芥末爆弹" sync="欧米茄:326D" icon="死刑.png" style="TANK" notice="死刑"/>
+
+		<t text="Phase 2" sync="欧米茄:3251" sync-count="1">
+			<load target="LEVELCHECK" truncate="true"/>
+		</t>        
+    </s>
+	
+	<s name="LEVELCHECK">
+		<t no="0" sync="等级检测仪:3626">
+			<expressions>
+				<set name="is_odd" value="false" />
+				<set name="is_me_appeared" value="false" />
+				<set name="is_positive" value="false" />
+				<set name="is_pair_positive" value="false" />
+				<set name="is_done" value="false" />
+			</expressions>
+		</t>
+
+		<t no="1" sync="^1B:[id8]:[pc]:0000:[id4]:(00A2|00A3):">
+			<expressions>
+				<set name="is_odd" toggle="true" ttl="3" />
+			</expressions>
+		</t>
+
+		<t no="11" sync="^1B:[id8]:[mex]:0000:[id4]:00A2:" text="自己正极">
+			<expressions>
+				<pre name="is_done" value="false" />
+				<set name="is_me_appeared" value="true" ttl="3" />
+				<set name="is_positive" value="true" />
+			</expressions>
+			<v-notice icon="Positive" duration="8" duration-visible="false" />
+		</t>
+		
+		<t no="12" sync="^1B:[id8]:[mex]:0000:[id4]:00A3:" text="自己负极">
+			<expressions>
+				<pre name="is_done" value="false" />
+				<set name="is_me_appeared" value="true" ttl="3" />
+				<set name="is_positive" value="false" />
+			</expressions>
+			<v-notice icon="Negative" duration="8" duration-visible="false" />
+		</t>
+
+		<t no="21" sync="^1B:[id8]:[nex]:0000:[id4]:00A2:">
+			<expressions>
+				<pre name="is_done" value="false" />
+				<set name="is_pair_positive" value="true" />
+			</expressions>
+		</t>
+		
+		<t no="22" sync="^1B:[id8]:[nex]:0000:[id4]:00A3:">
+			<expressions>
+				<pre name="is_done" value="false" />
+				<set name="is_pair_positive" value="false" />
+			</expressions>
+		</t>
+
+		<t no="41" text="相斥" sync="^1B:[id8]:[pc]:0000:[id4]:(00A2|00A3):" notice="靠近靠近">
+			<expressions>
+				<pre name="is_odd" value="false" />
+				<pre name="is_me_appeared" value="true" />
+				<pre name="is_positive" value="true" />
+				<pre name="is_pair_positive" value="true" />
+				<pre name="is_done" value="false" />
+				<set name="is_done" value="true" />
+			</expressions>
+			<v-notice icon="Knockback" order="-1" duration="8" duration-visible="false" />
+		</t>
+
+		<t no="42" text="相斥" sync="^1B:[id8]:[pc]:0000:[id4]:(00A2|00A3):" notice="靠近靠近">
+			<expressions>
+				<pre name="is_odd" value="false" />
+				<pre name="is_me_appeared" value="true" />
+				<pre name="is_positive" value="false" />
+				<pre name="is_pair_positive" value="false" />
+				<pre name="is_done" value="false" />
+				<set name="is_done" value="true" />
+			</expressions>
+			<v-notice icon="Knockback" order="-1" duration="8" duration-visible="false" />
+		</t>
+
+		<t no="43" text="吸引" sync="^1B:[id8]:[pc]:0000:[id4]:(00A2|00A3):" notice="远离远离">
+			<expressions>
+				<pre name="is_odd" value="false" />
+				<pre name="is_me_appeared" value="true" />
+				<pre name="is_positive" value="true" />
+				<pre name="is_pair_positive" value="false" />
+				<pre name="is_done" value="false" />
+				<set name="is_done" value="true" />
+			</expressions>
+			<v-notice icon="Pull" order="-1" duration="8" duration-visible="false" />	
+		</t>
+
+		<t no="44" text="吸引" sync="^1B:[id8]:[pc]:0000:[id4]:(00A2|00A3):" notice="远离远离">
+			<expressions>
+				<pre name="is_odd" value="false" />
+				<pre name="is_me_appeared" value="true" />
+				<pre name="is_positive" value="false" />
+				<pre name="is_pair_positive" value="true" />
+				<pre name="is_done" value="false" />
+				<set name="is_done" value="true" />
+			</expressions>
+			<v-notice icon="Pull" order="-1" duration="8" duration-visible="false" />
+		</t>
+
+		<t no="50" sync="等级检测仪:3253">
+			<expressions>
+				<set name="is_odd" value="false" />
+				<set name="is_me_appeared" value="false" />
+				<set name="is_done" value="false" />
+			</expressions>
+		</t>
+		
+		<t name="引导第一次" sync="[mex] gains the effect of 循环程序 from  for 13.00 Seconds." notice="一一一塔" >
+			<v-notice duration="10" icon="注意.png"/>
+		</t>
+		
+		<t name="引导第二次" sync="[mex] gains the effect of 循环程序 from  for 21.00 Seconds." notice="二二二塔" >
+			<v-notice duration="10" icon="注意.png"/>
+		</t>
+		
+		<t name="引导第三次" sync="[mex] gains the effect of 循环程序 from  for 29.00 Seconds." notice="三三三塔" >
+			<v-notice duration="10" icon="注意.png"/>
+		</t>
+		
+		<a time="14" text="执行程序" sync="等级检测仪:3626" />
+		<a time="22" text="磁石" sync="等级检测仪:3253">
+			<v-notice text="東西の円が内側：南" duration="15" icon="分岐" />
+			<v-notice text="東西の円が外側：北" duration="15" icon="分岐" />
+		</a>
+		<a enabled="false" time="23" text="Marker:00A2" sync="1B:(?&lt;pcid&gt;.{8}):[pc]:0000:0000:00A2:0000:0000:0000:" />
+		<a enabled="false" time="23" text="Marker:00A3" sync="1B:(?&lt;pcid&gt;.{8}):[pc]:0000:0000:00A3:0000:0000:0000:" />
+		<a time="36" text="执行程序" sync="等级检测仪:3626" />
+		<a time="68" text="初始化" sync="等级检测仪:3628" notice="钢铁钢铁" icon="躲避.png" />
+		<a time="75" text="最优化" sync="等级检测仪:3627" notice="月环月环" icon="躲避.png" />
+		<a time="123" text="DPS检测 狂暴" icon="分歧.png" />
+		<a time="240" text="分支判断" icon="分歧.png" />
+
+		<t text="Phase 3" sync="14:325B:欧米茄 starts using" sync-count="1">
+			<load target="NEXT" truncate="true"/>
+		</t>
+	</s>
+	
+	
+    <s name="NEXT">
+        <!--### Phase 3-->
+        <a time="000" text="--同步--" sync="14:325B:欧米茄 starts using" />
+        <a time="010" text="三角攻击" sync="欧米茄:325B" />
+        <a time="030" text="导弹发射" sync="欧米茄:325F" />
+        <a time="037" text="火炎放射" sync="欧米茄:325C" />
+        <a time="039" text="燃烧室排热" sync="欧米茄:325E" />
+        <a time="040" text="导弹命中"  sync="欧米茄:3260" notice="放火圈" icon="注意.png"/>
+        <a time="046" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[24]" />
+        <a time="052" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[35]" />
+        <a time="066" text="芥末爆弹" sync="欧米茄:326D" icon="死刑.png" style="TANK" notice="死刑"/>
+        <a time="068" text="爆破" sync="欧米茄:3261" notice="T接线" icon="注意.png"/>
+        <a time="077" text="原子射线" sync="欧米茄:326C"/>
+
+        <a time="090" text="生成外设" sync="欧米茄:324A" notice="大拳拳" />
+        <a time="103" text="突进" sync="欧米茄:3250" />
+        <a time="110" text="欧米茄滑跃" sync=":欧米茄:326B" notice="分摊分摊" icon="注意.png" />
+        <a time="119" text="生成外设" sync="欧米茄:324A" notice="大拳拳" />
+        <a time="132" text="突进" sync="欧米茄:3250" />
+        <a time="138" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[24]" icon="注意.png" />
+        <a time="143" text="右舷/左舷齐射·波动炮" sync="欧米茄:326[35]" icon="注意.png" />
+
+        <!--### Phase 4: Updated Program Light Show-->
+        <a time="157" text="更新循环程序" sync="欧米茄:36FC" />
+        <a time="169" text="火炎放射" sync="欧米茄:36FE" />
+        <a time="171" text="燃烧室排热" sync="欧米茄:3700" />
+        <a time="177" text="零式波动炮" sync="欧米茄:326[68]" />
+        <a time="180" text="零式波动炮" sync="欧米茄:326[79]" notice="穿穿穿"/>
+
+        <a time="196" text="全能之主 1" sync="欧米茄:31BC" notice="一运"/>
+        <a time="200" text="导弹命中" />
+        <a time="210" text="大功率波动炮P" sync="欧米茄:3704" notice="分摊分摊" icon="注意.png"/>
+        <a time="219" text="波动炮P 1" sync="欧米茄:3706"  />
+        <a time="226" text="波动炮P 2" sync="欧米茄:3706" />
+        <a time="235" text="大型导弹P" sync="欧米茄:370C" />
+        <a time="244" text="爆破" sync="欧米茄:3261" notice="T接线" icon="注意.png"/>
+        <a time="250" text="原子射线" sync="欧米茄:326C" />
+
+        <a time="261" text="生成外设" sync=":欧米茄:324A" notice="大拳拳" />
+        <a time="265" text="大爆炸" sync="欧米茄:36F8" icon="注意.png" />
+        <a time="286" text="芥末爆弹" sync=":欧米茄:326D"  icon="死刑.png" style="TANK" notice="死刑"/>
+        <a time="298" text="原子射线" sync=":欧米茄:326C" />
+        <a time="300" text="导弹发射" sync=":欧米茄:325F" />
+        <a time="307" text="火炎放射" sync="欧米茄:32FE" />
+        <a time="309" text="燃烧室排热" sync=":欧米茄:3700" />
+        <a time="310" text="导弹命中" sync="欧米茄:3260" notice="放火圈" icon="注意.png"/>
+        <a time="316" text="零式波动炮" sync="欧米茄:326[68]" />
+        <a time="318" text="零式波动炮" sync="欧米茄:326[79]" notice="穿穿穿"/>
+
+        <a time="334" text="全能之主 2" sync="欧米茄:3702" notice="二运"/>
+        <a time="339" text="导弹命中"  />
+        <a time="342" text="火炎放射"  />
+        <a time="346" text="跟踪导弹P" sync="欧米茄:3709" />
+        <a time="360" text="大功率波动炮P" sync="欧米茄:3704"  notice="分摊分摊" icon="注意.png"/>
+        <a time="362" text="扩散波动炮P" notice="集合引导光圈" />
+        <a time="370" text="波动炮P 1" sync="欧米茄:3706" />
+        <a time="377" text="波动炮P 2" sync="欧米茄:3706" />
+        <a time="400" text="零式波动炮" sync="欧米茄:326[68]" />
+        <a time="403" text="零式波动炮" sync="欧米茄:326[79]" notice="穿穿穿"/>
+        <a time="409" text="零式波动炮" sync="欧米茄:326[68]" />
+        <a time="412" text="零式波动炮" sync="欧米茄:326[79]" notice="穿穿穿"/>
+
+        <a time="424" text="大漩涡" sync="欧米茄:326E" notice="1血" icon="注意.png" />
+        <a time="438" text="芥末爆弹" sync="欧米茄:326D" icon="死刑.png" style="TANK" notice="死刑"/>
+        <a time="440" text="爆破" sync="欧米茄:3261" notice="T接线" icon="注意.png"/>
+        <a time="448" text="原子射线" sync="欧米茄:326A" />
+        <a time="454" text="原子射线" sync="欧米茄:326A" />
+        <a time="460" text="原子射线" sync="欧米茄:326A" />
+        <a time="480" text="狂暴循环" />
+    </s>
+</timeline>

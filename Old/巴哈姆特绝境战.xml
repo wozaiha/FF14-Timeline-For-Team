@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+@using ACT.SpecialSpellTimer.RaidTimeline
+@using System.Text.RegularExpressions
+@{
+	var loc = "";
+	var data = Model as TimelineRazorModel;
+	var reg= @"^[\u4e00-\u9fa5]";
+        if (Regex.IsMatch(data.Zone,reg)) {
+		loc = "巴哈姆特绝境战";
+	}
+	else {loc = "the Unending Coil of Bahamut (Ultimate)";}
+}
+<timeline>
+	<name>巴哈姆特绝境战</name>
+	<rev>v0.1</rev>
+	<description></description>
+	<zone>@loc</zone>
+	<locale>@Model.Locale</locale>
+	<entry>P1-双塔尼亚</entry>
+	<start>0039:战斗开始！</start>
+
+  <default target-element="Activity" target-attr="notice-o" value="-3"/>
+	<default target-element="Activity" target-attr="notice-d" value="Both"/>
+	<default target-element="Activity" target-attr="sync-s" value="-10"/>
+	<default target-element="Activity" target-attr="sync-e" value="10"/>
+
+
+<!-- 触发器 -->
+<t text="月环 分摊" sync="\b月光啊\b.*\b用你的炽热烧尽敌人\b" notice="auto">
+	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="月环 钢铁" sync="\b月光啊\b.*\b照亮铁血霸道\b" notice="auto">
+	<v-notice duration="5" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="月环 钢铁 跳跃" sync="\b我自月而来携钢铁降临于此\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="月环 跳跃 陨石" sync="\b我自月而来降临于此\b.*\b召唤星降之夜\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="月环 跳跃 分摊" sync="\b我自月而来降临于此\b.*\b踏过炽热之地\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="跳跃 月环 陨石流" sync="\b我降临于此对月长啸\b.*\b召唤星降之夜\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="跳跃 钢铁" sync="\b我降临于此\b.*\b征战铁血霸道\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="跳跃 月环" sync="\b我降临于此\b.*\b对月长啸\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="钢铁 分摊 跳跃" sync="\b钢铁燃烧吧\b.*\b成为我降临于此的刀剑吧\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="钢铁 跳跃 分摊" sync="\b钢铁成为我降临于此的燃烧之剑\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="分摊 月环" sync="\b炽热燃烧\b.*\b给予我月亮的祝福\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="跳T 分摊" sync="\b超新星啊，更加闪耀吧\b.*\b照亮红月下炽热之地\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="陨石流 跳T" sync="\b超新星啊，更加闪耀吧\b.*\b在星降之夜，称赞红月\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<t text="分摊 钢铁" sync="\b被炽热灼烧过的轨迹\b.*\b乃成铁血霸道\b" notice="auto">
+	<v-notice duration="10" style="NOTICE" order="-3" icon=""/>
+</t>
+<!-- 触发器 -->
+
+<s name="P1-双塔尼亚">
+  	<a time="07" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+  	<a time="10" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="1" icon=""/>
+    <a time="15" text="分摊" sync="发动了“火球”" notice="auto" icon="" name="0.9"/>
+    <a time="19" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="28" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="30" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="1" icon=""/>
+    <a time="35" text="分摊" sync="发动了“火球”" icon="" goto="0.9"/>
+    <a time="50" text="75%前" notice="auto" icon=""/>
+</s>
+<s name="拘束器2">
+    <a time="08" text="5连火" notice="auto" icon=""/>
+    <a time="14" text="黑球" notice="auto" icon=""/>
+    <a time="21" text="5连火" notice="auto" icon=""/>
+    <a time="28" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="36" text="黑球" notice="auto" icon=""/>
+  	<a time="40" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+  	<a time="50" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="55" text="5连火" notice="auto" icon=""/>
+    <a time="61" text="黑球" notice="auto" icon=""/>
+    <a time="68" text="5连火" notice="auto" icon=""/>
+    <a time="75" text="45%前" notice="auto" icon=""/>
+  </s>
+  <s name="拘束器3">
+    <a time="08" text="5连火" notice="auto" icon=""/>
+    <a time="13" text="双黑球" notice="auto" icon=""/>
+    <a time="20" text="5连火" notice="auto" icon=""/>
+    <a time="20" text="分摊" sync="发动了“火球”" icon=""/>
+    <a time="32" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="41" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="44" text="双黑球" notice="auto" icon=""/>
+    <a time="48" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+    <a time="56" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="58" text="5连火" notice="auto" icon=""/>
+    <a time="64" text="双黑球" notice="auto" icon=""/>
+    <a time="70" text="5连火" notice="auto" icon=""/>
+    <a time="70" text="分摊" sync="发动了“火球”" icon=""/>
+    <a time="82" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+    <a time="90" text="下压" sync="发动了“垂直下落”" notice="auto" icon=""/>
+    <a time="100" text="狂暴前" notice="auto" notice-o="-2" icon=""/>
+  </s>
+
+  <s name="P2-白银凶鸟">
+    <a time="00" text="天地崩坏" notice="auto" icon=""/>
+    <a time="05" text="陨石流1" notice="auto" icon=""/>
+    <a time="08" text="陨石流2" notice="auto" icon=""/>
+    <a time="11" text="月华冲" notice="auto" icon=""/>
+    <a time="13" text="巴哈姆特之爪" notice="auto" icon=""/>
+    <a time="22" text="龙神加护" notice="auto" icon=""/>
+    <a time="30" text="雷点名" notice="auto" icon=""/>
+    <a time="35" text="月环" notice="auto" icon=""/>
+    <a time="36" text="火1点名" notice="auto" icon=""/>
+    <a time="39" text="随机台词a+白圈1" notice="auto" icon=""/>
+    <a time="40" text="死亡宣告" notice="auto" icon=""/>
+    <a time="41" text="白圈2" notice="auto" icon=""/>
+
+    <a time="50" text="巴哈姆特之爪" notice="auto" icon=""/>
+    <a time="52" text="火2点名" notice="auto" icon=""/>
+    <a time="55" text="雷点名" notice="auto" icon=""/>
+    <a time="65" text="分摊" sync="发动了“火球”" icon=""/>
+    <a time="67" text="随机台词b+白圈1" notice="auto" icon=""/>
+    <a time="70" text="死亡宣告+白圈2" notice="auto" icon=""/>
+    <a time="75" text="雷点名+白圈3" notice="auto" icon=""/>
+    <a time="78" text="火3点名" notice="auto" icon=""/>
+
+    <a time="86" text="巴哈姆特之爪" notice="auto" icon=""/>
+		<a time="92" text="随机台词c" notice="auto" icon=""/>
+    <a time="98" text="跳跃" notice="auto" icon=""/>
+    <a time="99" text="火4点名" notice="auto" icon=""/>
+    <a time="102" text="雷点名" notice="auto" icon=""/>
+    <a time="106" text="死亡宣告+白圈1" notice="auto" icon=""/>
+    <a time="109" text="白圈2" notice="auto" icon=""/>
+    <a time="113" text="白圈3" notice="auto" icon=""/>
+		<a time="121" text="死刑" notice="auto" icon=""/>
+		<a time="131" text="随机台词d" notice="auto" icon=""/>
+		<a time="137" text="黑洞+俯冲" notice="auto" icon=""/>
+
+		<a time="154" text="巴哈姆特之爪" notice="auto" icon=""/>
+		<a time="180" text="随机台词e" notice="auto" icon=""/>
+		<a time="190" text="随机台词f" notice="auto" icon=""/>
+		<a time="202" text="死刑" sync="发动了“死刑”" notice="auto" icon=""/>
+		<a time="213" text="巴哈姆特之爪" notice="auto" icon=""/>
+		<a time="224" text="狂暴" notice="auto" icon=""/>
+  </s>
+
+	<s name="P3-第七灵灾">
+	  	<a time="00" text="第七灵灾" notice="auto" icon=""/>
+	  	<a time="04" text="TLB" notice="auto" notice-o="0" icon=""/>
+	    <a time="11" text="巴哈出现" notice="auto" icon="" name="0.9"/>
+	    <a time="17" text="吐息" notice="auto" icon=""/>
+	    <a time="21" text="平击" notice="auto" icon=""/>
+		<!-- 29 进军三重奏 -->
+	    <a time="37" text="俯冲+旋风" icon=""/>
+	    <a time="45" text="分摊点名" notice="auto" icon=""/>
+			<a time="46" text="百万核爆" notice="auto" icon=""/>
+			<a time="47" text="大地动摇+连线点名" notice="auto" icon=""/>
+			<a time="58" text="吐息" notice="auto" icon=""/>
+			<a time="61" text="平击" notice="auto" icon=""/>
+		<!-- 70 黑炎三重奏 -->
+			<a time="79" text="点名开始" notice="auto" icon=""/>
+			<a time="80" text="5连火" notice="auto" icon=""/>
+			<a time="83" text="热离子分摊" notice="auto" icon=""/>
+			<a time="85" text="8秒炸塔" notice="auto" icon=""/>
+			<a time="86" text="分摊点名" notice="auto" icon=""/>
+			<a time="89" text="黑洞*4" notice="auto" icon=""/>
+			<a time="93" text="十亿核爆" notice="auto" icon=""/>
+			<a time="108" text="吐息" notice="auto" icon=""/>
+			<a time="110" text="吐息" notice="auto" icon=""/>
+			<a time="112" text="吐息" notice="auto" icon=""/>
+		<!-- 122 灾厄三重奏（三方会谈） -->
+			<a time="130" text="随机台词" notice="auto" icon=""/>
+			<a time="135" text="连线" notice="auto" icon=""/>
+			<a time="143" text="以太爆发" notice="auto" icon=""/>
+			<a time="144" text="陨石流分散" notice="auto" icon=""/>
+			<a time="146" text="十亿核爆" notice="auto" icon=""/>
+			<a time="155" text="吐息" notice="auto" icon=""/>
+			<a time="160" text="平击" notice="auto" icon=""/>
+			<a time="169" text="吐息" notice="auto" icon=""/>
+		<!-- 174 天地三重奏 -->
+			<a time="182" text="俯冲点名" notice="auto" icon=""/>
+			<a time="188" text="出塔" notice="auto" icon=""/>
+			<a time="194" text="击退" notice="auto" icon=""/>
+			<a time="198" text="转圈" notice="auto" icon=""/>
+			<a time="202" text="黑洞*3" notice="auto" icon=""/>
+			<a time="203" text="火球分摊" notice="auto" icon=""/>
+			<a time="207" text="十亿核爆" notice="auto" icon=""/>
+			<a time="223" text="吐息" notice="auto" icon=""/>
+			<a time="225" text="吐息" notice="auto" icon=""/>
+			<a time="227" text="吐息" notice="auto" icon=""/>
+		<!-- 235 连击三重奏 -->
+			<a time="243" text="魔力炼成1" notice="auto" icon=""/>
+			<a time="247" text="魔力炼成1" notice="auto" icon=""/>
+			<a time="248" text="陨石流*8" notice="auto" icon=""/>
+			<a time="256" text="大地动摇1" notice="auto" icon=""/>
+			<a time="261" text="大地动摇2" notice="auto" icon=""/>
+			<a time="267" text="十亿核爆" notice="auto" icon=""/>
+			<a time="280" text="平击" notice="auto" icon=""/>
+			<a time="288" text="吐息" notice="auto" icon=""/>
+		<!-- 292 群龙八重奏 -->
+			<a time="305" text="凶鸟点名" notice="auto" icon=""/>
+			<a time="305" text="小龙点名" notice="auto" icon=""/>
+			<a time="307" text="小龙点名" notice="auto" icon=""/>
+			<a time="309" text="小龙点名" notice="auto" icon=""/>
+			<a time="311" text="小龙点名" notice="auto" icon=""/>
+			<a time="313" text="小龙点名" notice="auto" icon=""/>
+			<a time="322" text="巴哈点名" notice="auto" icon=""/>
+			<a time="328" text="出塔+分摊" notice="auto" icon=""/>
+			<a time="331" text="双塔俯冲定位" notice="auto" icon=""/>
+			<a time="337" text="旋风读条" notice="auto" icon=""/>
+	</s>
+
+	<s name="P4-双BOSS">
+		<a time="05" text="可选中" notice="auto" icon=""/>
+		<a time="13" text="巴哈姆特之爪+顺劈" notice="auto" icon=""/>
+		<a time="16" text="5连火" notice="auto" icon=""/>
+		<a time="22" text="魔力炼成" notice="auto" icon=""/>
+		<a time="27" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+		<a time="31" text="随机台词1" notice="auto" icon=""/>
+		<a time="44" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+		<a time="52" text="百万核爆" notice="auto" icon=""/>
+		<a time="60" text="双死刑" notice="auto" icon=""/>
+
+		<a time="69" text="巴哈姆特之爪+顺劈" notice="auto" icon=""/>
+		<a time="78" text="5连火" notice="auto" icon=""/>
+		<a time="83" text="魔力炼成" notice="auto" icon=""/>
+		<a time="88" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+		<a time="92" text="随机台词2" notice="auto" icon=""/>
+		<a time="105" text="旋风" sync="starts using (旋风|Twister)" notice="auto" notice-o="3" icon=""/>
+		<a time="115" text="双死刑" notice="auto" icon=""/>
+		<a time="126" text="百万核爆" notice="auto" icon=""/>
+	</s>
+
+	<s name="P5-黄金巴哈">
+		<a time="00" text="无尽轮回" notice="auto" icon=""/>
+		<a time="08" text="死亡轮回" notice="auto" icon=""/>
+		<a time="21" text="Exaflare" notice="auto" icon=""/>
+		<a time="40" text="死亡轮回" notice="auto" icon=""/>
+		<a time="55" text="无尽轮回" notice="auto" icon=""/>
+		<a time="70" text="Exaflare" notice="auto" icon=""/>
+		<a time="91" text="无尽轮回" notice="auto" icon=""/>
+		<a time="105" text="死亡轮回" notice="auto" icon=""/>
+		<a time="123" text="Exaflare" notice="auto" icon=""/>
+		<a time="142" text="无尽轮回" notice="auto" icon=""/>
+		<a time="156" text="死亡轮回" notice="auto" icon=""/>
+		<a time="171" text="Exaflare" notice="auto" icon=""/>
+		<a time="191" text="无尽轮回" notice="auto" icon=""/>
+		<a time="200" text="无尽轮回" notice="auto" icon=""/>
+	</s>
+
+</timeline>

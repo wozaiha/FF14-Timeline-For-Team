@@ -7,10 +7,10 @@
   </description>
   <author>anoyetta, sheeva,Translated by Tsubasa</author>
   <license>CC BY-SA</license>
-  <zone>伊甸零式希望乐园(共鸣之章3)</zone>
+  <zone>伊甸零式希望乐园 (共鸣之章3)</zone>
   <locale>CN</locale>
   <entry>PHASE1</entry>
-  <start>0039:战斗开始|リーンの声:すごい数の罪喰い……！ それに……中心から異質な力を感じます！</start>
+  <start>0039:战斗开始|这么多的食罪灵！而且……我还从中心那里感受到了不同寻常的力量！</start>
 
   <default target-element="Activity" target-attr="notice-o" value="-4" />
   <default target-element="Activity" target-attr="sync-s" value="-5" />
@@ -18,36 +18,36 @@
 
   @if (Model.Player.InRole("TANK")) {
     <!--
-    <t no="0" name="set_notice1" sync="^23:[id8]:ダークアイドル:[id8]:[mex]:0000:0000:0025:[id8]:000F">
+    <t no="0" name="set_notice1" sync="^23:[id8]:暗黑心象:[id8]:[mex]:0000:0000:0025:[id8]:000F">
       <expressions>
         <pre name="previous_tareget" value="me" />
-        <set name="additional_notice" value="、カバー呼ぶー" />
+        <set name="additional_notice" value="、Switch" />
       </expressions>
     </t>
 
-    <t no="0" name="set_notice2" sync="^23:[id8]:ダークアイドル:[id8]:[mex]:0000:0000:0025:[id8]:000F">
+    <t no="0" name="set_notice2" sync="^23:[id8]:暗黑心象:[id8]:[mex]:0000:0000:0025:[id8]:000F">
       <expressions>
         <pre name="previous_tareget" value="partner" />
         <set name="additional_notice" value="" />
       </expressions>
     </t>
 
-    <t no="0" name="set_notice3" sync="^23:[id8]:ダークアイドル:[id8]:[nex]:0000:0000:0025:[id8]:000F">
+    <t no="0" name="set_notice3" sync="^23:[id8]:暗黑心象:[id8]:[nex]:0000:0000:0025:[id8]:000F">
       <expressions>
         <pre name="previous_tareget" value="me" />
         <set name="additional_notice" value="" />
       </expressions>
     </t>
 
-    <t no="0" name="set_notice4" sync="^23:[id8]:ダークアイドル:[id8]:[nex]:0000:0000:0025:[id8]:000F">
+    <t no="0" name="set_notice4" sync="^23:[id8]:暗黑心象:[id8]:[nex]:0000:0000:0025:[id8]:000F">
       <expressions>
         <pre name="previous_tareget" value="partner" />
-        <set name="additional_notice" value="、カバー入るー" />
+        <set name="additional_notice" value="、帮挡" />
       </expressions>
     </t>
     -->
 
-    <t no="1" text="自分に釘" sync="^23:[id8]:ダークアイドル:[id8]:[mex]:0000:0000:0025:[id8]:000F" notice="自分に釘！">
+    <t no="1" text="自身死刑" sync="^23:[id8]:暗黑心象:[id8]:[mex]:0000:0000:0025:[id8]:000F" notice="死刑点你">
       <expressions>
         <set name="previous_tareget" value="me" />
       </expressions>
@@ -57,7 +57,7 @@
         icon="HardAttack.png" />
     </t>
 
-    <t no="1" text="相方に釘" sync="^23:[id8]:ダークアイドル:[id8]:[nex]:0000:0000:0025:[id8]:000F" notice="相方に釘！">
+    <t no="1" text="他人死刑" sync="^23:[id8]:暗黑心象:[id8]:[nex]:0000:0000:0025:[id8]:000F" notice="">
       <expressions>
         <set name="previous_tareget" value="partner" />
       </expressions>
@@ -68,19 +68,19 @@
     </t>
   }
 
-  <t text="強制転移：前" sync="^1A:[id8]:[mex] gains the effect of 強制転移：前 from  for 10.00 Seconds." notice="強制転移、前ー。" >
+  <t text="强制传送：前" sync="^1A:[id8]:[mex] gains the effect of 强制传送：前 from  for 10.00 Seconds." notice="强制传送、前。" >
     <v-notice duration="10" icon="Arrow1.png" />
   </t>
 
-  <t text="強制転移：後" sync="^1A:[id8]:[mex] gains the effect of 強制転移：後 from  for 10.00 Seconds." notice="強制転移、後ろー。" >
+  <t text="强制传送：后" sync="^1A:[id8]:[mex] gains the effect of 强制传送：后 from  for 10.00 Seconds." notice="强制传送、後。" >
     <v-notice duration="10" icon="Arrow5.png" />
   </t>
 
-  <t text="強制転移：右" sync="^1A:[id8]:[mex] gains the effect of 強制転移：右 from  for 10.00 Seconds." notice="強制転移、右ー。" >
+  <t text="强制传送：右" sync="^1A:[id8]:[mex] gains the effect of 强制传送：右 from  for 10.00 Seconds." notice="强制传送、右。" >
     <v-notice duration="10" icon="Arrow3.png" />
   </t>
 
-  <t text="強制転移：左" sync="^1A:[id8]:[mex] gains the effect of 強制転移：左 from  for 10.00 Seconds." notice="強制転移、左ー。" >
+  <t text="强制传送：左" sync="^1A:[id8]:[mex] gains the effect of 强制传送：左 from  for 10.00 Seconds." notice="强制传送、左。" >
     <v-notice duration="10" icon="Arrow7.png" />
   </t>
 
@@ -94,11 +94,22 @@
       </expressions>
     </a>
 
-    <a time="008.0" text="虚無の波動" sync="ダークアイドルは「虚無の波動」の構え。" notice="次は、全体攻撃。" />
-    <a time="020.0" text="闇光の釘" sync="ダークアイドルは「闇光の釘」の構え。" notice="次は、釘。" />
+    <a time="008.0" text="虚无波动" sync="暗黑心象 starts using 虚无波动 " notice=" AOE。轮子 " />
+    <a time="020.0" text="暗光钉" sync="暗黑心象 starts using 暗光钉 " notice="" />
 
-    <a time="037.0" text="波状の号令" sync="ダークアイドルは「波状の号令」の構え。" notice="次は、赤、青で回避。" />
-    <a time="044.0" text="次元孔" sync="ダークアイドルの「次元孔」" notice="" />
+    <a time="037.0" text="波状号令" sync="暗黑心象 starts using 波状号令 " notice=" 回避。" />
+    <a time="044.0" text="次元孔" sync="暗黑心象发动了“次元孔 " notice="" >
+		<v-notice
+			text="左上：红 → 交换"
+			duration="45"
+			icon="Avoid.png"
+			order="0" />
+		<v-notice
+			text="左上：蓝 → 不动"
+			duration="45"
+			icon="DontAction.png"
+			order="1" />
+	</a>
     <a time="051" text="奔流１" />
     <a time="054" text="奔流２" />
     <a time="059" text="奔流３" />
@@ -110,53 +121,53 @@
     <a time="092" text="奔流９" />
     <a time="095" text="奔流10" />
 
-    <a time="102.0" text="次元孔" sync="ダークアイドルは「次元孔」の構え。" notice="次は、強制移動ギミック" />
-    <a time="108.0" text="照準の号令" sync="ダークアイドルは「照準の号令」の構え。" notice="" />
-    <a time="113.0" text="強制転移" sync="ダークアイドルは「強制転移」の構え。" notice="" />
-    <a time="119.0" text="白光の槌" sync="ダークアイドルは「白光の槌」の構え。" notice="" />
+    <a time="102.0" text="次元孔" sync="暗黑心象 starts using 次元孔 " notice="读条天星" />
+    <a time="108.0" text="瞄准号令" sync="暗黑心象 starts using 瞄准号令 " notice="" />
+    <a time="113.0" text="强制传送" sync="暗黑心象 starts using 强制传送 " notice="地星天宫" />
+    <a time="119.0" text="白光之锤" sync="暗黑心象 starts using 白光之锤 " notice="" />
 
-    <a time="135.0" text="虚無の波動" sync="ダークアイドルは「虚無の波動」の構え。" notice="次は、全体攻撃。" />
-    <a time="142.0" text="闇光の釘" sync="ダークアイドルは「闇光の釘」の構え。" notice="次は、釘。" />
+    <a time="135.0" text="虚无波动" sync="暗黑心象 starts using 虚无波动 " notice=" 轮子相位" />
+    <a time="142.0" text="暗光钉" sync="暗黑心象 starts using 暗光钉 " notice="" />
 
-    <a time="156.0" text="波状の号令" sync="ダークアイドルは「波状の号令」の構え。" notice="次は、中央集合。" />
-    <a time="160.0" text="白夜の機動" sync="ダークアイドルは「白夜の機動」の構え。" notice="次は、AOE捨てて外側えー。" />
-    <a time="170.6" text="AOE発動" sync="^15:[id8]:ダークアイドル:4C93:白光の鞭:[id8]:[pc]:" />
+    <a time="156.0" text="波状号令" sync="暗黑心象 starts using 波状号令 " notice=" 相位" />
+    <a time="160.0" text="白夜机动" sync="暗黑心象 starts using 白夜机动 " notice=" 天星" />
+    <a time="170.6" text="白光之鞭" sync="^15:[id8]:暗黑心象:4C93:白光之鞭:[id8]:[pc]:" notice="" />
 
-    <a time="174.0" text="強制転移" sync="ダークアイドルは「強制転移」の構え。" notice="次は、頭割りと散開。" />
-    <a time="180.0" text="極夜の機動" sync="ダークアイドルは「極夜の機動」の構え。" notice="" />
+    <a time="174.0" text="强制传送" sync="暗黑心象 starts using 强制传送 " notice=" 地星天宫" />
+    <a time="180.0" text="极夜机动" sync="暗黑心象 starts using 极夜机动 " notice="" />
 
     @if (Model.Player.InRole("TANK")) {
-      <a time="200.0" text="NEXT" goto="PHASE2 vs雑魚" notice="次は、雑魚フェーズえー、スタンス忘れないー" />
+      <a time="200.0" text="NEXT" goto="PHASE2" notice="小怪阶段 " />
     } else {
-      <a time="200.0" text="NEXT" goto="PHASE2 vs雑魚" notice="次は、雑魚フェーズえー" />
+      <a time="200.0" text="NEXT" goto="PHASE2" notice="小怪阶段" />
     }
   </s>
 
-  <s name="PHASE2 vs雑魚">
+  <s name="PHASE2">
     @* このフェーズの基点秒数 *@
     @{ origin = 200.0; }
 
-    <a time="@(209.0 - origin)" sync="リーンの声:「闇」の力が、さらに凝縮されていきます！" />
+    <a time="@(209.0 - origin)" sync="暗之力进一步被凝缩了！" />
 
-    <a time="@(232.0 - origin)" name="破滅の光" text="破滅の光" sync="^00:282b:アイドラトリーの「破滅の光」" notice="次は、頭割り。" />
-    <a time="@(239.5 - origin)" text="光の飽和" sync="アイドラトリー starts using 光の飽和 on アイドラトリー." notice="次は、沈黙。" />
-    <a time="@(254.0 - origin)" text="破滅の光" sync="^00:282b:アイドラトリーの「破滅の光」" notice="次は、頭割り。" />
-    <a time="@(261.0 - origin)" text="強制転移" sync="^00:282b:ダークアイドルは「強制転移」の構え。" />
-    <a time="@(261.0 - origin)" text="攻撃機動" sync="^00:282b:アイドラトリーは「攻撃機動」の構え。" notice="次は、ダイナモかチャリオット。" />
-    <a time="@(278.0 - origin)" text="破滅の光" sync="^00:282b:アイドラトリーの「破滅の光」" notice="次は、頭割り。" />
-    <a time="@(286.1 - origin)" text="攻撃機動" sync="^00:282b:アイドラトリーは「攻撃機動」の構え。" notice="次は、ダイナモかチャリオット。" />
-    <a time="@(302.0 - origin)" text="破滅の光" sync="^00:282b:アイドラトリーの「破滅の光」" notice="次は、頭割り。" />
-    <a time="@(303.0 - origin)" text="爆散" sync="^00:282b:アイドラトリーは「爆散」の構え。" notice="" />
+    <a time="@(232.0 - origin)" name="破灭之光" text="破灭之光" sync="^00:282b:盲崇发动了“破灭之光 " notice=" 分摊。轮子 天星" />
+    <a time="@(239.5 - origin)" text="极限光" sync="盲崇 starts using 极限光 on 盲崇." notice="  " />
+    <a time="@(254.0 - origin)" text="破灭之光" sync="^00:282b:盲崇发动了“破灭之光 " notice=" 黄昏天宫" />
+    <a time="@(261.0 - origin)" text="强制传送" sync="^00:282b:暗黑心象 starts using 强制传送 " notice=" " />
+    <a time="@(261.0 - origin)" text="攻击机动" sync="^00:282b:盲崇 starts using 攻击机动 " notice=" 钢铁月环。" />
+    <a time="@(278.0 - origin)" text="破灭之光" sync="^00:282b:盲崇发动了“破灭之光 " notice="触发天宫" />
+    <a time="@(286.1 - origin)" text="攻击机动" sync="^00:282b:盲崇 starts using 攻击机动 " notice=" 钢铁月环。" />
+    <a time="@(302.0 - origin)" text="破灭之光" sync="^00:282b:盲崇发动了“破灭之光 " notice=" 分摊。" />
+    <a time="@(303.0 - origin)" text="爆炸" sync="^00:282b:盲崇 starts using 爆炸 " notice="" />
 
-    <a time="@(311.0 - origin)" text="防衛本能１" sync="^00:282b:ブラスヒームの「防衛本能」" notice="次は、全体攻撃6回。" sync-s="-30" />
-    <a time="@(313.0 - origin)" text="防衛本能２" />
-    <a time="@(315.0 - origin)" text="防衛本能３" />
-    <a time="@(317.0 - origin)" text="防衛本能４" />
-    <a time="@(319.0 - origin)" text="防衛本能５" />
-    <a time="@(321.0 - origin)" text="防衛本能６"/>
-    <a time="@(324.0 - origin)" text="爆散" sync="^00:282b:ブラスヒームは「爆散」の構え。" />
+    <a time="@(311.0 - origin)" text="防御本能１" sync="^00:282b:亵渎发动了“防御本能 " notice=" AOE 轮子天宫" sync-s="-30" />
+    <a time="@(313.0 - origin)" text="防御本能２" />
+    <a time="@(315.0 - origin)" text="防御本能３" />
+    <a time="@(317.0 - origin)" text="防御本能４" />
+    <a time="@(319.0 - origin)" text="防御本能５" />
+    <a time="@(321.0 - origin)" text="防御本能６"/>
+    <a time="@(324.0 - origin)" text="爆炸" sync="^00:282b:亵渎 starts using 爆炸 " />
 
-    <a time="@(340.0 - origin)" sync="^00:0044:リーンの声:このエーテルは……！？ 強大な攻撃に備えてくださいッ！" sync-s="-60" goto="PHASE3 Light＆Dark" />
+    <a time="@(340.0 - origin)" sync="^00:0044:琳的声音:这种以太是？！ 请做好准备防御强烈的攻击！" sync-s="-60" goto="PHASE3 Light＆Dark" notice="地星天星"/>
   </s>
 
   <s name="PHASE3 Light＆Dark">
@@ -174,7 +185,7 @@
         sync-to-hide="^1E:[id8]:[mex] loses the effect of 偏属性：光 from ." />
     </t>
 
-    <t text="偏属性：闇" sync="^1A:[id8]:[mex] gains the effect of 偏属性：闇 from" >
+    <t text="偏属性：暗" sync="^1A:[id8]:[mex] gains the effect of 偏属性：暗 from" >
       <expressions>
         <set name="is_light" value="false" />
         <set name="is_darkness" value="true" />
@@ -182,17 +193,17 @@
       <v-notice
         duration="54"
         icon="True.png"
-        sync-to-hide="^1E:[id8]:[mex] loses the effect of 偏属性：闇 from ." />
+        sync-to-hide="^1E:[id8]:[mex] loses the effect of 偏属性：暗 from ." />
     </t>
 
-    <t text="強襲の号令：自分が光" sync="^14:4C2D:ダークアイドル starts using 強襲の号令 on ダークアイドル." notice="黒に移動。" >
+    <t text="强袭号令：自己白色" sync="^14:4C2D:暗黑心象 starts using 强袭号令 on 暗黑心象." notice="去黑" >
       <expressions>
         <pre name="is_light" value="true" />
         <set name="is_darkness" value="false" />
       </expressions>
     </t>
 
-    <t text="強襲の号令：自分が闇" sync="^14:4C2D:ダークアイドル starts using 強襲の号令 on ダークアイドル." notice="白に移動。" >
+    <t text="强袭号令：自己黑色" sync="^14:4C2D:暗黑心象 starts using 强袭号令 on 暗黑心象." notice="去白" >
       <expressions>
         <pre name="is_light" value="false" />
         <set name="is_darkness" value="true" />
@@ -200,162 +211,162 @@
     </t>
 
     @if (Model.Player.InRole("DPS")) {
-      <t text="包囲の号令：自分が光" sync="^14:4C2E:ダークアイドル starts using 包囲の号令 on ダークアイドル." notice="黒い範囲えー。" >
+      <t text="包围号令：自己白色" sync="^14:4C2E:暗黑心象 starts using 包围号令 on 暗黑心象." notice="踩黑塔" >
         <expressions>
           <pre name="is_light" value="true" />
           <set name="is_darkness" value="false" />
         </expressions>
         <v-notice
-          text="黒い範囲に入る"
+          text="踩黑塔"
           duration="10"
           icon="FallingObject.png" />
       </t>
 
-      <t text="包囲の号令：自分が闇" sync="^14:4C2E:ダークアイドル starts using 包囲の号令 on ダークアイドル." notice="白い範囲えー。" >
+      <t text="包围号令：自己黑色" sync="^14:4C2E:暗黑心象 starts using 包围号令 on 暗黑心象." notice="踩白塔" >
         <expressions>
           <pre name="is_light" value="false" />
           <set name="is_darkness" value="true" />
         </expressions>
         <v-notice
-          text="白い範囲に入る"
+          text="踩白塔"
           duration="10"
           icon="FallingObject.png" />
       </t>
     } else {
-      <t text="包囲の号令：自分が光" sync="^14:4C2E:ダークアイドル starts using 包囲の号令 on ダークアイドル." >
+      <t text="包围号令：自己白色" sync="^14:4C2E:暗黑心象 starts using 包围号令 on 暗黑心象." >
         <expressions>
           <pre name="is_light" value="true" />
           <set name="is_darkness" value="false" />
         </expressions>
         <v-notice
-          text="黒の線を取る"
+          text="接黑线"
           duration="10"
           icon="Marker.png" />
       </t>
 
-      <t text="包囲の号令：自分が闇" sync="^14:4C2E:ダークアイドル starts using 包囲の号令 on ダークアイドル." >
+      <t text="包围号令：自己黑色" sync="^14:4C2E:暗黑心象 starts using 包围号令 on 暗黑心象." >
         <expressions>
           <pre name="is_light" value="false" />
           <set name="is_darkness" value="true" />
         </expressions>
         <v-notice
-          text="白の線を取る"
+          text="接白线"
           duration="10"
           icon="Marker.png" />
       </t>
     }
 
-    <t text="玉出現：自分が光" sync="^03:[id8]:Added new combatant (清光|闇影)塊.  Job: N/A Level: 80 Max HP: 148000 Max MP: 0 Pos:" sync-count="0" notice="玉取り" >
+    <t text="球出现：自己白色" sync="^03:[id8]:Added new combatant (清光|暗影)块.  Job: N/A Level: 80 Max HP: 148000 Max MP: 0 Pos:" sync-count="0" notice="撞球" >
       <expressions>
         <pre name="is_light" value="true" />
         <set name="is_darkness" value="false" />
       </expressions>
       <v-notice
-        text="玉が黒なら当たる"
+        text="撞黑球"
         duration="6"
         icon="Explosion.png" />
     </t>
 
-    <t text="玉出現：自分が闇" sync="^03:[id8]:Added new combatant (清光|闇影)塊.  Job: N/A Level: 80 Max HP: 148000 Max MP: 0 Pos:" sync-count="0" notice="玉取り" >
+    <t text="球出现：自己黑色" sync="^03:[id8]:Added new combatant (清光|暗影)块.  Job: N/A Level: 80 Max HP: 148000 Max MP: 0 Pos:" sync-count="0" notice="撞球" >
       <expressions>
         <pre name="is_light" value="false" />
         <set name="is_darkness" value="true" />
       </expressions>
       <v-notice
-        text="玉が白なら当たる"
+        text="撞白球"
         duration="6"
         icon="Explosion.png" />
     </t>
 
-    <t text="三重光環：自分が光" sync="^14:4C7E:ダークアイドル starts using 三重光環 on ダークアイドル." sync-count="0" notice="黒に移動。" >
+    <t text="三重光环：自己白色" sync="^14:4C7E:暗黑心象 starts using 三重光环 on 暗黑心象." sync-count="0" notice="去黑" >
       <expressions>
         <pre name="is_light" value="true" />
         <set name="is_darkness" value="false" />
       </expressions>
     </t>
 
-    <t text="三重光環：自分が闇" sync="^14:4C7E:ダークアイドル starts using 三重光環 on ダークアイドル." sync-count="0" notice="白に移動。" >
+    <t text="三重光环：自己黑色" sync="^14:4C7E:暗黑心象 starts using 三重光环 on 暗黑心象." sync-count="0" notice="去白" >
       <expressions>
         <pre name="is_light" value="false" />
         <set name="is_darkness" value="true" />
       </expressions>
     </t>
 
-    <a time="@(347 - origin)" text="虚無の氾濫" notice="次は、全体攻撃。" />
-    <a time="@(357 - origin)" sync="リーンの声:また何か仕掛けてきます！" />
-    <a time="@(362 - origin)" text="属性変動" sync="ダークアイドルの「属性変動」" />
-    <a time="@(364 - origin)" sync="リーンの声:こ、これは……！ エーテルバランスが極端に偏り始めています！" />
-    <a time="@(367 - origin)" text="強襲の号令" sync="ダークアイドルの「強襲の号令」" notice="次は、東西に分かれる。" />
-    <a time="@(376 - origin)" text="激流" />
+    <a time="@(347 - origin)" text="虚無の氾濫" notice=" AOE。" />
+    <a time="@(357 - origin)" sync="它又要攻过来了！" notice=""/>
+    <a time="@(362 - origin)" text="属性变动" sync="暗黑心象发动了“属性变动 " />
+    <a time="@(364 - origin)" sync="以太的平衡开始偏向了极端！" />
+    <a time="@(367 - origin)" text="强袭号令" sync="暗黑心象发动了“强袭号令 " notice=" 东西分散。" />
+    <a time="@(376 - origin)" text="激流"  notice=" 轮子天宫"/>
     @{
-      var NOTICE_ENTRAPMENT = Model.Player.InRole("DPS") ? "塔踏み。" : "線取り。" ;
+      var NOTICE_ENTRAPMENT = Model.Player.InRole("DPS") ? "踩塔" : "接线" ;
     }
-    <a time="@(382.0 - origin)" text="包囲の号令" sync="ダークアイドルの「包囲の号令」" notice="次は、@NOTICE_ENTRAPMENT" />
-    <a time="@(403.0 - origin)" text="強襲の号令" sync="ダークアイドルの「強襲の号令」" notice="次は、東西に分かれる。" />
-    <a time="@(413.4 - origin)" text="激流" />
-    <a time="@(426.0 - origin)" text="属性変動" sync="ダークアイドルの「属性変動」" />
-    <a time="@(429.0 - origin)" text="次元孔" sync="ダークアイドルの「次元孔」" />
-    <a time="@(434.0 - origin)" text="夜襲の号令" sync="ダークアイドルの「夜襲の号令」" />
+    <a time="@(382.0 - origin)" text="包围号令" sync="暗黑心象发动了“包围号令 " notice=" @NOTICE_ENTRAPMENT " />
+    <a time="@(403.0 - origin)" text="强袭号令" sync="暗黑心象发动了“强袭号令 " notice=" 东西分散。 " />
+    <a time="@(413.4 - origin)" text="激流 地星天星" />
+    <a time="@(426.0 - origin)" text="属性变动" sync="暗黑心象发动了“属性变动 " />
+    <a time="@(429.0 - origin)" text="次元孔" sync="暗黑心象发动了“次元孔 " />
+    <a time="@(434.0 - origin)" text="夜袭号令" sync="暗黑心象发动了“夜袭号令 " />
 
-    <a time="@(444.0 - origin)" text="奔流１回目" notice="右なら前、左は後ろ。">
+    <a time="@(444.0 - origin)" text="奔流１" notice="右前左后 天宫相位">
       <v-notice
-        text="右 → 前へ"
+        text="右 → 前"
         duration="5"
         icon="Arrow1.png"
         order="0" />
       <v-notice
-        text="左 → 後へ"
+        text="左 → 後"
         duration="5"
         icon="Arrow5.png"
         order="1" />
     </a>
 
-    <a time="@(452.0 - origin)" text="奔流２回目" notice="赤ならチェンジ、青ならそのまま">
+    <a time="@(452.0 - origin)" text="奔流２" notice="红换、蓝不动 轮子">
       <v-notice
-        text="左上：赤 → チェンジ"
+        text="左上：红 → 每次交换"
         duration="5"
         icon="Avoid.png"
         order="0" />
       <v-notice
-        text="左上：青 → そのまま"
+        text="左上：蓝 → 原地不动"
         duration="5"
         icon="DontAction.png"
         order="1" />
     </a>
 
-    <a time="@(457.0 - origin)" text="黎明の機動" sync="ダークアイドルの「黎明の機動」" notice="内側えー。" />
+    <a time="@(457.0 - origin)" text="黎明机动" sync="暗黑心象发动了“黎明机动 " notice="去内侧。天星" />
 
-    <a time="@(462.3 - origin)" text="奔流３回目" />
-    <a time="@(465.0 - origin)" text="AoE着弾" />
-    <a time="@(470.4 - origin)" text="奔流４回目" />
-    <a time="@(474.0 - origin)" name="虚無の波動" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="次は、全体攻撃。" />
+    <a time="@(462.3 - origin)" text="奔流３" notice="地星"/>
+    <a time="@(465.0 - origin)" text="去内侧" />
+    <a time="@(470.4 - origin)" text="奔流４" />
+    <a time="@(474.0 - origin)" name="虚无波动" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice=" AOE。" />
 
-    <a time="@(491.0 - origin)" text="闇光の釘" sync="ダークアイドルの「闇光の釘」" sync-s="-15" sync-e="15" notice="次は、釘" />
+    <a time="@(491.0 - origin)" text="暗光钉" sync="暗黑心象发动了“暗光钉 " sync-s="-15" sync-e="15" notice=" " />
 
-    <a time="@(511.0 - origin)" sync="リーンの声:周囲の罪喰いたちが、 全部集まってきているようです……！" notice="次は、全体攻撃。中央からノックバック。" />
-    <a time="@(516.0 - origin)" text="群体突進" sync="ダークアイドルの「群体突進」" />
-    <a time="@(525.0 - origin)" text="属性変動" sync="ダークアイドルの「属性変動」" />
-    <a time="@(531.0 - origin)" text="乱舞の号令" sync="ダークアイドルの「乱舞の号令」" />
-    <a time="@(534.0 - origin)" text="玉出現１" />
-    <a time="@(544.0 - origin)" text="玉出現２" />
-    <a time="@(555.0 - origin)" text="玉出現３" />
-    <a time="@(565.0 - origin)" text="三重光環１" sync="ダークアイドルの「三重光環」" />
-    <a time="@(570.0 - origin)" text="三重光環２" />
-    <a time="@(576.0 - origin)" text="三重光環３" />
-    <a time="@(584.0 - origin)" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="次は、全体攻撃2回。"/>
-    <a time="@(594.0 - origin)" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="" />
+    <a time="@(511.0 - origin)" sync="周围所有的食罪灵都聚集了过来！" notice=" AOE。击退轮子" />
+    <a time="@(516.0 - origin)" text="群体突进" sync="暗黑心象发动了“群体突进 " />
+    <a time="@(525.0 - origin)" text="属性变动" sync="暗黑心象发动了“属性变动 " />
+    <a time="@(531.0 - origin)" text="乱舞号令" sync="暗黑心象发动了“乱舞号令 " />
+    <a time="@(534.0 - origin)" text="球出现１" />
+    <a time="@(544.0 - origin)" text="球出现２" />
+    <a time="@(555.0 - origin)" text="球出现３" />
+    <a time="@(565.0 - origin)" text="三重光环１" sync="暗黑心象发动了“三重光环 " notice=" "/>
+    <a time="@(570.0 - origin)" text="三重光环２" />
+    <a time="@(576.0 - origin)" text="三重光环３" notice=" "/>
+    <a time="@(584.0 - origin)" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice=" AOE2回。轮子"/>
+    <a time="@(594.0 - origin)" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice="" />
 
-    <a time="@(603.0 - origin)" text="属性変動" sync="ダークアイドルの「属性変動」" />
-    <a time="@(609.0 - origin)" text="乱舞の号令" sync="ダークアイドルの「乱舞の号令」" />
-    <a time="@(612.0 - origin)" text="玉出現１" />
-    <a time="@(622.0 - origin)" text="玉出現２" />
-    <a time="@(632.0 - origin)" text="玉出現３" />
-    <a time="@(642.0 - origin)" text="三重光環１" sync="ダークアイドルの「三重光環」" />
-    <a time="@(648.0 - origin)" text="三重光環２" />
-    <a time="@(654.0 - origin)" text="三重光環３" />
-    <a time="@(672.0 - origin)" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="次は、全体攻撃3回。" />
-    <a time="@(682.0 - origin)" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="" />
-    <a time="@(742.0 - origin)" text="虚無の波動" sync="ダークアイドルの「虚無の波動」" notice="" />
-    <a time="@(767.0 - origin)" text="時間切れ" icon="Timeout.png" />
+    <a time="@(603.0 - origin)" text="属性变动" sync="暗黑心象发动了“属性变动 " />
+    <a time="@(609.0 - origin)" text="乱舞号令" sync="暗黑心象发动了“乱舞号令 " />
+    <a time="@(612.0 - origin)" text="球出现１" />
+    <a time="@(622.0 - origin)" text="球出现２" />
+    <a time="@(632.0 - origin)" text="球出现３" />
+    <a time="@(642.0 - origin)" text="三重光环１" sync="暗黑心象发动了“三重光环 " />
+    <a time="@(648.0 - origin)" text="三重光环２" />
+    <a time="@(654.0 - origin)" text="三重光环３" />
+    <a time="@(672.0 - origin)" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice=" AOE3回。" />
+    <a time="@(682.0 - origin)" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice="" />
+    <a time="@(742.0 - origin)" text="虚无波动" sync="暗黑心象发动了“虚无波动 " notice="" />
+    <a time="@(767.0 - origin)" text="狂暴" icon="Timeout.png" />
   </s>
 </timeline>

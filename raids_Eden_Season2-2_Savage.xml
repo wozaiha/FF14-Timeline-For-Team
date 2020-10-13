@@ -7,7 +7,7 @@
   </description>
   <author>anoyetta, sheeva,Translated by Tsubasa</author>
   <license>CC BY-SA</license>
-  <zone>伊甸零式希望乐园(共鸣之章2)</zone>
+  <zone>伊甸零式希望乐园 (共鸣之章2)</zone>
   <locale>CN</locale>
   <entry>PHASE1 Garuda</entry>
   <start>0039:战斗开始</start>
@@ -16,192 +16,88 @@
   <default target-element="Activity" target-attr="sync-s" value="-6" />
   <default target-element="Activity" target-attr="sync-e" value="6" />
 
-  <!-- サッカー判定 by suzu -->
-  <t text="北（西から北西）" notice="西、西、西">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.50" Y="23.20" tolerance="0.00"/><!--北-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.20" Y="23.28" tolerance="0.00"/><!--北西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.28" Y="23.58" tolerance="0.00"/><!--西-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
 
-  <t text="北（東から北東）" notice="東、東、東">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.50" Y="23.20" tolerance="0.00"/><!--北-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.80" Y="23.28" tolerance="0.00"/><!--北東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.72" Y="23.58" tolerance="0.00"/><!--東-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="東（北から北東）" notice="北、北、北">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.80" Y="23.50" tolerance="0.00"/><!--東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.72" Y="23.20" tolerance="0.00"/><!--北東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.42" Y="23.28" tolerance="0.00"/><!--北-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="東（南から南東）" notice="南、南、南">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.80" Y="23.50" tolerance="0.00"/><!--東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.72" Y="23.80" tolerance="0.00"/><!--南東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.42" Y="23.72" tolerance="0.00"/><!--南-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="南（東から南東）" notice="東、東、東">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.50" Y="23.80" tolerance="0.00"/><!--南-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.80" Y="23.72" tolerance="0.00"/><!--南東-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.72" Y="23.42" tolerance="0.00"/><!--東-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="南（西から南西）" notice="西、西、西">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.50" Y="23.80" tolerance="0.00"/><!--南-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.20" Y="23.72" tolerance="0.00"/><!--南西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.28" Y="23.42" tolerance="0.00"/><!--西-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="西（南から南西）" notice="南、南、南">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.20" Y="23.50" tolerance="0.00"/><!--西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.28" Y="23.80" tolerance="0.00"/><!--南西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.58" Y="23.72" tolerance="0.00"/><!--南-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <t text="西（北から北西）" notice="北、北、北">
-    <p-sync interval="60">
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.20" Y="23.50" tolerance="0.00"/><!--西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.28" Y="23.20" tolerance="0.00"/><!--北西-->
-      <combatant name="^(イフリート|ラクタパクシャ)$" X="23.58" Y="23.28" tolerance="0.00"/><!--北-->
-    </p-sync>
-    <expressions>
-      <set name="is_cross" value="true" ttl="10"/>
-    </expressions>
-  </t>
-
-  <!-- 飛び火の判定 -->
-  <!-- ななめ方向は厳密な位置を検知できないため「ななめ」とだけ通知する -->
-  <t sync="(イフリート|ラクタパクシャ) starts using 飛び火" notice="ななめ安置、ななめ安置" sync-interval="10">
-    <expressions>
-      <pre name="is_cross" value="false"/>
-      <pre name="is_firespark" value="true"/>
-    </expressions>
-  </t>
-
-  <!-- ファイアスパークを使ったかどうか -->
-  <t sync="((イフリート|ラクタパクシャ)は「ファイアスパーク」の構え。)|((イフリート|ラクタパクシャ) starts using ファイアスパーク)">
-    <expressions>
-      <set name="is_firespark" value="true" ttl="20"/>
-    </expressions>
-  </t>
-
-  <t text="火炎拳" sync="は「火炎拳」の構え。" notice="火炎ケン">
+  <t text="火焰拳" sync=" casts 火焰拳 " notice="火焰拳">
     <v-notice
       icon="Fire.png"
       duration="4"
       duration-visible="false"
       order="-1" />
   </t>
-  <t text="爆裂炎" sync="は「爆裂炎」の構え。" notice="爆裂エン" />
-  <t text="メテオ" sync="は「メテオストライク」の構え。" notice="メテオ" />
+  <t text="爆裂炎" sync=" casts 爆裂炎 " notice="爆裂炎" />
+  <t text="流星强击" sync=" casts 流星强击 " notice="流星强击" />
 
   @{ var origin = 0.0; }
 
   <s name="PHASE1 Garuda">
-    <a time="012.0" text="スーパーストーム" sync="ガルーダは「スーパーストーム」の構え。" notice="次は、全体攻撃。" />
-    <a time="023.0" text="オクルーデッドフロント" sync="ガルーダは「オクルーデッドフロント」の構え。" notice="" />
-    <a time="032.0" text="フューリア" sync="ガルーダは「フューリアスストーム」の構え。" notice="次は、DPSに線" />
-    <a time="046.8" text="エアーバンプ" sync="ラクタパクシャ starts using エアーバンプ" notice="次は、Xペア処理" />
-    <a time="058.0" text="フィアス" sync="ガルーダは「フィアスストーム」の構え。" notice="次は、牙から扇範囲" />
-    <a time="069.7" text="ダウンバースト" notice="次は、ノックバックとペア処理" />
-    <a time="083.0" text="バキュームスラッシュ" sync="ガルーダは「バキュームスラッシュ」の構え。" notice="次は、ギロチン" />
-    <a time="091.0" text="オクルーデッドフロント" sync="ガルーダは「オクルーデッドフロント」の構え。" notice="次は、安置に移動" />
-    <a time="096.0" text="フューリア" sync="ガルーダは「フューリアスストーム」の構え。" notice="次は、DPSに線" />
-    <a time="105.0" text="フィアス" sync="ガルーダは「フィアスストーム」の構え。" notice="次は、牙から扇範囲" />
+    <a time="012.0" text="超级风暴" sync="迦楼罗 casts 超级风暴 " notice="AOE" />
+    <a time="023.0" text="锢囚锋" sync="迦楼罗 casts 锢囚锋 " notice="" />
+    <a time="032.0" text="暴怒风暴" sync="迦楼罗 casts 暴怒风暴 " notice="天星" />
+    <a time="046.8" text="空气弹垫" sync="赤翼罗羯坨博叉 starts using 空气弹垫" notice="配对" />
+    <a time="058.0" text="凶猛风暴" sync="迦楼罗 casts 凶猛风暴 " notice="扇形AOE 地星" />
+    <a time="069.7" text="下行突风" notice="击退加配对" />
+    <a time="083.0" text="真空斩" sync="迦楼罗 casts 真空斩 " notice="切割" />
+    <a time="091.0" text="锢囚锋" sync="迦楼罗 casts 锢囚锋 " notice="天宫" />
+    <a time="096.0" text="暴怒风暴" sync="迦楼罗 casts 暴怒风暴 " notice="" />
+    <a time="105.0" text="凶猛风暴" sync="迦楼罗 casts 凶猛风暴 " notice="扇形AOE" />
 
-    <a time="112.0" text="NEXT" sync="ガルーダ:おのれ……ちょこまかとッ……！" goto="PHASE2 Ifrit" notice="スタンス忘れない" />
+    <a time="112.0" text="NEXT" sync="迦楼罗:可恶……真会乱跑……" goto="PHASE2 Ifrit" notice="转阶段 相位" />
   </s>
 
   <s name="PHASE2 Ifrit">
     @* このフェーズの基点秒数 *@
     @{ origin = 112.0; }
 
-    <a time="@(117.0 - origin)" sync="イフリート:神色自若……下がるがいい……！" />
-    <a time="@(117.7 - origin)" text="タッチダウン" sync="イフリート starts using タッチダウン on Unknown." notice="次は、タッチダウン。" />
-    <a time="@(130.0 - origin)" text="火炎拳" sync="イフリートは「火炎拳」の構え。" notice="次は、スイッチ" />
-    <a time="@(138.0 - origin)" text="爆裂炎" sync="イフリートは「爆裂炎」の構え。" notice="" />
-    <a time="@(145.0 - origin)" text="メテオストライク" sync="イフリートは「メテオストライク」の構え。" notice="" />
-    <a time="@(154.0 - origin)" text="灼熱の咆哮" sync="イフリートは「灼熱の咆哮」の構え。" notice="次は、全体攻撃。" />
-    <a time="@(164.0 - origin)" text="業炎拳" sync="イフリートは「業炎拳」の構え。" notice="次は、線取り、ヒーラー、遠隔" />
-    <a time="@(182.0 - origin)" text="ファイアスパーク" sync="イフリートは「ファイアスパーク」の構え。" notice="次は、サッカー" />
-    <a time="@(207.0 - origin)" text="業炎拳" sync="イフリートは「業炎拳」の構え。" notice="次は、線取り、ヒーラー、遠隔" />
-    <a time="@(219.0 - origin)" text="火炎拳" sync="イフリートは「火炎拳」の構え。" notice="次は、スイッチ" />
-    <a time="@(228.0 - origin)" text="爆裂炎" sync="イフリートは「爆裂炎」の構え。" notice="" />
-    <a time="@(234.0 - origin)" text="メテオストライク" sync="イフリートは「メテオストライク」の構え。" notice="次は、背面集合" />
+    <a time="@(117.0 - origin)" sync="伊弗利特:神态自若……退下吧！" />
+    <a time="@(117.7 - origin)" text="空降" sync="伊弗利特 starts using 空降 on Unknown." notice="空降。" />
+    <a time="@(130.0 - origin)" text="火焰拳" sync="伊弗利特 casts 火焰拳 " notice="死刑" />
+    <a time="@(138.0 - origin)" text="爆裂炎" sync="伊弗利特 casts 爆裂炎 " notice="地星" />
+    <a time="@(145.0 - origin)" text="流星强击" sync="伊弗利特 casts 流星强击 " notice="" />
+    <a time="@(154.0 - origin)" text="灼热的咆哮" sync="伊弗利特 casts 灼热的咆哮 " notice="AOE" />
+    <a time="@(164.0 - origin)" text="业火拳" sync="伊弗利特 casts 业火拳 " notice="远程+治疗接" />
+    <a time="@(182.0 - origin)" text="火花爆" sync="伊弗利特 casts 火花爆 " notice="踢球 天星天宫" />
+    <a time="@(207.0 - origin)" text="业火拳" sync="伊弗利特 casts 业火拳 " notice="远程+治疗接 地星" />
+    <a time="@(219.0 - origin)" text="火焰拳" sync="伊弗利特 casts 火焰拳 " notice="死刑" />
+    <a time="@(228.0 - origin)" text="爆裂炎" sync="伊弗利特 casts 爆裂炎 " notice="" />
+    <a time="@(234.0 - origin)" text="流星强击" sync="伊弗利特 casts 流星强击 " notice="背面集合" />
 
-    <a time="@(240.0 - origin)" text="NEXT" sync="イフリート:才気煥発……認めよう、その力……！ だがしかしッ！" goto="PHASE3 Pair" />
+    <a time="@(240.0 - origin)" text="NEXT" sync="伊弗利特:才气焕发……我承认你们的力量……" goto="PHASE3 Pair" />
   </s>
 
   <s name="PHASE3 Pair">
     @* このフェーズの基点秒数 *@
     @{ origin = 240.0; }
 
-    <a time="@(246.0 - origin)" sync="ガルーダ:火と風を喚びしこと、 その愚行を後悔させてくれる……！" />
-    <a time="@(246.0 - origin)" text="焔神の呪い" sync="イフリートは「焔神の呪い」の構え。" notice="次は、呪い。" />
-    <a time="@(251.0 - origin)" text="オクルーデッドフロント" sync="ガルーダは「オクルーデッドフロント」の構え。" notice="" />
-    <a time="@(260.0 - origin)" text="火炎拳" sync="イフリートは「火炎拳」の構え。" notice="次は、ST無敵受け。" />
-    <a time="@(268.0 - origin)" text="爆裂炎" sync="イフリートは「爆裂炎」の構え。" notice="" />
-    <a time="@(273.0 - origin)" text="バキュームスラッシュ" sync="ガルーダは「バキュームスラッシュ」の構え。" notice="次は、ギロチン" />
-    <a time="@(282.0 - origin)" text="オクルーデッドフロント" sync="ガルーダは「オクルーデッドフロント」の構え。" notice="" />
-    <a time="@(290.0 - origin)" text="エラプション" sync="イフリートは「エラプション」の構え。" notice="次は、エラプ" />
-    <a time="@(294.0 - origin)" text="フィアスストーム" sync="ガルーダは「フィアスストーム」の構え。" notice="次は、DPSに線" />
+    <a time="@(246.0 - origin)" sync="居然斗胆同时召唤风与火……(.*?)你们必将为自己的愚蠢而后悔！" />
+    <a time="@(246.0 - origin)" text="火神的诅咒" sync="伊弗利特 casts 火神的诅咒 " notice="天星" />
+    <a time="@(251.0 - origin)" text="锢囚锋" sync="迦楼罗 casts 锢囚锋 " notice="" />
+    <a time="@(260.0 - origin)" text="火焰拳" sync="伊弗利特 casts 火焰拳 " notice="死刑" />
+    <a time="@(268.0 - origin)" text="爆裂炎" sync="伊弗利特 casts 爆裂炎 " notice="" />
+    <a time="@(273.0 - origin)" text="真空斩" sync="迦楼罗 casts 真空斩 " notice="切割" />
+    <a time="@(282.0 - origin)" text="锢囚锋" sync="迦楼罗 casts 锢囚锋 " notice="" />
+    <a time="@(290.0 - origin)" text="地火喷发" sync="伊弗利特 casts 地火喷发 " notice="地火" />
+    <a time="@(294.0 - origin)" text="凶猛风暴" sync="迦楼罗 casts 凶猛风暴 " notice="" />
 
-    <a time="@(300.0 - origin)" text="NEXT" goto="PHASE4 Fusion" />
+    <a time="@(300.0 - origin)" text="NEXT" goto="PHASE4 Fusion"  notice="天宫天星" />
   </s>
 
   <s name="PHASE4 Fusion">
     @* このフェーズの基点秒数 *@
     @{ origin = 300.0; }
 
-    <a time="@(301.0 - origin)" sync="イフリート:魂飛魄散……まだ抗おうとは……！" />
-    <a time="@(306.0 - origin)" sync="ガルーダ:ならば、わたくしの風の力…… 燃え上がる焔神の炎に注ぐまで！" />
-    <a time="@(317.0 - origin)" sync="？？？？:ウオォォォォォッ！！" />
-    <a time="@(327.0 - origin)" sync="ラクタパクシャ:我が名はラクタパクシャ…… 「赤き翼」を持つ者なり……！" />
+    <a time="@(301.0 - origin)" sync="伊弗利特:魂飞魄散……还敢抗争吗！" />
+    <a time="@(306.0 - origin)" sync="迦楼罗:既然如此，就将我的风之力" notice="地星"/>
+    <a time="@(317.0 - origin)" sync="喔喔喔喔喔喔！" />
+    <a time="@(327.0 - origin)" sync="赤翼罗羯坨博叉:我名罗羯坨博叉……(.*?)乃赤红之翼的拥有者！" />
 
-    <a time="@(336.0 - origin)" text="業炎拳" sync="ラクタパクシャは「業炎拳」の構え。" notice="次は、線取り、タンクとヒーラー" />
-    <a time="@(354.0 - origin)" text="業炎拳" sync="ラクタパクシャは「業炎拳」の構え。" notice="次は、線取り、DPS" />
-    <a time="@(372.0 - origin)" text="灼熱の咆哮" sync="ラクタパクシャは「灼熱の咆哮」の構え。" notice="次は、全体攻撃。" />
-    <a time="@(380.3 - origin)" text="ペア処理＋フィアス" sync="ラクタパクシャ starts using エアーバンプ" notice="次は、Xペア処理、離れ気味でー" />
-    <a time="@(393.0 - origin)" text="ファイアスパーク" sync="ラクタパクシャは「ファイアスパーク」の構え。" notice="次は、サッカー" />
-    <a time="@(406.0 - origin)" text="火炎拳" sync="ラクタパクシャは「火炎拳」の構え。" notice="次は、スイッチ" />
-    <a time="@(415.0 - origin)" text="爆裂炎" sync="ラクタパクシャは「爆裂炎」の構え。" notice="" />
-    <a time="@(421.0 - origin)" text="メテオストライク" sync="ラクタパクシャは「メテオストライク」の構え。" notice="次は、背面集合" />
+    <a time="@(336.0 - origin)" text="业火拳" sync="赤翼罗羯坨博叉 casts 业火拳 " notice="T奶接线" />
+    <a time="@(354.0 - origin)" text="业火拳" sync="赤翼罗羯坨博叉 casts 业火拳 " notice="DPS接线 地星" />
+    <a time="@(372.0 - origin)" text="灼热的咆哮" sync="赤翼罗羯坨博叉 casts 灼热的咆哮 " notice="AOE 天宫轮子" />
+    <a time="@(380.3 - origin)" text="配对+凶猛风暴" sync="赤翼罗羯坨博叉 starts using 空气弹垫" notice="斜点远离处理" />
+    <a time="@(393.0 - origin)" text="火花爆" sync="赤翼罗羯坨博叉 casts 火花爆 " notice="踢球" />
+    <a time="@(406.0 - origin)" text="火焰拳" sync="赤翼罗羯坨博叉 casts 火焰拳 " notice="死刑" />
+    <a time="@(415.0 - origin)" text="爆裂炎" sync="赤翼罗羯坨博叉 casts 爆裂炎 " notice="" />
+    <a time="@(421.0 - origin)" text="流星强击" sync="赤翼罗羯坨博叉 casts 流星强击 " notice="背面集合" />
 
     <a time="@(427.0 - origin)" text="NEXT" goto="PHASE5 Sword" />
   </s>
@@ -211,12 +107,12 @@
     @{ origin = 427.0; }
 
     @{
-      // コンフラのときのDPSのエアーバンプの東西優先順位を表示する
+      // コンフラのときのDPSの空气弹垫の東西優先順位を表示する
 
       // 優先順位の定義
       // 若いほうがより東に陣取る
-      var bumps = new[] { "DRG", "MCH", "BRD", "SMN" };
-
+	  
+      var bumps = new[] { "" }; //"DRG", "MCH", "BRD", "SMN"
       foreach (var job in bumps) {
       <text>
         <t text="${_@(job)}" sync="^1B:[id8]:[@(job)]:0000:[id4]:00D3:0000:0000:0000:">
@@ -228,9 +124,9 @@
       }
     }
 
-    <a time="@(442.0 - origin)" sync="ラクタパクシャ:風を得て、猛る炎よ、渦を巻け！" />
+    <a time="@(442.0 - origin)" sync="赤翼罗羯坨博叉:风助火长，爆炎啊，形成漩涡吧！" />
 
-    <a time="@(442.0 - origin)" text="コンフラ・ストライク" sync="ラクタパクシャは「コンフラグレーションストライク」の構え。" notice="次は、コンフラ、左右に散開">
+    <a time="@(442.0 - origin)" text="瞬燃强袭" sync="赤翼罗羯坨博叉 casts 瞬燃强袭 " notice="左右散開">
       <expressions>
         @foreach (var job in bumps) {
         <text>
@@ -239,7 +135,7 @@
         }
       </expressions>
     </a>
-    <a time="@(469.0 - origin)" text="エアーバンプ" sync="ラクタパクシャ starts using エアーバンプ" notice="次は、十字ペア処理" />
+    <a time="@(469.0 - origin)" text="空气弹垫" sync="赤翼罗羯坨博叉 starts using 空气弹垫" notice="配对 地星" />
     <a time="@(471.0 - origin)" name="BUMP表示" notice-o="0">
       @{
         var i = 0;
@@ -252,8 +148,8 @@
       }
     </a>
 
-    <a time="@(477.0 - origin)" sync="ラクタパクシャ:大火の一撃、灰燼に帰せッ！" />
-    <a time="@(478.0 - origin)" text="コンフラ・ストライク" sync="ラクタパクシャの「コンフラグレーションストライク」" notice-o="-6" notice="次は、北側に集合">
+    <a time="@(477.0 - origin)" sync="赤翼罗羯坨博叉:在烈焰的一击下化为灰烬吧！" />
+    <a time="@(478.0 - origin)" text="瞬燃强袭" sync="赤翼罗羯坨博叉 casts 瞬燃强袭" notice-o="-6" notice="北側集合">
       <v-notice
         icon="Arrow1.png"
         duration="6"
@@ -261,22 +157,22 @@
         order="-1" />
     </a>
 
-    <a time="@(488.0 - origin)" text="オクルーデッドフロント" sync="ラクタパクシャは「オクルーデッドフロント」の構え。" notice="" />
-    <a time="@(490.8 - origin)" text="エアーバンプ" sync="ラクタパクシャ starts using エアーバンプ" notice="次は、Xペア処理、近づけてー" />
-    <a time="@(497.0 - origin)" text="フューリア" sync="ラクタパクシャは「フューリアスストーム」の構え。" notice="次は、DPSに線" />
-    <a time="@(505.0 - origin)" text="灼熱の咆哮" sync="ラクタパクシャは「灼熱の咆哮」の構え。" notice="次は、全体攻撃。" />
+    <a time="@(488.0 - origin)" text="锢囚锋" sync="赤翼罗羯坨博叉 casts 锢囚锋 " notice="" />
+    <a time="@(490.8 - origin)" text="空气弹垫" sync="赤翼罗羯坨博叉 starts using 空气弹垫" notice="配对、靠近" />
+    <a time="@(497.0 - origin)" text="暴怒风暴" sync="赤翼罗羯坨博叉 casts 暴怒风暴 " notice="轮子天星天宫" />
+    <a time="@(505.0 - origin)" text="灼热的咆哮" sync="赤翼罗羯坨博叉 casts 灼热的咆哮 " notice="AOE" />
 
-    <a time="@(518.0 - origin)" text="オクルーデッドフロント" sync="ラクタパクシャは「オクルーデッドフロント」の構え。" notice="" />
-    <a time="@(523.0 - origin)" text="業炎拳" sync="ラクタパクシャは「業炎拳」の構え。" notice="次は、線取り、タンクとヒーラー" />
-    <a time="@(541.0 - origin)" text="業炎拳" sync="ラクタパクシャは「業炎拳」の構え。" notice="次は、線取り、DPS" />
-    <a time="@(542.9 - origin)" text="エアーバンプ" sync="ラクタパクシャ starts using エアーバンプ" notice="次は、Xペア処理" />
-    <a time="@(553.0 - origin)" text="火炎拳" sync="ラクタパクシャは「火炎拳」の構え。" notice="次は、スイッチ" />
-    <a time="@(561.0 - origin)" text="爆裂炎" sync="ラクタパクシャは「爆裂炎」の構え。" notice="" />
-    <a time="@(567.0 - origin)" text="メテオストライク" sync="ラクタパクシャは「メテオストライク」の構え。" notice="次は、背面集合" />
-    <a time="@(581.0 - origin)" text="フィアス" sync="ラクタパクシャは「フィアスストーム」の構え。" notice="次は、牙から扇範囲" />
-    <a time="@(589.0 - origin)" text="フィアス" sync="ラクタパクシャは「フィアスストーム」の構え。" notice="次は、牙から扇範囲" />
+    <a time="@(518.0 - origin)" text="锢囚锋" sync="赤翼罗羯坨博叉 casts 锢囚锋 " notice="" />
+    <a time="@(523.0 - origin)" text="业火拳" sync="赤翼罗羯坨博叉 casts 业火拳 " notice="T奶接线" />
+    <a time="@(541.0 - origin)" text="业火拳" sync="赤翼罗羯坨博叉 casts 业火拳 " notice="DPS接线" />
+    <a time="@(542.9 - origin)" text="空气弹垫" sync="赤翼罗羯坨博叉 starts using 空气弹垫" notice="配对" />
+    <a time="@(553.0 - origin)" text="火焰拳" sync="赤翼罗羯坨博叉 casts 火焰拳 " notice="死刑" />
+    <a time="@(561.0 - origin)" text="爆裂炎" sync="赤翼罗羯坨博叉 casts 爆裂炎 " notice="" />
+    <a time="@(567.0 - origin)" text="流星强击" sync="赤翼罗羯坨博叉 casts 流星强击 " notice="背面集合" />
+    <a time="@(581.0 - origin)" text="凶猛风暴" sync="赤翼罗羯坨博叉 casts 凶猛风暴 " notice="扇形AOE" />
+    <a time="@(589.0 - origin)" text="凶猛风暴" sync="赤翼罗羯坨博叉 casts 凶猛风暴 " notice="扇形AOE" />
 
-    <a time="@(608.0 - origin)" sync="ラクタパクシャ:地をうごめく者どもよ……！ 燃え尽き灰となりて、風に散れッ！" />
-    <a time="@(608.0 - origin)" text="ワイプ攻撃" sync="ラクタパクシャは「コンフラグレーションストライク」の構え。" notice="次は、時間切れ" />
+    <a time="@(608.0 - origin)" sync="赤翼罗羯坨博叉:徘徊于大地之人……" />
+    <a time="@(608.0 - origin)" text="狂暴" sync="赤翼罗羯坨博叉 casts 瞬燃强袭 " notice="狂暴" />
   </s>
 </timeline>
