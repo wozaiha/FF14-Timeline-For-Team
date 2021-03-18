@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>伊甸零式希望乐园(再生之章2)</name>
+  <rev>rev6</rev>
+  <description>
+    希望の園エデン零式： 再生編2 のスペスペたいむ定義です。
+    需要关闭SpeSpe中Log过滤的 0x26:NetworksStatusResultList 开关。
+    0x26 的主要内容为Debuff目标判定。
+  </description>
+  <author>anoyetta, sheeva,Translated by Tsubasa</author>
+  <license>CC BY-SA</license>
+  <zone>947,伊甸零式希望乐园(再生之章2)</zone>
+  <locale>CN</locale>
+  <start>0039:战斗开始</start>
+
+  <default target-element="Activity" target-attr="notice-o" value="-9" />
+
+  <t name="聚爆：正面攻击" sync="^14:(56F0|56FC):影の王 starts using 聚爆 on 影の王." notice="靠近影子。" >
+    <v-notice
+      text="影のある方へ"
+      duration="6"
+      order="-1"
+      icon="StackBack.png" />
+  </t>
+
+  <t name="聚爆：背面攻击" sync="^14:(56F3|5700):影の王 starts using 聚爆 on 影の王." notice="远离影子。" >
+    <v-notice
+      text="影のない方へ"
+      duration="6"
+      order="-1"
+      icon="StackFront.png" />
+  </t>
+
+  <t text="右刀" sync="^14:(56F4|56EA):影の王 starts using 万亿斩击 on 影の王." notice="去影子左侧">
+    <v-notice
+      text="影の左へ"
+      duration="6"
+      order="-1"
+      icon="Arrow7.png" />
+  </t>
+
+  <t text="左刀" sync="^14:(56F8|56ED):影の王 starts using 万亿斩击 on 影の王." notice="去影子右侧">
+    <v-notice
+      text="影の右へ"
+      duration="6"
+      order="-1"
+      icon="Arrow3.png" />
+  </t>
+
+  <t name="暗影释放" sync="影の王正在发动“暗影释放”" notice="分摊" >
+    <v-notice
+      text="分摊"
+      duration="6"
+      order="-1"
+      icon="DamageShare.png" />
+  </t>
+
+  <t name="暗影刀" sync="影の王正在发动“暗影刀”" notice="直线AOE" >
+    <v-notice
+      text="直线AOE"
+      duration="6"
+      order="-1"
+      icon="Targetaoe02.png" />
+  </t>
+
+  <t name="影：向上" sync="^26:[id8]:[mex]:[id8]:.*:0973:" >
+    <expressions>
+      <set name="ShadowDirection" value="N" />
+    </expressions>
+    <v-notice
+      duration="12"
+      order="-1"
+      icon="Arrow1.png" />
+  </t>
+
+  <t name="影：向下" sync="^26:[id8]:[mex]:[id8]:.*:0974:" >
+    <expressions>
+      <set name="ShadowDirection" value="S" />
+    </expressions>
+    <v-notice
+      duration="12"
+      order="-1"
+      icon="Arrow5.png" />
+  </t>
+
+  <t name="影：向右" sync="^26:[id8]:[mex]:[id8]:.*:0975:" >
+    <expressions>
+      <set name="ShadowDirection" value="E" />
+    </expressions>
+    <v-notice
+      duration="12"
+      order="-1"
+      icon="Arrow3.png" />
+  </t>
+
+  <t name="影：向左" sync="^26:[id8]:[mex]:[id8]:.*:0976:" >
+    <expressions>
+      <set name="ShadowDirection" value="W" />
+    </expressions>
+    <v-notice
+      duration="12"
+      order="-1"
+      icon="Arrow7.png" />
+  </t>
+
+  <t name="右刀：影向上" sync="^14:5B2C:影の王 starts using 万亿斩击 on 影の王." notice="去东侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="N" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去东侧"
+      duration="10"
+      order="-2"
+      icon="East.png" />
+  </t>
+
+  <t name="右刀：影向下" sync="^14:5B2C:影の王 starts using 万亿斩击 on 影の王." notice="去西侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="S" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去西侧"
+      duration="10"
+      order="-2"
+      icon="West.png" />
+  </t>
+
+  <t name="右刀：影向右" sync="^14:5B2C:影の王 starts using 万亿斩击 on 影の王." notice="去南侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="E" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去南侧"
+      duration="10"
+      order="-2"
+      icon="Sorth.png" />
+  </t>
+
+  <t name="右刀：影向左" sync="^14:5B2C:影の王 starts using 万亿斩击 on 影の王." notice="去北侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="W" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去北侧"
+      duration="10"
+      order="-2"
+      icon="Nouth.png" />
+  </t>
+
+  <t name="左刀：影向上" sync="^14:5B2D:影の王 starts using 万亿斩击 on 影の王." notice="去西侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="N" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去西侧"
+      duration="10"
+      order="-2"
+      icon="Wast.png" />
+  </t>
+
+  <t name="左刀：影向下" sync="^14:5B2D:影の王 starts using 万亿斩击 on 影の王." notice="去东侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="S" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去东侧"
+      duration="10"
+      order="-2"
+      icon="Eest.png" />
+  </t>
+
+  <t name="左刀：影向右" sync="^14:5B2D:影の王 starts using 万亿斩击 on 影の王." notice="去北侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="E" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去北侧"
+      duration="10"
+      order="-2"
+      icon="Nouth.png" />
+  </t>
+
+  <t name="左刀：影向左" sync="^14:5B2D:影の王 starts using 万亿斩击 on 影の王." notice="去南侧。" >
+    <expressions>
+      <pre name="ShadowDirection" value="W" />
+      <set name="ShadowDirection" value="empty" />
+    </expressions>
+    <v-notice
+      text="去南侧"
+      duration="10"
+      order="-2"
+      icon="Sorth.png" />
+  </t>
+
+  @if (Model.Player.InRole("TANK")) {
+    <t name="粉碎计数" sync="影の王正在发动“本影粉碎”" notice="粉碎">
+      <expressions>
+        <set name="smash_count" count="0" />
+      </expressions>
+      <v-notice
+        text="粉碎"
+        duration="3.5"
+        duration-visible="false"
+        order="-2"
+        icon="HardAttack.png" />
+    </t>
+
+    <t no="1" name="粉碎++" sync="影の王发动了“本影粉碎”">
+      <expressions>
+        <set name="smash_count" count="+1" />
+      </expressions>
+    </t>
+
+    <t no="2" name="粉碎换T" sync="影の王发动了“本影粉碎”" notice="换T">
+      <expressions>
+        <pre name="smash_count" count="4" />
+      </expressions>
+      <v-notice
+        text="换T"
+        duration="2"
+        duration-visible="false"
+        order="-2"
+        icon="Switch.png" />
+    </t>
+  }
+
+  <t name="人形态" sync="影の王 starts using 暗影王权" notice="远离">
+    <v-notice
+      text="远离"
+      duration="6.2"
+      duration-visible="true"
+      order="-2"
+      icon="Leave.png" />
+  </t>
+
+  <t name="兽形态" sync="影の王 starts using 影の遠吠え" notice="注意击退">
+    <v-notice
+      text="注意击退"
+      duration="6.2"
+      duration-visible="true"
+      order="-2"
+      icon="KnockBack.png" />
+  </t>
+
+  <a time="011.0" text="暗影新星" notice="AOE" />
+  <a time="019.0" sync="影の王:我正在发动“影の王”……！ その意味するところを知らねば、我が刃を避けられまいよ！" />
+  <a time="025.0" text="聚爆" sync="影の王发动了“聚爆”" />
+
+  <a time="032.0" text="暗影王权（远离）" notice="远离。" />
+  <a time="042.0" text="万亿斩击" sync="影の王发动了“万亿斩击”" />
+  <a time="054.0" text="本影粉碎" sync="影の王发动了“本影粉碎”" notice="死刑" />
+  <a time="067.0" text="分摊or正面AOE" sync="影の王发动了“暗影(释放|刀)”" />
+  <a time="074.0" sync="影の王:お前たちの影を、我が配下としよう……！ 己が影と殺し合うがいい！" />
+  <a time="082.0" text="暗影クリーヴ" sync="影の王发动了“暗影クリーヴ”" notice="远离分散" />
+  <a time="095.0" text="ダブルスペル" sync="影の王发动了“ダブルスペル”" />
+  <a time="095.0" text="分摊１" notice="1分摊" notice-o="0" />
+  <a time="098.0" text="分摊２" notice="2分摊" notice-o="0" />
+  <a time="101.0" text="分摊３" notice="3分摊" notice-o="0" />
+  <a time="104.0" sync="影の王:影の疾さを知れ！ 英雄の影たちよ、背後に回るのだ……！" />
+  <a time="108.0" text="影の王命" sync="影の王发动了“影の王命”" />
+  <a time="121.0" text="本影粉碎" sync="影の王发动了“本影粉碎”" notice="死刑" />
+  <a time="135.0" text="分摊or正面AOE" sync="影の王发动了“暗影(释放|刀)”" />
+
+  <a time="142.0" sync="影の王:すべての影は、我が領土…… お前たちの影すら例外ではない！" />
+  <a time="146.0" text="影の従僕" sync="影の王发动了“影の従僕”" />
+  <a time="156.3" text="万亿斩击" />
+  <a time="175.0" text="万亿斩击" />
+
+  <a time="190.0" text="击退"  notice="击退" />
+  <a time="209.0" text="暗影宝珠" sync="影の王发动了“暗影宝珠”" />
+  <a time="217.0" text="球判定" />
+  <a time="226.0" text="スポーン暗影" sync="影の王发动了“スポーン暗影”" />
+  <a time="239.0" text="暗影宝珠" sync="影の王发动了“暗影宝珠”" />
+  <a time="247.7" text="球判定" />
+  <a time="261.0" text="暗影新星" notice="AOE" />
+  <a time="274.0" text="影潜り" sync="影の王发动了“影潜り”" />
+  <a time="286.0" text="聚爆" sync="影の王发动了“聚爆”" />
+  <a time="297.0" text="暗影新星" notice="AOE" />
+  <a time="309.0" text="连续聚爆" />
+  <a time="329.0" text="暗影新星" notice="AOE" />
+
+  <a time="340.3" text="暗影王权（远离）" notice="远离。" />
+  <a time="352.0" text="本影粉碎" sync="影の王发动了“本影粉碎”" notice="死刑" />
+  <a time="362.0" text="分摊or正面AOE" sync="影の王发动了“暗影(释放|刀)”" />
+  <a time="369.0" sync="影の王:闇に沈みし我が故郷よ……！ 虚ろなる力を、我に注ぎ込め……！" />
+  <a time="374.0" text="虚空之门" sync="影の王发动了“虚空之门”" />
+  <a time="380.0" text="影の従僕" sync="影の王发动了“影の従僕”" />
+  <a time="391.4" text="踩塔+左右刀" />
+  <a time="399.0" text="影の従僕" />
+  <a time="404.5" text="踩塔" />
+  <a time="412.5" text="万亿斩击" />
+  <a time="432.0" text="暗影沼泽" sync="影の王发动了“暗影沼泽”" />
+  <a time="438.0" text="暗影宝珠" sync="影の王发动了“暗影宝珠”" />
+  <a time="445.5" text="击退"  notice="击退" />
+  <a time="447.4" text="球判定" />
+  <a time="456.0" text="连续聚爆" sync="影の王发动了“聚爆”" />
+  <a time="471.0" text="暗影新星" notice="AOE" />
+  <a time="484.0" text="離別の鎖" sync="影の王发动了“離別の鎖”" />
+  <a time="492.0" text="影潜り" sync="影の王发动了“影潜り”" />
+  <a time="500.0" text="暗影宝珠" sync="影の王发动了“暗影宝珠”" />
+  <a time="522.0" text="暗影新星" notice="AOE" />
+
+  <a time="532.2" text="暗影王权（远离）" notice="远离。" />
+  <a time="545.0" text="暗影沼泽" sync="影の王发动了“暗影沼泽”" />
+  <a time="563.0" text="万亿斩击" sync="影の王发动了“万亿斩击”" />
+  <a time="570.0" text="虚空之门：强化" sync="影の王发动了“虚空之门：强化”" />
+  <a time="577.0" text="影の王命" sync="影の王发动了“影の王命”" />
+  <a time="585.3" text="踩塔" />
+  <a time="589.5" text="地火" />
+  <a time="594.8" text="近线" />
+  <a time="600.4" text="踩塔" notice="踩塔" />
+  <a time="612.0" text="本影粉碎" sync="影の王发动了“本影粉碎”" notice="死刑" />
+  <a time="622.0" text="分摊or正面AOE" sync="影の王发动了“暗影(释放|刀)”" />
+  <a time="629.0" text="暗影宝珠" sync="影の王发动了“暗影宝珠”" />
+  <a time="631.8" text="击退" sync="影の王 starts using 影の遠吠え on 影の王." notice="击退。" />
+  <a time="639.0" text="球判定" />
+  <a time="649.0" text="暗影新星" notice="AOE" />
+  <a time="661.0" text="暗影新星" notice="AOE" />
+  <a time="672.0" text="暗影新星" notice="AOE" />
+  <a time="707.4" text="狂暴" />
+</timeline>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>伊甸零式希望乐园(再生之章1)</name>
+  <rev>rev4</rev>
+  <description>
+    希望の園エデン零式： 再生編1 のスペスペたいむ定義です。
+  </description>
+  <author>anoyetta, Aqua Cat, sheeva,Translated by Tsubasa</author>
+  <license>CC BY-SA</license>
+  <zone>946,伊甸零式希望乐园(再生之章1)</zone>
+  <locale>CN</locale>
+  <start>0039:战斗开始</start>
+  <entry>时间轴</entry>
+
+  <default target-element="Activity" target-attr="notice-o" value="-4" />
+
+  <t name="黑暗战技：配对" sync="^14:5B46:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="配对分摊。" >
+    <v-notice
+      text="配对分摊"
+      duration="6"
+      duration-visible="false"
+      icon="Pair.png" />
+  </t>
+
+  <t name="黑暗战技：分散" sync="^14:5B45:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="八方分散。" >
+    <v-notice
+      text="八方分散"
+      duration="6"
+      duration-visible="false"
+      icon="SpreadB.png" />
+  </t>
+
+  <t name="波动诅咒" sync="^1A:[id8]:[mex] gains the effect of 波动诅咒 from 暗黑之云 for 15.00 Seconds." notice="/wait 11, 面向外侧。" >
+    <v-notice
+      text="波动诅咒"
+      duration="15"
+      icon="Eye.png" />
+  </t>
+
+  <t name="战技：BOSS左安全" sync="^14:5A95:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="去左侧。" >
+    <v-notice
+      text="去BOSS左"
+      duration="12"
+      duration-visible="false"
+      order="-1"
+      icon="West.png" />
+  </t>
+
+  <t name="战技：BOSS右安全" sync="^14:5A96:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="去右侧。" >
+    <v-notice
+      text="去BOSS右"
+      duration="12"
+      duration-visible="false"
+      order="-1"
+      icon="East.png" />
+  </t>
+
+  <t name="天空：分散" sync="^14:55FB:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="八方分散。" >
+    <v-notice
+      text="八方分散"
+      duration="12"
+      duration-visible="false"
+      order="-1"
+      icon="SpreadB.png" />
+  </t>
+
+  <t name="天空：配对分摊" sync="^14:55FE:暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="配对分摊。" >
+    <v-notice
+      text="配对分摊"
+      duration="12"
+      duration-visible="false"
+      order="-1"
+      icon="Pair.png" />
+  </t>
+
+  <!-- 黑暗战技:二重/三重 ID不定のため一旦封印 begin -->
+  <!--
+  <t name="連続：右が安全" sync="^1B:[id8]:暗黑之云:0000:[id4]:0177:0000:0000:0000:" notice="去右侧。" >
+    <v-notice
+      text="右へ"
+      duration="10"
+      duration-visible="false"
+      order="-1"
+      icon="East.png" />
+  </t>
+
+  <t name="連続：左が安全" sync="^1B:[id8]:暗黑之云:0000:[id4]:0178:0000:0000:0000:" notice="去左侧。" >
+    <v-notice
+      text="左へ"
+      duration="10"
+      duration-visible="false"
+      order="-1"
+      icon="West.png" />
+  </t>
+
+  <t name="連続：配对分摊" sync="^1B:[id8]:暗黑之云:0000:[id4]:0179:0000:0000:0000:" notice="配对分摊。" >
+    <v-notice
+      text="配对分摊"
+      duration="10"
+      duration-visible="false"
+      order="-1"
+      icon="Pair.png" />
+  </t>
+
+  <t name="連続：分散"     sync="^1B:[id8]:暗黑之云:0000:[id4]:017A:0000:0000:0000:" notice="八方分散。" >
+    <v-notice
+      text="八方分散"
+      duration="10"
+      duration-visible="false"
+      order="-1"
+      icon="SpreadB.png" />
+  </t>
+  -->
+  <!-- 黑暗战技:二重/三重 end -->
+
+  <!-- 黑暗战技:二重/三重 シンプルな注意勧告 begin -->
+  <t no="0" name="黑暗战技 准备1" sync="暗黑之云 starts using 黑暗战技：二重" notice="2連准备">
+    <expressions>
+      <set name="shadow_skill_no" count="0" />
+    </expressions>
+  </t>
+
+  <t no="0" name="黑暗战技 准备2" sync="暗黑之云 starts using 黑暗战技：三重" notice="3連准备">
+    <expressions>
+      <set name="shadow_skill_no" count="0" />
+    </expressions>
+  </t>
+
+  <t no="1" name="黑暗战技 准备++" sync="^1B:[id8]:暗黑之云:0000:[id4]:[id4]:0000:0000:0000:">
+    <expressions>
+      <set name="shadow_skill_no" count="+1" />
+    </expressions>
+  </t>
+
+  <t no="11" name="黑暗战技 准备1" sync="^1B:[id8]:暗黑之云:0000:[id4]:[id4]:0000:0000:0000:" notice="准备1">
+    <expressions>
+      <pre name="shadow_skill_no" count="1" />
+    </expressions>
+    <v-notice text="准备1 左／右" duration="5" duration-visible="false" order="-1" icon="Check.png" />
+  </t>
+
+  <t no="12" name="黑暗战技 准备2" sync="^1B:[id8]:暗黑之云:0000:[id4]:[id4]:0000:0000:0000:" notice="准备2">
+    <expressions>
+      <pre name="shadow_skill_no" count="2" />
+    </expressions>
+    <v-notice text="准备2 分散／配对" duration="5" duration-visible="false" order="-1" icon="Check.png" />
+  </t>
+
+  <t no="13" name="黑暗战技 准备3" sync="^1B:[id8]:暗黑之云:0000:[id4]:[id4]:0000:0000:0000:" notice="准备3">
+    <expressions>
+      <pre name="shadow_skill_no" count="3" />
+    </expressions>
+    <v-notice text="准备3 左／右" duration="5" duration-visible="false" order="-1" icon="Check.png" />
+  </t>
+  <!-- 黑暗战技:二重/三重 シンプルな注意勧告 end -->
+
+  <!-- 跳躍式波动炮 begin -->
+  if (Model.Player.InRole("TANK")) {
+    <t name="高射式" sync="“高射式 跳跃波动炮：零式”" notice="先远离，再靠近">
+      <v-notice
+        text="远离 → 靠近"
+        duration="10"
+        duration-visible="false"
+        order="-1"
+        icon="Leave.png" />
+    </t>
+  
+    <t name="广角式" sync="“广角式 跳跃波动炮：零式”" notice="先靠近，再远离">
+      <v-notice
+        text="靠近 → 远离\n→ 注意AOE范围"
+        duration="10"
+        duration-visible="false"
+        order="-1"
+        icon="DamageShare.png" />
+    </t>
+  } else {
+    <t name="高射式" sync="“高射式 跳跃波动炮：零式”" notice="圆形AOE">
+      <v-notice
+        text="圆形AOE"
+        duration="10"
+        duration-visible="false"
+        order="-1"
+        icon="Targetaoe01.png" />
+    </t>
+  
+    <t name="广角式" sync="“广角式 跳跃波动炮：零式”" notice="正面扇形">
+      <v-notice
+        text="正面扇形"
+        duration="10"
+        duration-visible="false"
+        order="-1"
+        icon="Targetaoe03.png" />
+    </t>
+  }
+  <!-- 跳躍式波动炮 begin -->
+
+  <s name="时间轴">
+    <a time="001.0" sync="暗黑之云:光など、わしには届かん！ 闇に覆われよ……！" />
+    <a time="011.0" text="放射式 波动炮" sync="暗黑之云正在发动“放射式 波动炮”" notice="全体攻撃" />
+    <a time="021.0" text="黑暗战技1" sync="暗黑之云正在发动“黑暗战技”" notice="黑暗战技、2连" />
+    <a time="031.0" text="黑暗战技2" notice="" />
+    <a time="042.0" text="黑暗侵蚀" sync="暗黑之云正在发动“黑暗侵蚀”" notice="死刑" />
+
+    <!-- 暗黒森林1 -->
+    <a time="058.0" sync="暗黑之云:活性の闇よ、沸き立ちて暗黒森林となれ……！" notice="森林阶段，注意击退。" />
+    <a time="058.0" text="暗黒森林" sync="暗黑之云正在发动“暗黒森林”" />
+    <a time="069.0" sync="暗黑之云:均衡を取り戻す……！ 活性の闇よ、黑暗大树に注げ！" />
+    <a time="069.0" sync="暗黑之云正在发动“闇の氾濫：暗黒森林”" />
+    <a time="077.0" text="活性弾" sync="暗黑之云正在发动“活性弾”" />
+    <a time="084.5" sync="黑暗大树 starts using 強振動 on 黑暗大树." />
+    <a time="084.8" text="荆棘" notice="荆棘" />
+  
+    <!-- 広角 or 高射分岐 -->
+    <a time="095.0" text="跳跃波动炮" sync="暗黑之云正在发动“(高射式|广角式) 跳跃波动炮：零式”" notice="跳跃波动炮。" />
+
+    <!-- 中間 全体から二重 -->
+    <a time="121.0" text="放射式 波动炮" sync="暗黑之云正在发动“放射式 波动炮”" notice="AOE" />
+    <a time="134.0" text="黑暗战技：二重" sync="暗黑之云正在发动“黑暗战技：二重”" notice="黑暗战技二重。" />
+
+    <!-- 残りの跳躍 -->
+    <a time="153.0" text="跳跃波动炮" sync="暗黑之云正在发动“(高射式|广角式) 跳跃波动炮：零式”" notice="跳跃波动炮。" />
+    <a time="177.0" text="黑暗侵蚀" sync="暗黑之云正在发动“黑暗侵蚀”" notice="死刑" />
+
+    <!-- 落とし穴フェーズ -->
+    <a time="193.0" sync="暗黑之云:世界を闇で包み込もう……！" notice="天空阶段" />
+    <a time="193.0" text="暗黒天空" sync="暗黑之云正在发动“暗黒天空”" />
+    <a time="203.0" text="云出现" sync="暗黑之云:寄り添う命が、滅びを加速させる……！ もろとも沈め……！" />
+    <a time="209.0" text="黑暗泛滥：暗黑天空" sync="暗黑之云发动了“黑暗泛滥：暗黑天空”" />
+    <a time="212.0" sync="暗黑之云:希望も絶望も、わしの糧だ……！ 暗雲ごと喰らってやる！" />
+    <a time="216.0" text="波動雲吸引" sync="暗黑之云发动了“波動雲吸引”" notice-o="-1" notice="雲、开始移动" />
+    <a time="224.0" text="扫射式 波动炮" sync="暗黑之云正在发动“扫射式 波动炮”" notice="去中央。" />
+    <a time="239.0" text="黑暗战技1" sync="暗黑之云正在发动“黑暗战技”" notice="黑暗战技、2连" />
+    <a time="255.0" text="黑暗战技2" sync="暗黑之云正在发动“黑暗战技”" />
+    <a time="274.0" sync="暗黑之云:さらなる闇を生むために…… 無から生まれ、無へと消えろ！" />
+    <a time="274.0" text="黑暗大泛滥" sync="暗黑之云正在发动“黑暗大泛滥”" notice="AOE" />
+
+    <!-- 落とし穴終了 -->
+    <a time="283.0" text="召唤" sync="暗黑之云正在发动“召唤”" notice="分身注意。" />
+    <a time="292.0" text="黑暗战技" sync="暗黑之云正在发动“黑暗战技”" notice="黑暗战技。" />
+    <a time="311.0" text="黑暗侵蚀" sync="暗黑之云正在发动“黑暗侵蚀”" notice="死刑" />
+    <a time="325.0" text="黑暗战技：三重" sync="暗黑之云正在发动“黑暗战技：三重”" notice="黑暗战技三重。" />
+
+    <!-- 暗黒森林2 -->
+    <a time="354.0" text="暗黒森林" sync="暗黑之云正在发动“暗黒森林”" notice="森林阶段，注意击退。" notice-o="-8" />
+    <a time="365.0" text="闇の氾濫：暗黒森林" sync="暗黑之云正在发动“闇の氾濫：暗黒森林”" />
+    <a time="375.0" text="波动球" sync="暗黑之云正在发动“波动球”" />
+    <a time="381.5" text="荆棘" notice="荆棘后踩塔" />
+    <a time="389.0" text="波动爆炸" />
+
+    <a time="391.0" text="高射式 跳跃波动炮：零式" sync="暗黑之云正在发动“(高射式|广角式) 跳跃波动炮：零式”" notice="跳跃波动炮。" />
+    <a time="415.0" text="放射式 波动炮" sync="暗黑之云正在发动“放射式 波动炮”" notice="全体攻撃" />
+
+    <a time="430.0" text="活性弾" sync="暗黑之云正在发动“活性弾”" notice="活性弾。" />
+    <a time="435.0" text="黑暗战技：二重" sync="暗黑之云正在发动“黑暗战技：二重”" notice="黑暗战技二重。" />
+
+    <a time="457.0" text="黑暗侵蚀" sync="暗黑之云正在发动“黑暗侵蚀”" notice="死刑" />
+
+    <!-- 暗黒天空2 -->
+    <a time="473.0" text="暗黒天空" sync="暗黑之云正在发动“暗黒天空”" notice="天空阶段" />
+    <a time="489.0" text="黑暗泛滥：暗黑天空" sync="暗黑之云发动了“黑暗泛滥：暗黑天空”" />
+    <a time="496.0" text="波動雲吸引" sync="暗黑之云发动了“波動雲吸引”" notice-o="-1" notice="雲、开始移动" />
+    <a time="505.2" text="扫射式 波动炮" sync="暗黑之云 starts using 扫射式 波动炮 on 暗黑之云." notice="去中央。" />
+
+    <a time="519.4" text="黑暗战技" sync="暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="黑暗战技。" />
+    <a time="535.2" text="黑暗战技" sync="暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="黑暗战技。" />
+    <a time="551.0" text="黑暗战技" sync="暗黑之云 starts using 黑暗战技 on 暗黑之云." notice="黑暗战技。" />
+  </s>
+</timeline>
