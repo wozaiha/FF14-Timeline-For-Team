@@ -14,7 +14,7 @@
 
   <default target-element="Activity" target-attr="notice-o" value="-9" />
 
-  <t name="元素：火" sync="^14:5663:フェイトブレイカー starts using 元素ブレイク on フェイトブレイカー." notice="2人分摊。" >
+  <t name="元素：火" sync="^14:5663:命运破灭者 starts using 元素爆破 on 命运破灭者." notice="2人分摊。" >
     <v-notice
       text="火：八方\n➜ 2人分摊"
       duration="9"
@@ -23,7 +23,7 @@
       icon="Pair.png" />
   </t>
 
-  <t name="元素：雷" sync="^14:5666:フェイトブレイカー starts using 元素ブレイク on フェイトブレイカー." notice="八方分散。" >
+  <t name="元素：雷" sync="^14:5666:命运破灭者 starts using 元素爆破 on 命运破灭者." notice="八方分散。" >
     <v-notice
       text="雷：八方\n➜ 分散"
       duration="9"
@@ -32,7 +32,7 @@
       icon="Leave.png" />
   </t>
 
-  <t name="元素：光" sync="^14:5668:フェイトブレイカー starts using 元素ブレイク on フェイトブレイカー." notice="三组分摊。" >
+  <t name="元素：光" sync="^14:5668:命运破灭者 starts using 元素爆破 on 命运破灭者." notice="三组分摊。" >
     <v-notice
       text="光：八方\n➜ 三组分摊"
       duration="9"
@@ -41,7 +41,7 @@
       icon="Stack.png" />
   </t>
 
-  <t name="ストライク：火" sync="^14:5652:フェイトブレイカー starts using バーンストライク on フェイトブレイカー." notice="击退。" >
+  <t name="直线：火" sync="^14:5652:命运破灭者 starts using 爆破强击 on 命运破灭者." notice="击退。" >
     <v-notice
       text="击退"
       duration="9"
@@ -50,7 +50,7 @@
       icon="KnockBack.png" />
   </t>
 
-  <t name="ストライク：雷" sync="^14:5654:フェイトブレイカー starts using バーンストライク on フェイトブレイカー." notice="远离。" >
+  <t name="直线：雷" sync="^14:5654:命运破灭者 starts using 爆破强击 on 命运破灭者." notice="远离。" >
     <v-notice
       text="远离"
       duration="9"
@@ -59,7 +59,7 @@
       icon="AOEVertical.png" />
   </t>
 
-  <t name="ストライク：光" sync="^14:5656:フェイトブレイカー starts using バーンストライク on フェイトブレイカー." notice="集合。" >
+  <t name="直线：光" sync="^14:5656:命运破灭者 starts using 爆破强击 on 命运破灭者." notice="集合。" >
     <v-notice
       text="集合放AOE"
       duration="9"
@@ -88,7 +88,7 @@
       font-scale="0.9" />
   </t>
 
-  <t name="ソイル：火" sync="^14:5658:フェイトブレイカー starts using シンソイルスラスト on フェイトブレイカー." notice="分摊。" >
+  <t name="ソイル：火" sync="^14:5658:命运破灭者 starts using 信仰之绊 on 命运破灭者." notice="分摊。" >
     <v-notice
       text="火：分摊"
       duration="9"
@@ -97,16 +97,16 @@
       icon="Stack.png" />
   </t>
 
-  <t name="ソイル：雷" sync="^14:565B:フェイトブレイカー starts using シンソイルスラスト on フェイトブレイカー." notice="扇形AOE" >
+  <t name="ソイル：雷" sync="^14:565B:命运破灭者 starts using 信仰之绊 on 命运破灭者." notice="T扇形AOE" >
     <v-notice
-      text="雷：扇形AOE"
+      text="雷：T扇形AOE"
       duration="9"
       duration-visible="false"
       order="-1"
       icon="Thunder.png" />
   </t>
 
-  <t name="ソイル：光" sync="^14:565F:フェイトブレイカー starts using シンソイルスラスト on フェイトブレイカー." notice="远离目标。" >
+  <t name="ソイル：光" sync="^14:565F:命运破灭者 starts using 信仰之绊 on 命运破灭者." notice="远离目标。" >
     <v-notice
       text="光：远离目标"
       duration="9"
@@ -115,7 +115,7 @@
       icon="Targetaoe01.png" />
   </t>
 
-  <t name="至天絶技：赤" sync="^14:5675:フェイトブレイカー starts using 至天絶技 on フェイトブレイカー." notice="击退去东侧。" >
+  <t name="至天絶技：火" sync="^14:5675:命运破灭者 starts using 至天絶技 on 命运破灭者." notice="击退去东侧。" >
     <v-notice
       text="击退去东侧"
       duration="15"
@@ -124,7 +124,7 @@
       order="-1" />
   </t>
 
-  <t name="至天絶技：青" sync="^14:5676:フェイトブレイカー starts using 至天絶技 on フェイトブレイカー." notice="击退去西侧。" >
+  <t name="至天絶技：雷" sync="^14:5676:命运破灭者 starts using 至天絶技 on 命运破灭者." notice="击退去西侧。" >
     <v-notice
       text="击退去西侧"
       duration="15"
@@ -133,7 +133,7 @@
       order="-1" />
   </t>
 
-  <t name="四天召：赤" sync="^14:566E:フェイトブレイカー starts using 四天召 on フェイトブレイカー." notice="蓝色安全" >
+  <t name="四天召：火" sync="^14:566E:命运破灭者 starts using 四天召 on 命运破灭者." notice="蓝色安全" >
     <v-notice
       text="蓝色安全"
       duration="12"
@@ -141,7 +141,7 @@
       order="-1" />
   </t>
 
-  <t name="四天召：青" sync="^14:566F:フェイトブレイカー starts using 四天召 on フェイトブレイカー." notice="红色安全" >
+  <t name="四天召：雷" sync="^14:566F:命运破灭者 starts using 四天召 on 命运破灭者." notice="红色安全" >
     <v-notice
       text="红色安全"
       duration="12"
@@ -149,7 +149,7 @@
       order="-1" />
   </t>
 
-  <t name="堕獄絶技：赤" sync="^14:5677:フェイトブレイカー starts using 堕獄絶技 on フェイトブレイカー." notice="去红色。" >
+  <t name="堕獄絶技：火" sync="^14:5677:命运破灭者 starts using 堕獄絶技 on 命运破灭者." notice="去红色。" >
     <v-notice
       text="击退去红色"
       duration="16"
@@ -157,7 +157,7 @@
       order="-1" />
   </t>
 
-  <t name="堕獄絶技：青" sync="^14:5678:フェイトブレイカー starts using 堕獄絶技 on フェイトブレイカー." notice="去蓝色。" >
+  <t name="堕獄絶技：雷" sync="^14:5678:命运破灭者 starts using 堕獄絶技 on 命运破灭者." notice="去蓝色。" >
     <v-notice
       text="击退去蓝色"
       duration="16"
@@ -165,7 +165,7 @@
       order="-1" />
   </t>
 
-  <t name="転輪召：火" sync="^14:566A:フェイトブレイカー starts using 転輪召 on フェイトブレイカー" notice="靠近蓝色" >
+  <t name="転輪召：火" sync="^14:566A:命运破灭者 starts using 転輪召 on 命运破灭者" notice="靠近蓝色" >
     <v-notice
       text="靠近蓝色"
       duration="16"
@@ -173,7 +173,7 @@
       order="-1" />
   </t>
 
-  <t name="転輪召：火" sync="^14:566B:フェイトブレイカー starts using 転輪召 on フェイトブレイカー" notice="靠近红色" >
+  <t name="転輪召：火" sync="^14:566B:命运破灭者 starts using 転輪召 on 命运破灭者" notice="靠近红色" >
     <v-notice
       text="靠近红色"
       duration="16"
@@ -181,29 +181,29 @@
       order="-1" />
   </t>
 
-  <t name="連続剣：火" sync="^14:568A:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="火" >
+  <t name="連続剣：火" sync="^14:568A:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="火" >
     <v-notice
-      text="火\n八方➜分组分摊\n➜击退\n➜分摊"
+      text="火\n八方➜分组分摊\n➜击退\n➜全员分摊"
       duration="26"
       duration-visible="false"
       icon="Check.png"
       order="-1" />
   </t>
 
-  <t name="連続剣：火" sync="^14:568A:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="南侧分摊" notice-o="12" />
+  <t name="連続剣：火" sync="^14:568A:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="南侧分摊" notice-o="12" />
 
-  <t name="連続剣：雷" sync="^14:5692:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="雷" >
+  <t name="連続剣：雷" sync="^14:5692:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="雷" >
     <v-notice
-      text="雷\n八方➜分散\n➜远离\n➜扇形AOE引导"
+      text="雷\n八方➜分散\n➜远离\n➜T扇形AOE引导"
       duration="26"
       duration-visible="false"
       icon="Check.png"
       order="-1" />
   </t>
 
-  <t name="連続剣：雷" sync="^14:5692:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="扇形AOE" notice-o="12" />
+  <t name="連続剣：雷" sync="^14:5692:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="T引导扇形AOE" notice-o="12" />
 
-  <t name="連続剣：光" sync="^14:569A:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="光" >
+  <t name="連続剣：光" sync="^14:569A:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="光" >
     <v-notice
       text="光\n八方➜３方向\n➜集合放AOE\n➜远离标记"
       duration="26"
@@ -212,10 +212,10 @@
       order="-1" />
   </t>
 
-  <t name="連続剣：光" sync="^14:569A:フェイトブレイカー starts using 魔装連続剣 on フェイトブレイカー." notice="北侧AOE" notice-o="12" />
+  <t name="連続剣：光" sync="^14:569A:命运破灭者 starts using 魔装連続剣 on 命运破灭者." notice="北侧AOE注意" notice-o="12" />
 
   <!--
-  <t name="連続剣のバーンストライク警告" sync="^(15|16):[id8]:フェイトブレイカー:[id4]:シン.+:[id8]:[mex]:" notice="避けろ">
+  <t name="連続剣の爆破强击警告" sync="^(15|16):[id8]:命运破灭者:[id4]:シン.+:[id8]:[mex]:" notice="避けろ">
     <expressions>
       <pre name="renzokuken" value="true" />
     </expressions>
@@ -228,7 +228,7 @@
   </t>
   -->
 
-  <t name="爆印刻" sync="フェイトブレイカーは「爆印刻」の構え。" notice="バクインコク">
+  <t name="爆印刻" sync="命运破灭者正在发动“爆印刻”" notice="爆印刻">
     <v-notice
       text="爆印刻"
       duration="5"
@@ -237,7 +237,7 @@
       order="-1" />
   </t>
 
-  <t name="爆印刻计时" sync="^1A:[id8]:[mex] gains the effect of 爆印 from フェイトブレイカー for 18.00 Seconds" notice="即将爆炸" notice-o="13">
+  <t name="爆印刻计时" sync="^1A:[id8]:[mex] gains the effect of 爆印 from 命运破灭者 for 18.00 Seconds" notice="即将爆炸" notice-o="13">
     <v-notice
       text="剩余时间"
       duration="18"
@@ -245,21 +245,21 @@
       order="1" />
   </t>
 
-  <a time="000.0" sync="フェイトブレイカー:今こそ誓いを果たす時…… この堅牢な護り、打ち破れると思うなよ！" />
-  <a time="017.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
+  <a time="000.0" sync="命运破灭者:今こそ誓いを果たす時…… この堅牢な護り、打ち破れると思うなよ！" />
+  <a time="017.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
 
-  <a time="033.0" text="バーンストライク" sync="フェイトブレイカーの「バーンストライク」" />
+  <a time="033.0" text="爆破强击" sync="命运破灭者发动了“爆破强击”" />
   <a time="040.3" text="点名" />
-  <a time="046.0" text="シンソイルスラスト" sync="フェイトブレイカーの「シンソイルスラスト」" />
-  <a time="060.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="070.0" text="爆印刻" sync="フェイトブレイカーの「爆印刻」" />
-  <a time="078.0" text="転輪召" icon="Check.png" sync="フェイトブレイカーの「転輪召」" notice-o="-7" notice="次、2色リング" />
+  <a time="046.0" text="信仰之绊" sync="命运破灭者发动了“信仰之绊”" />
+  <a time="060.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
+  <a time="070.0" text="爆印刻" sync="命运破灭者发动了“爆印刻”" />
+  <a time="078.0" text="転輪召" icon="Check.png" sync="命运破灭者发动了“転輪召”" notice-o="-7" notice="双色环" />
   <a time="080.0" sync="リーンの声:光輪から、エーテルの高まりを感じます……。" />
 
   <a time="089.6" text="爆印爆発" />
   <a time="090.0" text="光輪爆発" />
   
-  <a time="104.0" text="バーンストライク" sync="フェイトブレイカーの「バーンストライク」" notice-o="-10" notice="次、スラスト、アムレン使わない">
+  <a time="104.0" text="爆破强击" sync="命运破灭者发动了“爆破强击”" notice-o="-10" notice="スラスト、アムレン使わない">
     <v-notice
       text="アムレン禁止" 
       duration="6"
@@ -267,107 +267,107 @@
       icon="Check.png" />
   </a>
   <a time="111.0" text="点名" />
-  <a time="117.0" text="シンソイルスラスト" sync="フェイトブレイカーの「シンソイルスラスト」" />
+  <a time="117.0" text="信仰之绊" sync="命运破灭者发动了“信仰之绊”" />
 
-  <a time="133.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
-  <a time="139.0" sync="フェイトブレイカー:構えよ、この技が見切れるか！？" notice-o="-3" notice="次、してんぜつぎ。" />
-  <a time="147.0" text="至天絶技" icon="Check.png" sync="フェイトブレイカーの「至天絶技」" />
+  <a time="133.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
+  <a time="139.0" sync="命运破灭者:構えよ、この技が見切れるか！？" notice-o="-3" notice="至天絶技。" />
+  <a time="147.0" text="至天絶技" icon="Check.png" sync="命运破灭者发动了“至天絶技”" />
 
-  <a time="157.0" text="点名" sync="^00:112f:[pc]に「标记」の効果。" />
-  <a time="165.0" text="シンソイルスラストx2" sync="フェイトブレイカーの幻影の「シンソイルスラスト」" />
+  <a time="157.0" text="点名" />
+  <a time="165.0" text="信仰之绊x2" sync="命运破灭者的幻影发动了“信仰之绊”" />
   <a time="167.0" text="光輪爆発" />
-  <a time="173.0" text="雷バーンストライク" notice="次、ストライク注意。">
+  <a time="173.0" text="雷爆破强击" notice="强击注意。">
     <v-notice 
-      text="ストライク注意"
+      text="强击注意"
       duration="3"
       duration-visible="false"
       icon="Check.png" />
   </a>
-  <a time="176.0" text="火バーンストライク" />
+  <a time="176.0" text="火爆破强击" />
 
-  <a time="192.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
-  <a time="204.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="214.0" sync="フェイトブレイカー:こいつを試すとしよう。" />
-  <a time="221.0" text="光元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
-  <a time="238.0" text="光バーンストライク" sync="フェイトブレイカーの「バーンストライク」" />
+  <a time="192.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
+  <a time="204.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
+  <a time="214.0" sync="命运破灭者:こいつを試すとしよう。" />
+  <a time="221.0" text="光元素爆破" sync="命运破灭者发动了“元素爆破”" />
+  <a time="238.0" text="光爆破强击" sync="命运破灭者发动了“爆破强击”" />
   <a time="244.9" text="点名" />
-  <a time="251.0" text="光シンソイルスラスト" sync="フェイトブレイカーの「シンソイルスラスト」" />
-  <a time="265.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="275.0" text="爆印刻" sync="フェイトブレイカーの「爆印刻」" />
-  <a time="283.0" text="四天召1回目" icon="Check.png" sync="フェイトブレイカーの「四天召」" notice-o="-6" notice="次、4枚扉。" />
+  <a time="251.0" text="光信仰之绊" sync="命运破灭者发动了“信仰之绊”" />
+  <a time="265.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
+  <a time="275.0" text="爆印刻" sync="命运破灭者发动了“爆印刻”" />
+  <a time="283.0" text="四天召第一次" icon="Check.png" sync="命运破灭者发动了“四天召”" notice-o="-6" notice="4门。" />
   <a time="294.1" text="爆印爆発" />
   <a time="296.0" text="閃光" />
 
-  <a time="309.0" text="バーンストライク" sync="フェイトブレイカーの「バーンストライク」" notice-o="-10" notice="次、スラスト、アムレン使わない">
+  <a time="309.0" text="爆破强击" sync="命运破灭者发动了“爆破强击”" notice-o="-10" notice="">
     <v-notice
-      text="アムレン禁止" 
+      text="不要防击退" 
       duration="6"
       duration-visible="false"
       icon="Check.png" />
   </a>
   <a time="316.0" text="点名" />
-  <a time="322.0" text="シンソイルスラスト" sync="フェイトブレイカーの「シンソイルスラスト」" />
-  <a time="337.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
+  <a time="322.0" text="信仰之绊" sync="命运破灭者发动了“信仰之绊”" />
+  <a time="337.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
 
-  <a time="343.0" name="堕獄絶技の通知" notice-o="0" notice="次、だごくぜつぎ。" />
-  <a time="352.0" text="堕獄絶技" icon="Check.png" sync="フェイトブレイカーの「堕獄絶技」" />
+  <a time="343.0" name="堕獄絶技の通知" notice-o="0" notice="堕獄絶技" />
+  <a time="352.0" text="堕獄絶技" icon="Check.png" sync="命运破灭者发动了“堕獄絶技”" />
   <a time="359.8" text="击退" />
   <a time="361.8" text="点名" sync="^1A:10048B6B:[pc] gains the effect of 标记 from  for 9999.00 Seconds." />
   <a time="368.0" text="閃光" />
-  <a time="369.0" text="シンソイルスラストx2" sync="フェイトブレイカーの幻影の「シンソイルスラスト」" />
-  <a time="377.0" text="光バーンストライク" notice="次は、外周ストライク。" />
-  <a time="381.0" text="雷バーンストライク" />
-  <a time="384.0" text="火バーンストライク" />
+  <a time="369.0" text="信仰之绊x2" sync="命运破灭者的幻影发动了“信仰之绊”" />
+  <a time="377.0" text="光爆破强击" notice="光强击。" />
+  <a time="381.0" text="雷爆破强击" />
+  <a time="384.0" text="火爆破强击" />
 
-  <a time="398.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
-  <a time="410.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="417.0" sync="フェイトブレイカー:あくまでも、歩み続けるか……。" notice-o="0" notice="次、2色リング、8方向分散。" />
-  <a time="428.0" text="転輪召" sync="フェイトブレイカーの「転輪召」" />
-  <a time="439.0" text="元素ブレイク" sync="フェイトブレイカーの「元素ブレイク」" />
+  <a time="398.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
+  <a time="410.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
+  <a time="417.0" sync="命运破灭者:あくまでも、歩み続けるか……。" notice-o="0" notice="双色环、8方分散。" />
+  <a time="428.0" text="転輪召" sync="命运破灭者发动了“転輪召”" />
+  <a time="439.0" text="元素爆破" sync="命运破灭者发动了“元素爆破”" />
   <a time="440.0" text="光輪爆発" />
 
-  <a time="451.0" text="爆印刻" sync="フェイトブレイカーの「爆印刻」" />
-  <a time="459.0" text="四天召2回目" icon="Check.png" sync="フェイトブレイカーの「四天召」" notice-o="-7" notice="次、4枚扉。" />
-  <a time="470.0" text="シンソイルスラスト" sync="フェイトブレイカーの「シンソイルスラスト」" />
+  <a time="451.0" text="爆印刻" sync="命运破灭者发动了“爆印刻”" />
+  <a time="459.0" text="四天召2回目" icon="Check.png" sync="命运破灭者发动了“四天召”" notice-o="-7" notice="4门。" />
+  <a time="470.0" text="信仰之绊" sync="命运破灭者发动了“信仰之绊”" />
   <a time="472.0" text="閃光" />
 
-  <a time="491.0" sync="フェイトブレイカー:この光は我が希望……。 すべての罪を、喰らい尽くす！" notice="次、インビジ" />
-  <a time="495.0" text="プリズマチックインビジブル" sync="フェイトブレイカーの「プリズマチックインビジブル」" />
+  <a time="491.0" sync="命运破灭者:この光は我が希望……。 すべての罪を、喰らい尽くす！" notice="インビジ" />
+  <a time="495.0" text="プリズマチックインビジブル" sync="命运破灭者发动了“プリズマチックインビジブル”" />
   <a time="502.0" sync="リーンの声:光が強すぎて、気配を探れない……？ 周囲に気を配ってください……！">
     <dump name="prismatic_invisible" target="Position" />
   </a>
-  <a time="515.0" text="ブラスティングゾーン１" />
-  <a time="533.0" text="ブラスティングゾーン２" />
+  <a time="515.0" text="爆破１" />
+  <a time="533.0" text="爆破２" />
 
-  <a time="550.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="551.0" name="連続剣フェーズ開始">
+  <a time="550.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
+  <a time="551.0" name="连续剑阶段开始">
     <expressions>
       <set name="renzokuken" value="true" />
     </expressions>
   </a>
 
-  <a time="564.0" sync="リーンの声:この感じ、まさかガイアの連続剣……！？" notice-o="-3" notice="次、連続剣1回目" />
+  <a time="564.0" sync="リーンの声:この感じ、まさかガイアの連続剣……！？" notice-o="-3" notice="連続剣第一次" />
   <a time="565.4" text="点名" />
-  <a time="571.0" text="魔装連続剣" sync="フェイトブレイカーの「魔装連続剣」" />
-  <a time="572.0" text="元素ブレイク" />
-  <a time="576.4" text="バーンストライク" />
-  <a time="584.0" text="シンソイルスラスト"  />
-  <a time="598.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
+  <a time="571.0" text="魔装連続剣" sync="命运破灭者发动了“魔装連続剣”" />
+  <a time="572.0" text="元素爆破" />
+  <a time="576.4" text="爆破强击" />
+  <a time="584.0" text="信仰之绊"  />
+  <a time="598.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
 
-  <a time="602.0" sync="フェイトブレイカー:そろそろ決着をつけよう……。" notice-o="-3" notice="次、連続剣2回目" />
+  <a time="602.0" sync="命运破灭者:そろそろ決着をつけよう……。" notice-o="-3" notice="連続剣第二次" />
   <a time="602.8" text="点名" />
-  <a time="609.0" text="魔装連続剣" sync="フェイトブレイカーの「魔装連続剣」" />
-  <a time="610.0" text="元素ブレイク" />
-  <a time="614.0" text="バーンストライク" />
-  <a time="621.0" text="シンソイルスラスト" />
-  <a time="635.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
+  <a time="609.0" text="魔装連続剣" sync="命运破灭者发动了“魔装連続剣”" />
+  <a time="610.0" text="元素爆破" />
+  <a time="614.0" text="爆破强击" />
+  <a time="621.0" text="信仰之绊" />
+  <a time="635.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="光焔光背" />
 
-  <a time="639.0" sync="フェイトブレイカー:持てる力、すべてを出しきる！" notice-o="-3" notice="次、連続剣3回目" />
+  <a time="639.0" sync="命运破灭者:持てる力、すべてを出しきる！" notice-o="-3" notice="連続剣第三次" />
   <a time="640.7" text="点名" />
-  <a time="647.0" text="魔装連続剣" sync="フェイトブレイカーの「魔装連続剣」" />
-  <a time="648.0" text="元素ブレイク" />
-  <a time="652.0" text="バーンストライク" />
-  <a time="660.0" text="シンソイルスラスト" />
-  <a time="675.0" text="光焔光背" sync="フェイトブレイカーの「光焔光背」" notice="次、全体攻撃。" />
-  <a time="691.0" text="時間切れ" />
+  <a time="647.0" text="魔装連続剣" sync="命运破灭者发动了“魔装連続剣”" />
+  <a time="648.0" text="元素爆破" />
+  <a time="652.0" text="爆破强击" />
+  <a time="660.0" text="信仰之绊" />
+  <a time="675.0" text="光焔光背" sync="命运破灭者发动了“光焔光背”" notice="AOE" />
+  <a time="691.0" text="狂暴" />
 </timeline>
