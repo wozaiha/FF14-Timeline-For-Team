@@ -18,11 +18,11 @@
   <!-- 前半/後半の識別用エントリフェーズ -->
   <s name="ENTRY">
     <!-- 前半/後半識別 -->
-    <t sync="伊甸之诺:(理想郷では我らこそが唯一の存在……。|過去も未来も棄て、今この刻を永遠となす……！)" sync-count="1" >
+    <t sync="伊甸之约:(我们将在理想乡中合二为一，永不分离……|没有过去，也没有未来，唯有现在将永远持续！)" sync-count="1" >
       <load target="门神" truncate="true" />
     </t>
 
-    <t sync="暗之巫女:(暗之巫女が紡ぐは神の詞（ことば）…… 忌まわしき光の使徒を、祓ってくれようぞ……！|古の魔力よ！ 創造の泉より湧きて、世界に希望をもたらせ！)" sync-count="1">
+    <t sync="暗之巫女:(暗之巫女将会传颂神的话语！|涌出创造之泉，为世界带来希望！)" sync-count="1">
       <load target="PHASE1 本体开场" truncate="true" />
     </t>
 
@@ -30,35 +30,35 @@
   </s>
 
   <s name="门神" >
-    <t name="悦楽の手 右侧AOE" sync="^14:(5877|58AD)" notice="去西侧">
+    <t name="愉悦之手 右侧AOE" sync="^14:(5877|58AD)" notice="去西侧">
       <expressions>
         <pre name="in_kyojin" value="false" />
       </expressions>
       <v-notice text="去西侧" icon="Arrow7.png" duration="6" duration-visible="false" order="-20" />
     </t>
 
-    <t name="悦楽の手 左サイド攻撃" sync="^14:(5878|58AE)" notice="去东侧">
+    <t name="愉悦之手 左侧AOE" sync="^14:(5878|58AE)" notice="去东侧">
       <expressions>
         <pre name="in_kyojin" value="false" />
       </expressions>
       <v-notice text="去东侧" icon="Arrow3.png" duration="6" duration-visible="false" order="-20" />
     </t>
 
-    <t name="悦楽の手 右侧AOE（面南时）" sync="^14:(5877|58AD)" notice="去东侧">
+    <t name="愉悦之手 右侧AOE（面南时）" sync="^14:(5877|58AD)" notice="去东侧">
       <expressions>
         <pre name="in_kyojin" value="true" />
       </expressions>
       <v-notice text="去东侧" icon="Arrow3.png" duration="6" duration-visible="false" order="-20" />
     </t>
 
-    <t name="悦楽の手 左サイド攻撃（面南时）" sync="^14:(5878|58AE)" notice="去西侧">
+    <t name="愉悦之手 左侧AOE（面南时）" sync="^14:(5878|58AE)" notice="去西侧">
       <expressions>
         <pre name="in_kyojin" value="true" />
       </expressions>
       <v-notice text="去西侧" icon="Arrow7.png" duration="6" duration-visible="false" order="-20" />
     </t>
 
-    <t name="天罚的波动" sync="伊甸之诺 starts using 天罚的波动" notice="天罚">
+    <t name="天罚波动" sync="伊甸之约 starts using 天罚波动" notice="天罚">
       <v-notice
         text="天罚"
         duration="6"
@@ -67,7 +67,7 @@
         order="-20" />
     </t>
 
-    <t text="连接1：泰坦" sync="^14:5895:伊甸之诺 starts using 连接：泰坦 on 伊甸之诺." >
+    <t text="融合1：泰坦" sync="^14:5895:伊甸之约 starts using 融合：泰坦 on 伊甸之约" >
       <expressions>
         <pre name="first_branch" value="true" />
         <set name="first_branch" value="false" />
@@ -80,7 +80,7 @@
         order="-10" />
     </t>
 
-    <t text="连接1：希瓦" sync="^14:5894:伊甸之诺 starts using 连接：希瓦 on 伊甸之诺." >
+    <t text="融合1：希瓦" sync="^14:5894:伊甸之约 starts using 融合：希瓦 on 伊甸之约" >
       <expressions>
         <pre name="first_branch" value="true" />
         <set name="first_branch" value="false" />
@@ -93,7 +93,7 @@
         order="-10" />
     </t>
 
-    <t text="连接2：泰坦" sync="^14:5895:伊甸之诺 starts using 连接：泰坦 on 伊甸之诺." >
+    <t text="融合2：泰坦" sync="^14:5895:伊甸之约 starts using 融合：泰坦 on 伊甸之约" >
       <expressions>
         <pre name="second_branch" value="true" />
         <set name="current_junction" value="titan" />
@@ -101,20 +101,20 @@
       </expressions>
       <v-notice
         text="泰坦：分摊"
-        sync-to-hide="^1A:[id8]:[pc] gains the effect of 土属性耐性低下［強］"
+        sync-to-hide="^1A:[id8]:[pc] gains the effect of 土属性耐性大幅降低"
         duration="16"
         icon="DamageShare.png"
         order="-10" />
     </t>
 
-    <t text="连接2：希瓦" sync="^14:5894:伊甸之诺 starts using 连接：希瓦 on 伊甸之诺." >
+    <t text="融合2：希瓦" sync="^14:5894:伊甸之约 starts using 融合：希瓦 on 伊甸之约" >
       <expressions>
         <pre name="second_branch" value="true" />
         <set name="current_junction" value="shiva" />
       </expressions>
       <v-notice
         text="希瓦：分散"
-        sync-to-hide="^1A:[id8]:[pc] gains the effect of 氷属性耐性低下［強］"
+        sync-to-hide="^1A:[id8]:[pc] gains the effect of 冰属性耐性大幅降低"
         duration="16"
         icon="Leave.png"
         order="-10" />
@@ -211,7 +211,7 @@
     <!-- 读取・储存・释放および "释放" の判定 end -->
 
     <!-- 動的な1B骰子の判定 begin -->
-    <t name="天罚的波动の骰子を覚える" sync="^1B:[id8]:[pc]:0000:[id4]:(?&lt;sign&gt;[0-9a-fA-F]{4}):">
+    <t name="天罚波动の骰子を覚える" sync="^1B:[id8]:[pc]:0000:[id4]:(?&lt;sign&gt;[0-9a-fA-F]{4}):">
       <expressions>
         <pre name="is_ready_detect_sign" value="false" />
         <set name="sign_origin" value="0x${sign}" />
@@ -429,15 +429,15 @@
     </t>
     <!-- 動的な1B骰子の判定 end -->
 
-    <t name="右下击退" sync="^14:58B4:ガーディアン・オブ・エデン starts using 拒绝之手" notice="右下击退">
+    <t name="右下击退" sync="^14:58B4:伊甸守卫 starts using 拒绝之手" notice="右下击退">
       <v-notice text="去右下" duration="7.7" duration-visible="true" icon="Arrow4.png" />
     </t>
 
-    <t name="左下击退" sync="^14:58B5:ガーディアン・オブ・エデン starts using 拒绝之手" notice="右下击退">
+    <t name="左下击退" sync="^14:58B5:伊甸守卫 starts using 拒绝之手" notice="左下击退">
       <v-notice text="去左下" duration="7.7" duration-visible="true" icon="Arrow6.png" />
     </t>
 
-    <t no="1" name="狮子线" sync="^23:[id8]:創られた獅子:[id8]:[mex]:" notice="连线点你">
+    <t no="1" name="狮子线" sync="^23:[id8]:被创造的狮子:[id8]:[mex]:" notice="连线点你">
       <v-notice 
         text="连线点你" 
         duration="8" 
@@ -445,7 +445,7 @@
         order="-2" />
     </t>
 
-    <t no="2" name="狮子线-TH" sync="^23:[id8]:創られた獅子:[id8]:([TANK]|[HEALER]):" sync-count="1">
+    <t no="2" name="狮子线-TH" sync="^23:[id8]:被创造的狮子:[id8]:([TANK]|[HEALER]):" sync-count="1">
       <v-notice 
         text="ＤＰＳ →大獅子" 
         duration="8" 
@@ -453,9 +453,9 @@
         order="-1" />
     </t>
 
-    @if (Model.Player.InRole("TANK"))
+    @if (Model.Player.InRole("HEALER"))
     {
-      <t no="2" name="狮子线-DPS" sync="^23:[id8]:創られた獅子:[id8]:[DPS]:" sync-count="1">
+      <t no="2" name="狮子线-DPS" sync="^23:[id8]:被创造的狮子:[id8]:[DPS]:" sync-count="1">
         <v-notice 
           text="治疗 →大獅子" 
           duration="8" 
@@ -464,9 +464,9 @@
       </t>
     }
 
-    @if (Model.Player.InRole("HEALER"))
+    @if (Model.Player.InRole("TANK"))
     {
-      <t no="2" name="狮子线-DPS" sync="^23:[id8]:創られた獅子:[id8]:[DPS]:" sync-count="1">
+      <t no="2" name="狮子线-DPS" sync="^23:[id8]:被创造的狮子:[id8]:[DPS]:" sync-count="1">
         <v-notice 
           text="T →中央" 
           duration="8" 
@@ -484,50 +484,50 @@
       </expressions>
     </a>
 
-    <a time="005.0" sync="伊甸之诺:過去も未来も棄て、今この刻を永遠となす……！" />
-    <a time="016.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="025.0" sync="伊甸之诺:世界の記憶を解き放とう……！" />
-    <a time="033.0" text="连接" sync="伊甸之诺发动了“连接：" />
-    <a time="040.0" text="悦楽の手" sync="伊甸之诺发动了“悦楽の手”" />
+    <a time="005.0" sync="没有过去，也没有未来，唯有现在将永远持续！" />
+    <a time="016.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="025.0" sync="将你的记忆解放出来……" />
+    <a time="033.0" text="融合" sync="伊甸之约发动了“融合：" />
+    <a time="040.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
     <a time="043.0" text="分摊or分散" />
 
-    <a time="046.0" sync="伊甸之诺:記憶は誇張され、改変される！" />
+    <a time="046.0" sync="记忆会被夸大，会被改变！" />
 
-    <a time="046.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
+    <a time="046.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
     <a time="046.4" name="储存技能">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
-    <a time="053.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <a time="053.0" text="释放" sync="伊甸之约发动了“释放”" />
     <a time="054.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
     <a time="057.0" text="分摊or分散" />
-    <a time="069.0" text="天罚的波动１" sync="伊甸之诺发动了“天罚的波动”" notice="死刑。" />
-    <a time="069.0" name="天罚的波动１结束">
+    <a time="069.0" text="天罚波动１" sync="伊甸之约发动了“天罚波动”" notice="死刑。" />
+    <a time="069.0" name="天罚波动１结束">
       <expressions>
         <set name="is_ready_detect_sign" value="true" />
       </expressions>
     </a>
-    <a time="071.0" text="天罚的波动２" />
+    <a time="071.0" text="天罚波动２" />
 
-    <a time="082.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="096.0" text="连接：希瓦" sync="伊甸之诺发动了“连接：希瓦”" />
-    <a time="101.0" sync="伊甸之诺:氷の記憶を再生する……！" />
-    <a time="107.0" text="钻石星辰" sync="伊甸之诺发动了“钻石星辰”" />
+    <a time="082.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="096.0" text="融合：希瓦" sync="伊甸之约发动了“融合：希瓦”" />
+    <a time="101.0" sync="唤起寒冰的记忆！" />
+    <a time="107.0" text="钻石星辰" sync="伊甸之约发动了“钻石星辰”" />
     <a time="112.9" text="结冰" />
     <a time="114.0" text="分摊" />
-    <a time="119.9" text="极冰喷发" />
-    <a time="125.0" text="极冰喷发" />
+    <a time="119.9" text="冰柱冲击1" />
+    <a time="125.0" text="冰柱冲击2" />
     <a time="126.0" text="冰柱" />
-    <a time="135.0" text="极冰喷发" />
+    <a time="135.0" text="冰柱冲击3" />
     <a time="138.0" text="击退" notice="击退。" />
-    <a time="140.0" text="极冰喷发" />
-    <a time="142.0" text="冰柱突进" sync="冰柱发动了“突进”" />
-    <a time="155.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="169.0" text="连接：泰坦" sync="伊甸之诺发动了“连接：泰坦”" />
-    <a time="174.0" sync="伊甸之诺:大地の記憶を再生する……！" />
-    <a time="180.0" text="大地之怒" sync="伊甸之诺发动了“大地之怒”" />
+    <a time="140.0" text="冰柱冲击4" />
+    <a time="142.0" text="冰柱激突" sync="冰柱发动了“激突”" />
+    <a time="155.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="169.0" text="融合：泰坦" sync="伊甸之约发动了“融合：泰坦”" />
+    <a time="174.0" sync="唤起大地的记忆！" />
+    <a time="180.0" text="大地之怒" sync="伊甸之约发动了“大地之怒”" />
 
     <a time="188.0" text="石头+标记１" />
     <a time="193.6" text="标记判定" />
@@ -538,39 +538,39 @@
     <a time="214.1" text="石头+标记３" />
     <a time="219.7" text="标记判定" />
 
-    <a time="229.0" sync="伊甸之诺:なぜ、そっとしておいてくれない？" />
-    <a time="239.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
+    <a time="229.0" sync="你们一定要来妨碍我吗？" />
+    <a time="239.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
 
-    <a time="252.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
+    <a time="252.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
     <a time="252.4" name="储存技能">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
-    <a time="259.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <a time="259.0" text="释放" sync="伊甸之约发动了“释放”" />
     <a time="260.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
-    <a time="259.0" text="オブリタレーション" sync="ガーディアン・オブ・エデン发动了“オブリタレーション”" />
-    <a time="270.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="277.0" sync="伊甸之诺:この理想郷に、おまえたちは必要ない。">
+    <a time="259.0" text="灭迹" sync="伊甸守卫发动了“灭迹”" />
+    <a time="270.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="277.0" sync="这个理想乡不需要你们的存在！">
       <expressions>
         <set name="in_kyojin" value="true" />
       </expressions>
     </a>
 
-    <a time="283.0" text="储存" sync="伊甸之诺发动了“储存”" />
-    <a time="288.0" text="巨兵創出" sync="創られた男发动了“巨兵創出”" />
-    <a time="299.0" text="悦楽の手" sync="伊甸之诺发动了“悦楽の手”" />
-    <a time="302.0" text="巨兵の光炎" sync="創られた男发动了“巨兵の光炎”" />
-    <a time="305.0" text="巨兵の光炎" />
-    <a time="309.0" text="巨兵の光炎" />
-    <a time="310.0" text="拒绝之手" sync="ガーディアン・オブ・エデン发动了“拒绝之手”" />
+    <a time="283.0" text="储存" sync="伊甸之约发动了“储存”" />
+    <a time="288.0" text="创造巨兵" sync="被创造的男性发动了“创造巨兵”" />
+    <a time="299.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
+    <a time="302.0" text="巨兵光炎" sync="被创造的男性发动了“巨兵光炎”" />
+    <a time="305.0" text="巨兵光炎" />
+    <a time="309.0" text="巨兵光炎" />
+    <a time="310.0" text="拒绝之手" sync="伊甸守卫发动了“拒绝之手”" />
 
-    <a time="310.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
+    <a time="310.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
     <a time="310.4" name="储存技能">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
-    <a time="317.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <a time="317.0" text="施放" sync="伊甸之约发动了“施放”" />
     <a time="318.0" name="清除">
       <expressions>
         <set name="in_kyojin" value="false" />
@@ -578,84 +578,84 @@
       <dump target="Log" log="@ClearStocks" />
     </a>
 
-    <a time="328.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="336.0" text="天罚的波动１" sync="伊甸之诺发动了“天罚的波动”" notice="死刑。" />
-    <a time="338.0" text="天罚的波动２" />
-    <a time="347.0" sync="伊甸之诺:その存在ごと、記憶の彼方に消し去ろう！" />
+    <a time="328.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="336.0" text="天罚波动１" sync="伊甸之约发动了“天罚波动”" notice="死刑。" />
+    <a time="338.0" text="天罚波动２" />
+    <a time="347.0" sync="你们将会消失在我们记忆的彼岸！" />
 
-    <a time="352.0" text="储存" sync="伊甸之诺发动了“储存”" />
-    <a time="363.0" text="悦楽の手" sync="伊甸之诺发动了“悦楽の手”" />
-    <a time="371.0" text="镭射光" sync="ガーディアン・オブ・エデン发动了“镭射光”" />
-    <a time="372.0" sync="伊甸之诺:己の記憶に、苦しむがいい……！" />
+    <a time="352.0" text="储存" sync="伊甸之约发动了“储存”" />
+    <a time="363.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
+    <a time="371.0" text="激射眼" sync="伊甸守卫发动了“激射眼”" />
+    <a time="372.0" sync="在自己的记忆中受苦吧！" />
     <a time="375.0" text="狮子喷火" />
 
-    <a time="373.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
+    <a time="373.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
     <a time="373.4" name="储存技能">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
-    <a time="380.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <a time="380.0" text="施放" sync="伊甸之约发动了“施放”" />
     <a time="381.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
     <a time="384.0" text="狮子喷火" />
-    <a time="389.0" text="悦楽の手" sync="伊甸之诺发动了“悦楽の手”" />
-    <a time="402.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="410.0" sync="伊甸之诺:思い出など、脆く儚いもの……。" />
+    <a time="389.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
+    <a time="402.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="410.0" sync="回忆都是既脆弱又短暂的……" />
 
-    <a time="415.0" text="储存" sync="伊甸之诺发动了“储存”" >
+    <a time="415.0" text="储存" sync="伊甸之约发动了“储存”" >
       <expressions>
         <set name="second_branch" value="true" />
       </expressions>
     </a>
 
-    <a time="420.0" name="释放事前判定">
+    <a time="420.0" name="施放事前判定">
       <dump target="Log" log="@StockTakingNoticeDelay" />
     </a>
     <a time="421.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
-    <a time="425.0" text="连接" sync="伊甸之诺发动了“连接：" />
+    <a time="425.0" text="融合" sync="伊甸之约发动了“融合：" />
 
-    <a time="427.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
+    <a time="427.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
     <a time="427.4" name="储存技能">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
-    <a time="434.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <a time="434.0" text="释放" sync="伊甸之约发动了“释放”" />
     <a time="435.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
-    <a time="446.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="AOE" />
-    <a time="453.0" text="连接" sync="伊甸之诺发动了“连接：" />
-    <a time="455.0" sync="伊甸之诺:すぐに形を失い、色褪せていく……。" />
+    <a time="446.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
+    <a time="453.0" text="融合" sync="伊甸之约发动了“融合：" />
+    <a time="455.0" sync="很快就会消失或褪色……" />
 
-    <!-- ここの释放は事前判定によって遅延通知される -->
-    <a time="456.3" name="释放开始" sync="伊甸之诺正在发动“释放”" />
-    <a time="463.0" text="释放" sync="伊甸之诺发动了“释放”" />
+    <!-- ここの施放は事前判定によって遅延通知される -->
+    <a time="456.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
+    <a time="463.0" text="施放" sync="伊甸之约发动了“施放”" />
     
-    <a time="479.0" text="天罚的波动１" sync="伊甸之诺发动了“天罚的波动”" notice="死刑。" />
-    <a time="481.0" text="天罚的波动２" />
-    <a time="490.0" text="妖术" sync="伊甸之诺发动了“妖术”" notice="全体攻撃2回。" />
-    <a time="499.0" text="妖术" />
-    <a time="506.0" sync="伊甸之诺:今こそ、約束が果たされるとき……。" />
-    <a time="511.0" sync="伊甸之诺:さようなら、光の使徒。" />
-    <a time="511.0" text="狂暴" sync="伊甸之诺发动了“失乐园”" />
+    <a time="479.0" text="天罚波动１" sync="伊甸之约发动了“天罚波动”" notice="死刑。" />
+    <a time="481.0" text="天罚波动２" />
+    <a time="490.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="全体攻撃2回。" />
+    <a time="499.0" text="邪法" />
+    <a time="506.0" sync="现在是实现约定的时候了……" />
+    <a time="511.0" sync="永别了，光之使徒。" />
+    <a time="511.0" text="狂暴" sync="伊甸之约发动了“失乐园”" />
   </s>
 
   @if (Model.Player.InRole("TANK")) {
-    <t name="暗影光轮" sync="暗之巫女 starts using 暗影光轮" notice="光轮">
-      <v-notice text="光轮" duration="6" duration-visible="false" icon="HardAttack.png" />
+    <t name="黑色光环" sync="暗之巫女 starts using 黑色光环" notice="光环">
+      <v-notice text="光环" duration="6" duration-visible="false" icon="HardAttack.png" />
     </t>
 
-    <t name="宵闇之舞" sync="暗之巫女 starts using 宵闇之舞" notice="宵闇">
-      <v-notice text="宵闇" duration="6" duration-visible="false" icon="HardAttack.png" />
+    <t name="真夜舞蹈" sync="暗之巫女 starts using 真夜舞蹈" notice="真夜">
+      <v-notice text="真夜" duration="6" duration-visible="false" icon="HardAttack.png" />
     </t>
   }
 
   <s name="PHASE1 本体开场" >
-    <t name="爆炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影爆炎 from  for 16.96 Seconds." >
+    <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 16.96 Seconds" >
       <v-notice
         text="分散"
         duration="17"
@@ -663,7 +663,7 @@
         order="-1" />
     </t>
 
-    <t name="水3" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影水3 from  for 11.96 Seconds." sync-count="2" >
+    <t name="狂水" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗狂水 from  for 11.96 Seconds" sync-count="2" >
       <v-notice
         text="分摊"
         duration="12"
@@ -671,77 +671,77 @@
         order="-1" />
     </t>
 
-    <a time="010.0" sync="暗之巫女:古の魔力よ！ 創造の泉より湧きて、世界に希望をもたらせ！" />
+    <a time="010.0" sync="涌出创造之泉，为世界带来希望！" />
     <a time="015.0" text="地狱审判" sync="暗之巫女发动了“地狱审判”" />
-    <a time="023.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="025.0" sync="暗之巫女:死の言霊よ…… 刹那を刻み、终末の到来を遅延させる……！" />
+    <a time="023.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="025.0" sync="刻下现在，延迟即将来临的终焉！" />
     <a time="032.0" text="延迟咏唱" sync="暗之巫女发动了“延迟咏唱”" />
     <a time="040.0" text="技能1"  />
     <a time="045.0" text="延迟咏唱" sync="暗之巫女发动了“延迟咏唱”" />
     <a time="053.0" text="技能2" />
-    <a time="065.0" text="暗夜之舞１" sync="暗之巫女发动了“暗夜之舞”" />
-    <a time="068.0" text="暗夜之舞２" />
-    <a time="080.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" goto="PHASE2 序" />
+    <a time="065.0" text="暗夜舞蹈１" sync="暗之巫女发动了“暗夜舞蹈”" />
+    <a time="068.0" text="暗夜舞蹈２" />
+    <a time="080.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" goto="PHASE2 起" />
   </s>
 
-  <s name="PHASE2 序" >
-    <!-- 时间压缩・序トリガー begin -->
-    <t name="火3先" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影火3 from  for 14.96 Seconds." sync-count="1" >
+  <s name="PHASE2 起" >
+    <!-- 时间压缩·起トリガー begin -->
+    <t name="先爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from  for 14.96 Seconds" sync-count="1" >
       <v-notice
-        text="火3"
+        text="爆炎"
         duration="15"
         icon="Targetaoe01.png"
         order="-3" />
     </t>
-    <t name="火3後" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影火3 from  for 28.96 Seconds." sync-count="1" >
+    <t name="後爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from  for 28.96 Seconds" sync-count="1" >
       <v-notice
-        text="➜火3"
+        text="➜爆炎"
         duration="29"
         icon="Targetaoe01.png"
         order="-1" />
     </t>
 
-    <t name="冰3先" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影冰3 from  for 14.96 Seconds." sync-count="1" >
+    <t name="先冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from  for 14.96 Seconds" sync-count="1" >
       <v-notice
-        text="冰3"
+        text="冰封"
         duration="15"
         icon="AOEOutside.png"
         order="-3" />
     </t>
-    <t name="冰3後" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影冰3 from  for 28.96 Seconds." sync-count="1" >
+    <t name="後冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from  for 28.96 Seconds" sync-count="1" >
       <v-notice
-        text="➜冰3"
+        text="➜冰封"
         duration="29"
         icon="AOEOutside.png"
         order="-1" />
     </t>
 
-    <t name="暗影之眼" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影之眼 from  for 21.96 Seconds." sync-count="0" >
+    <t name="暗影之眼" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影之眼 from  for 21.96 Seconds" sync-count="0" >
       <v-notice
         text="➜暗影之眼"
         duration="22"
         job-icon="true"
         order="-2" />
     </t>
-    <!-- 时间压缩・序トリガー end -->
+    <!-- 时间压缩·起トリガー end -->
 
-    <a time="011.0" sync="暗之巫女:過去……現在……未来……。" />
-    <a time="022.0" text="时间压缩・序" sync="暗之巫女发动了“时间压缩・序”" />
-    <a time="030.0" text="变速" sync="暗之巫女发动了“变速”" />
-    <a time="044.7" text="返回" />
-    <a time="068.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="078.0" sync="暗之巫女:昏き深淵よ！ いやはてより来たりて、终末を切り裂け！" />
-    <a time="083.0" text="启示录・单" sync="暗之巫女发动了“启示录・单”" />
-    <a time="093.0" text="灾变" sync="暗之巫女发动了“灾变”" />
-    <a time="101.0" text="暗影光轮" sync="暗之巫女发动了“暗影光轮”" notice="次、光轮" />
-    <a time="109.0" text="护盾碎击" sync="暗之巫女发动了“护盾碎击”" />
-    <a time="115.0" text="汲魂" sync="暗之巫女发动了“汲魂”" />
-    <a time="126.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" goto="PHASE3 破" />
+    <a time="011.0" sync="过去……现在……未来……" />
+    <a time="022.0" text="时间压缩·起" sync="暗之巫女发动了“时间压缩·起”" />
+    <a time="030.0" text="限速" sync="暗之巫女发动了“限速”" />
+    <a time="044.7" text="回返" />
+    <a time="068.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="078.0" sync="来自世界尽头，斩断过往的悲伤！" />
+    <a time="083.0" text="单一启示" sync="暗之巫女发动了“单一启示”" />
+    <a time="093.0" text="大灾变" sync="暗之巫女发动了“大灾变”" />
+    <a time="101.0" text="黑色光环" sync="暗之巫女发动了“黑色光环”" notice="光环" />
+    <a time="109.0" text="破盾一击" sync="暗之巫女发动了“破盾一击”" />
+    <a time="115.0" text="碎灵一击" sync="暗之巫女发动了“碎灵一击”" />
+    <a time="126.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" goto="PHASE3 承" />
   </s>
 
-  <s name="PHASE3 破">
-    <!-- 时间压缩・破トリガー begin -->
-    <t name="爆炎1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影爆炎 from  for 30.96 Seconds." >
+  <s name="PHASE3 承">
+    <!-- 时间压缩·承トリガー begin -->
+    <t name="暗炎1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 30.96 Seconds" >
       <v-notice
         text="１：靠外（火）"
         duration="12"
@@ -750,7 +750,7 @@
         order="-3" />
     </t>
 
-    <t name="爆炎2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影爆炎 from  for 26.96 Seconds." >
+    <t name="暗炎2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 26.96 Seconds" >
       <v-notice
         text="２：靠外（火）"
         duration="17"
@@ -759,7 +759,7 @@
         order="-2" />
     </t>
 
-    <t name="爆炎3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影爆炎 from  for 22.96 Seconds." >
+    <t name="暗炎3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 22.96 Seconds" >
       <v-notice
         text="３：靠外（火）"
         duration="23"
@@ -768,7 +768,7 @@
         order="-1" />
     </t>
 
-    <t name="神圣1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 30.96 Seconds." sync-count="1" >
+    <t name="神圣1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（分摊）"
         duration="12"
@@ -777,7 +777,7 @@
         order="-3" />
     </t>
 
-    <t name="神圣2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 26.96 Seconds." sync-count="1" >
+    <t name="神圣2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（分摊）"
         duration="17"
@@ -786,7 +786,7 @@
         order="-2" />
     </t>
 
-    <t name="神圣3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 22.96 Seconds." sync-count="1" >
+    <t name="神圣3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（分摊）"
         duration="23"
@@ -795,7 +795,7 @@
         order="-1" />
     </t>
 
-    <t name="核爆1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 30.96 Seconds." sync-count="1" >
+    <t name="核爆1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：靠外（核爆）"
         duration="12"
@@ -804,7 +804,7 @@
         order="-3" />
     </t>
 
-    <t name="核爆2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 26.96 Seconds." sync-count="1" >
+    <t name="核爆2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：靠外（核爆）"
         duration="17"
@@ -813,7 +813,7 @@
         order="-2" />
     </t>
 
-    <t name="核爆3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 22.96 Seconds." sync-count="1" >
+    <t name="核爆3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：靠外（核爆）"
         duration="23"
@@ -822,7 +822,7 @@
         order="-1" />
     </t>
 
-    <t name="暗影之眼1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 30.96 Seconds." sync-count="1" >
+    <t name="暗影之眼1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（眼）"
         duration="12"
@@ -831,7 +831,7 @@
         order="-3" />
     </t>
 
-    <t name="暗影之眼2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds." sync-count="1" >
+    <t name="暗影之眼2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（眼）"
         duration="17"
@@ -840,7 +840,7 @@
         order="-2" />
     </t>
 
-    <t name="暗影之眼3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 22.96 Seconds." sync-count="1" >
+    <t name="暗影之眼3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（眼）"
         duration="23"
@@ -849,7 +849,7 @@
         order="-1" />
     </t>
 
-    <t name="冰31" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影冰3 from  for 30.96 Seconds." sync-count="1" >
+    <t name="冰封1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（月环）"
         duration="12"
@@ -858,7 +858,7 @@
         order="-3" />
     </t>
 
-    <t name="冰32" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影冰3 from  for 26.96 Seconds." sync-count="1" >
+    <t name="冰封2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（月环）"
         duration="17"
@@ -867,7 +867,7 @@
         order="-2" />
     </t>
 
-    <t name="冰33" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影冰3 from  for 22.96 Seconds." sync-count="1" >
+    <t name="冰封3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（月环）"
         duration="23"
@@ -876,57 +876,57 @@
         order="-1" />
     </t>
 
-    <t name="风31" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影风3 from  for 30.96 Seconds." sync-count="1" >
+    <t name="暴风1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 30.96 Seconds" sync-count="1" >
       <v-notice
-        text="１：靠边（风3）"
+        text="１：靠边（暴风）"
         duration="12"
         icon="Twister.png"
         font-scale="0.9"
         order="-3" />
     </t>
 
-    <t name="风32" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影风3 from  for 26.96 Seconds." sync-count="1" >
+    <t name="暴风2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 26.96 Seconds" sync-count="1" >
       <v-notice
-        text="２：靠边（风3）"
+        text="２：靠边（暴风）"
         duration="17"
         icon="Twister.png"
         font-scale="0.9"
         order="-2" />
     </t>
 
-    <t name="风33" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影风3 from  for 22.96 Seconds." sync-count="1" >
+    <t name="暴风3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 22.96 Seconds" sync-count="1" >
       <v-notice
-        text="３：靠边（风3）"
+        text="３：靠边（暴风）"
         duration="23"
         icon="Twister.png"
         font-scale="0.9"
         order="-1" />
     </t>
-    <!-- 时间压缩・破トリガー end -->
+    <!-- 时间压缩·承トリガー end -->
 
-    <a time="012.0" sync="暗之巫女:苦しみは刹那、喜びは永遠……。" />
-    <a time="017.0" sync="暗之巫女:我が意のままに、時は流れる！" />
-    <a time="023.0" text="时间压缩・破" sync="暗之巫女发动了“时间压缩・破”" />
-    <a time="035.7" text="返回１" />
-    <a time="040.7" text="返回２" />
-    <a time="047.7" text="返回开始" />
-    <a time="064.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="074.0" sync="暗之巫女:虚ろなる大地よ！ 次元を超えて光を喰らい、無へと回帰せよ！" />
-    <a time="079.0" text="启示录・双" sync="暗之巫女发动了“启示录・双”" />
-    <a time="089.0" text="灾变" sync="暗之巫女发动了“灾变”" />
-    <a time="102.0" text="宵闇之舞１" sync="暗之巫女发动了“宵闇之舞”" />
-    <a time="105.0" text="宵闇之舞２" />
-    <a time="116.0" text="护盾碎击" sync="暗之巫女发动了“护盾碎击”" />
-    <a time="132.0" text="汲魂" sync="暗之巫女发动了“汲魂”" />
-    <a time="140.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" goto="PHASE4 急·终" />
+    <a time="012.0" sync="痛苦转瞬，喜悦永恒……" />
+    <a time="017.0" sync="时间的流逝由我掌控！" />
+    <a time="023.0" text="时间压缩·承" sync="暗之巫女发动了“时间压缩·承”" />
+    <a time="035.7" text="回返１" />
+    <a time="040.7" text="回返２" />
+    <a time="047.7" text="回返开始" />
+    <a time="064.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="074.0" sync="跨过次元将光噬尽，回归空无！" />
+    <a time="079.0" text="双重启示" sync="暗之巫女发动了“双重启示”" />
+    <a time="089.0" text="大灾变" sync="暗之巫女发动了“大灾变”" />
+    <a time="102.0" text="真夜舞蹈１" sync="暗之巫女发动了“真夜舞蹈”" />
+    <a time="105.0" text="真夜舞蹈２" />
+    <a time="116.0" text="破盾一击" sync="暗之巫女发动了“破盾一击”" />
+    <a time="132.0" text="碎灵一击" sync="暗之巫女发动了“碎灵一击”" />
+    <a time="140.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" goto="PHASE4 转·合" />
   </s>
 
-  <s name="PHASE4 急·终" >
-    <!-- 时间压缩・急トリガー begin -->
+  <s name="PHASE4 转·合" >
+    <!-- 时间压缩·转トリガー begin -->
     @if (Model.Player.InRole("TANK")) {
-      <t name="火3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影火3 from  for 22.96 Seconds." sync-count="1" notice="火3、稍靠外" >
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外" >
         <v-notice
-          text="火3\n１：稍靠外\n２：右回りに設置\n３：中央に設置"
+          text="暗炎\n１：稍靠外\n２：向左放置\n３：中央に設置"
           duration="31"
           icon="Targetaoe01.png"
           order="-1"
@@ -935,9 +935,9 @@
     }
 
     @if (Model.Player.InRole("HEALER")) {
-      <t name="火3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影火3 from  for 22.96 Seconds." sync-count="1" notice="火3、稍靠外">
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
         <v-notice
-          text="火3\n１：稍靠外\n２：右回りに設置\n３：右回り(大)に設置"
+          text="暗炎\n１：稍靠外\n２：向左放置\n３：向左1.5格场边放置"
           duration="31"
           icon="Targetaoe01.png"
           order="-1"
@@ -946,9 +946,9 @@
     }
 
     @if (Model.Player.InRole("DPS")) {
-      <t name="火3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影火3 from  for 22.96 Seconds." sync-count="1" notice="火3、稍靠外">
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
         <v-notice
-          text="火3\n１：稍靠外\n２：右回りに設置\n３：中央or右回り(大)に設置"
+          text="暗炎\n１：稍靠外\n２：向左放置\n３：中央or向左1.5格场边放置"
           duration="31"
           icon="Targetaoe01.png"
           order="-1"
@@ -956,43 +956,43 @@
       </t>
     }
 
-    <t name="暗影之眼" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds." sync-count="1" notice="暗影之眼、稍靠外">
+    <t name="暗影之眼" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds" sync-count="1" notice="暗影之眼、稍靠外">
       <v-notice
-        text="暗影之眼\n１：稍靠外\n２：右回りに設置\n３：更に右に設置"
+        text="暗影之眼\n１：稍靠外\n２：向右放置\n３：继续向右放置"
         duration="31"
         icon="Eye.png"
         order="-1"
         font-scale="0.9" />
       </t>
 
-    <t name="风32個" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影风3 from 暗之巫女 for 30.96 Seconds." sync-count="1" notice="风3、靠边">
+    <t name="暴风x2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from 暗之巫女 for 30.96 Seconds" sync-count="1" notice="暴风、靠边">
       <v-notice
-        text="风3x2\n１：靠边\n２：左回りに設置\n３：更に左に設置"
+        text="暴风x2\n１：靠边\n２：向左放置\n３：继续向左放置"
         duration="31"
         icon="Twister.png"
         order="-1"
         font-scale="0.9" />
       </t>
-    <!-- 时间压缩・急トリガー end -->
+    <!-- 时间压缩·转トリガー end -->
 
-    <a time="008.0" sync="暗之巫女:他者がいるから孤独を感じる……。" />
-    <a time="013.0" sync="暗之巫女:ならば、ひとりとなり幸福に浸ろう！" />
-    <a time="019.0" text="时间压缩・急" sync="暗之巫女发动了“时间压缩・急”" />
-    <a time="027.0" text="变速" sync="暗之巫女发动了“变速”" />
-    <a time="032.3" text="返回１" />
-    <a time="037.2" text="返回２" />
-    <a time="042.0" text="光束１" sync="悲しみの砂時計发动了“メイルシュトローム”" />
-    <a time="044.3" text="返回开始" />
-    <a time="064.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="082.0" text="启示录・三" sync="暗之巫女发动了“启示录・三”" />
-    <a time="093.0" text="暗夜之舞１" sync="暗之巫女发动了“暗夜之舞”" />
-    <a time="095.0" text="暗夜之舞２" />
-    <a time="108.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="117.0" text="暗影光轮" sync="暗之巫女发动了“暗影光轮”" notice="次、光轮" />
-    <a time="140.0" text="时间压缩・终" sync="暗之巫女发动了“时间压缩・终”" />
-    <a time="155.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" notice="AOE" />
-    <a time="169.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" />
-    <a time="182.0" text="冲击波脉冲" sync="暗之巫女发动了“冲击波脉冲”" />
-    <a time="191.9" text="狂暴读条" sync="暗之巫女 starts using 回忆尽头 on 暗之巫女." />
+    <a time="008.0" sync="他人的存在会令人孤独……" />
+    <a time="013.0" sync="只要你们都消失，我就会永远幸福！" />
+    <a time="019.0" text="时间压缩·转" sync="暗之巫女发动了“时间压缩·转”" />
+    <a time="027.0" text="限速" sync="暗之巫女发动了“限速”" />
+    <a time="032.3" text="回返１" />
+    <a time="037.2" text="回返２" />
+    <a time="042.0" text="光束１" sync="悲伤的沙漏发动了“巨漩涡”" />
+    <a time="044.3" text="回返开始" />
+    <a time="064.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="082.0" text="三重启示" sync="暗之巫女发动了“三重启示”" />
+    <a time="093.0" text="暗夜舞蹈１" sync="暗之巫女发动了“暗夜舞蹈”" />
+    <a time="095.0" text="暗夜舞蹈２" />
+    <a time="108.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="117.0" text="黑色光环" sync="暗之巫女发动了“黑色光环”" notice="光环" />
+    <a time="140.0" text="时间压缩·合" sync="暗之巫女发动了“时间压缩·合”" />
+    <a time="155.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" notice="AOE" />
+    <a time="169.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" />
+    <a time="182.0" text="脉冲星震波" sync="暗之巫女发动了“脉冲星震波”" />
+    <a time="191.9" text="狂暴读条" sync="暗之巫女 starts using 记忆终结 on 暗之巫女" />
   </s>
 </timeline>
