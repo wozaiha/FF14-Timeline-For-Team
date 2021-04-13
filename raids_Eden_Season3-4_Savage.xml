@@ -655,7 +655,7 @@
   }
 
   <s name="PHASE1 本体开场" >
-    <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 16.96 Seconds" >
+    <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from .{0,20} for 16.96 Seconds" >
       <v-notice
         text="分散"
         duration="17"
@@ -663,7 +663,7 @@
         order="-1" />
     </t>
 
-    <t name="狂水" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗狂水 from  for 11.96 Seconds" sync-count="2" >
+    <t name="狂水" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗狂水 from .{0,20} for 11.96 Seconds" sync-count="2" >
       <v-notice
         text="分摊"
         duration="12"
@@ -686,14 +686,14 @@
 
   <s name="PHASE2 起" >
     <!-- 时间压缩·起トリガー begin -->
-    <t name="先爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from  for 14.96 Seconds" sync-count="1" >
+    <t name="先爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from .{0,20} for 14.96 Seconds" sync-count="1" >
       <v-notice
         text="爆炎"
         duration="15"
         icon="Targetaoe01.png"
         order="-3" />
     </t>
-    <t name="後爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from  for 28.96 Seconds" sync-count="1" >
+    <t name="後爆炎" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗爆炎 from .{0,20} for 28.96 Seconds" sync-count="1" >
       <v-notice
         text="➜爆炎"
         duration="29"
@@ -701,14 +701,14 @@
         order="-1" />
     </t>
 
-    <t name="先冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from  for 14.96 Seconds" sync-count="1" >
+    <t name="先冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from .{0,20} for 14.96 Seconds" sync-count="1" >
       <v-notice
         text="冰封"
         duration="15"
         icon="AOEOutside.png"
         order="-3" />
     </t>
-    <t name="後冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from  for 28.96 Seconds" sync-count="1" >
+    <t name="後冰封" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：黑暗冰封 from .{0,20} for 28.96 Seconds" sync-count="1" >
       <v-notice
         text="➜冰封"
         duration="29"
@@ -716,7 +716,7 @@
         order="-1" />
     </t>
 
-    <t name="暗影之眼" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影之眼 from  for 21.96 Seconds" sync-count="0" >
+    <t name="暗影之眼" sync="^1A:[id8]:[pc] gains the effect of 延迟咏唱：暗影之眼 from .{0,20} for 21.96 Seconds" sync-count="0" >
       <v-notice
         text="➜暗影之眼"
         duration="22"
@@ -741,7 +741,7 @@
 
   <s name="PHASE3 承">
     <!-- 时间压缩·承トリガー begin -->
-    <t name="暗炎1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 30.96 Seconds" >
+    <t name="暗炎1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from .{0,20} for 30.96 Seconds" >
       <v-notice
         text="１：靠外（火）"
         duration="12"
@@ -750,7 +750,7 @@
         order="-3" />
     </t>
 
-    <t name="暗炎2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 26.96 Seconds" >
+    <t name="暗炎2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from .{0,20} for 26.96 Seconds" >
       <v-notice
         text="２：靠外（火）"
         duration="17"
@@ -759,7 +759,7 @@
         order="-2" />
     </t>
 
-    <t name="暗炎3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from  for 22.96 Seconds" >
+    <t name="暗炎3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗炎喷发 from .{0,20} for 22.96 Seconds" >
       <v-notice
         text="３：靠外（火）"
         duration="23"
@@ -768,7 +768,7 @@
         order="-1" />
     </t>
 
-    <t name="神圣1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 30.96 Seconds" sync-count="1" >
+    <t name="神圣1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from .{0,20} for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（分摊）"
         duration="12"
@@ -777,7 +777,7 @@
         order="-3" />
     </t>
 
-    <t name="神圣2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 26.96 Seconds" sync-count="1" >
+    <t name="神圣2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from .{0,20} for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（分摊）"
         duration="17"
@@ -786,7 +786,7 @@
         order="-2" />
     </t>
 
-    <t name="神圣3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from  for 22.96 Seconds" sync-count="1" >
+    <t name="神圣3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影神圣 from .{0,20} for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（分摊）"
         duration="23"
@@ -795,7 +795,7 @@
         order="-1" />
     </t>
 
-    <t name="核爆1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 30.96 Seconds" sync-count="1" >
+    <t name="核爆1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from .{0,20} for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：靠外（核爆）"
         duration="12"
@@ -804,7 +804,7 @@
         order="-3" />
     </t>
 
-    <t name="核爆2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 26.96 Seconds" sync-count="1" >
+    <t name="核爆2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from .{0,20} for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：靠外（核爆）"
         duration="17"
@@ -813,7 +813,7 @@
         order="-2" />
     </t>
 
-    <t name="核爆3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from  for 22.96 Seconds" sync-count="1" >
+    <t name="核爆3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：核爆 from .{0,20} for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：靠外（核爆）"
         duration="23"
@@ -822,7 +822,7 @@
         order="-1" />
     </t>
 
-    <t name="暗影之眼1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 30.96 Seconds" sync-count="1" >
+    <t name="暗影之眼1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from .{0,20} for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（眼）"
         duration="12"
@@ -831,7 +831,7 @@
         order="-3" />
     </t>
 
-    <t name="暗影之眼2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds" sync-count="1" >
+    <t name="暗影之眼2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from .{0,20} for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（眼）"
         duration="17"
@@ -840,7 +840,7 @@
         order="-2" />
     </t>
 
-    <t name="暗影之眼3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 22.96 Seconds" sync-count="1" >
+    <t name="暗影之眼3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from .{0,20} for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（眼）"
         duration="23"
@@ -849,7 +849,7 @@
         order="-1" />
     </t>
 
-    <t name="冰封1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 30.96 Seconds" sync-count="1" >
+    <t name="冰封1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from .{0,20} for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：中央（月环）"
         duration="12"
@@ -858,7 +858,7 @@
         order="-3" />
     </t>
 
-    <t name="冰封2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 26.96 Seconds" sync-count="1" >
+    <t name="冰封2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from .{0,20} for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：中央（月环）"
         duration="17"
@@ -867,7 +867,7 @@
         order="-2" />
     </t>
 
-    <t name="冰封3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from  for 22.96 Seconds" sync-count="1" >
+    <t name="冰封3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗冰封 from .{0,20} for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：中央（月环）"
         duration="23"
@@ -876,7 +876,7 @@
         order="-1" />
     </t>
 
-    <t name="暴风1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 30.96 Seconds" sync-count="1" >
+    <t name="暴风1" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from .{0,20} for 30.96 Seconds" sync-count="1" >
       <v-notice
         text="１：靠边（暴风）"
         duration="12"
@@ -885,7 +885,7 @@
         order="-3" />
     </t>
 
-    <t name="暴风2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 26.96 Seconds" sync-count="1" >
+    <t name="暴风2" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from .{0,20} for 26.96 Seconds" sync-count="1" >
       <v-notice
         text="２：靠边（暴风）"
         duration="17"
@@ -894,7 +894,7 @@
         order="-2" />
     </t>
 
-    <t name="暴风3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from  for 22.96 Seconds" sync-count="1" >
+    <t name="暴风3" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影暴风 from .{0,20} for 22.96 Seconds" sync-count="1" >
       <v-notice
         text="３：靠边（暴风）"
         duration="23"
@@ -924,7 +924,7 @@
   <s name="PHASE4 转·合" >
     <!-- 时间压缩·转トリガー begin -->
     @if (Model.Player.InRole("TANK")) {
-      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外" >
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from .{0,20} for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外" >
         <v-notice
           text="暗炎\n１：稍靠外\n２：向左放置\n３：中央に設置"
           duration="31"
@@ -935,7 +935,7 @@
     }
 
     @if (Model.Player.InRole("HEALER")) {
-      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from .{0,20} for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
         <v-notice
           text="暗炎\n１：稍靠外\n２：向左放置\n３：向左1.5格场边放置"
           duration="31"
@@ -946,7 +946,7 @@
     }
 
     @if (Model.Player.InRole("DPS")) {
-      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from  for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
+      <t name="暗炎" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：黑暗爆炎 from .{0,20} for 22.96 Seconds" sync-count="1" notice="暗炎、稍靠外">
         <v-notice
           text="暗炎\n１：稍靠外\n２：向左放置\n３：中央or向左1.5格场边放置"
           duration="31"
@@ -956,7 +956,7 @@
       </t>
     }
 
-    <t name="暗影之眼" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from  for 26.96 Seconds" sync-count="1" notice="暗影之眼、稍靠外">
+    <t name="暗影之眼" sync="^1A:[id8]:[mex] gains the effect of 延迟咏唱：暗影之眼 from .{0,20} for 26.96 Seconds" sync-count="1" notice="暗影之眼、稍靠外">
       <v-notice
         text="暗影之眼\n１：稍靠外\n２：向右放置\n３：继续向右放置"
         duration="31"
