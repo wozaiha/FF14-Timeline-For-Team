@@ -255,17 +255,17 @@
 
   <a time="032.0" text="影之王权（远离）" notice="远离。" />
   <a time="042.0" text="十亿斩击" sync="影之王发动了“十亿斩击”" />
-  <a time="054.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑" />
+  <a time="054.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑 地星" />
   <a time="067.0" text="分摊or正面AOE" sync="影之王发动了“(影之斩击|释影)”" />
   <a time="074.0" sync="你们的影子将成为我的仆人！" />
-  <a time="082.0" text="影裂" sync="影之王发动了“影裂”" notice="远离分散" />
+  <a time="082.0" text="影裂" sync="影之王发动了“影裂”" notice="远离分散 黄昏天星天宫" />
   <a time="095.0" text="双重咏唱" sync="影之王发动了“双重咏唱”" />
-  <a time="095.0" text="分摊１" notice="1分摊" notice-o="0" />
+  <a time="095.0" text="分摊１" notice="1分摊 光速罩子" notice-o="0" />
   <a time="098.0" text="分摊２" notice="2分摊" notice-o="0" />
   <a time="101.0" text="分摊３" notice="3分摊" notice-o="0" />
   <a time="104.0" sync="英雄之影啊，绕到身后吧！" />
   <a time="108.0" text="影之王命" sync="影之王发动了“影之王命”" />
-  <a time="121.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑" />
+  <a time="121.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑 地星天星" /> 
   <a time="135.0" text="分摊or正面AOE" sync="影之王发动了“(影之斩击|释影)”" />
 
   <a time="142.0" sync="所有影子均为我的领土……" />
@@ -273,55 +273,55 @@
   <a time="156.3" text="十亿斩击" />
   <a time="175.0" text="十亿斩击" />
 
-  <a time="190.0" text="击退"  notice="击退" />
-  <a time="209.0" text="本影球" sync="影之王发动了“本影球”" />
+  <a time="190.0" text="击退"  notice="击退 光速黄昏天宫" />
+  <a time="209.0" text="本影球" sync="影之王发动了“本影球”" notice="罩子" />
   <a time="217.0" text="球判定" />
   <a time="226.0" text="影之增殖" sync="影之王发动了“影之增殖”" />
   <a time="239.0" text="本影球" sync="影之王发动了“本影球”" />
-  <a time="247.7" text="球判定" />
+  <a time="247.7" text="球判定" notice="地星天星"/>
   <a time="261.0" text="深影新星" notice="AOE" />
   <a time="274.0" text="潜影" sync="影之王发动了“潜影”" />
   <a time="286.0" text="向心聚爆" sync="影之王发动了“向心聚爆”" />
-  <a time="297.0" text="深影新星" notice="AOE" />
-  <a time="309.0" text="连续向心聚爆" />
+  <a time="297.0" text="深影新星" notice="AOE 天宫罩子" />
+  <a time="309.0" text="连续向心聚爆" notice="天星地星"  />
   <a time="329.0" text="深影新星" notice="AOE" />
 
-  <a time="340.3" text="影之王权（远离）" notice="远离。" />
-  <a time="352.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑" />
+  <a time="340.3" text="影之王权（远离）" notice="远离。光速" />
+  <a time="352.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑 罩子天宫1" />
   <a time="362.0" text="分摊or正面AOE" sync="影之王发动了“(影之斩击|释影)”" />
   <a time="369.0" sync="沉入黑暗的故乡啊……" />
   <a time="374.0" text="虚无之门" sync="影之王发动了“虚无之门”" />
   <a time="380.0" text="影仆从" sync="影之王发动了“影仆从”" />
   <a time="391.4" text="踩塔+左右刀" />
   <a time="399.0" text="影仆从" />
-  <a time="404.5" text="踩塔" />
+  <a time="404.5" text="踩塔" notice="地星天星" />
   <a time="412.5" text="十亿斩击" />
-  <a time="432.0" text="影之沼泽" sync="影之王发动了“影之沼泽”" />
+  <a time="432.0" text="影之沼泽" sync="影之王发动了“影之沼泽”" notice="黄昏光速" />
   <a time="438.0" text="本影球" sync="影之王发动了“本影球”" />
-  <a time="445.5" text="击退"  notice="击退" />
+  <a time="445.5" text="击退"  notice="击退 罩子天宫相位" />
   <a time="447.4" text="球判定" />
-  <a time="456.0" text="连续向心聚爆" sync="影之王发动了“向心聚爆”" />
+  <a time="456.0" text="连续向心聚爆" sync="影之王发动了“向心聚爆”" notice="地星天星" />
   <a time="471.0" text="深影新星" notice="AOE" />
   <a time="484.0" text="离别之锁" sync="影之王发动了“离别之锁”" />
   <a time="492.0" text="潜影" sync="影之王发动了“潜影”" />
-  <a time="500.0" text="本影球" sync="影之王发动了“本影球”" />
-  <a time="522.0" text="深影新星" notice="AOE" />
+  <a time="500.0" text="本影球" sync="影之王发动了“本影球”" notice="天宫相位" />
+  <a time="522.0" text="深影新星" notice="AOE 罩子天星" />
 
-  <a time="532.2" text="影之王权（远离）" notice="远离。" />
+  <a time="532.2" text="影之王权（远离）" notice="远离。地星" />
   <a time="545.0" text="影之沼泽" sync="影之王发动了“影之沼泽”" />
   <a time="563.0" text="十亿斩击" sync="影之王发动了“十亿斩击”" />
-  <a time="570.0" text="扩大虚无之门" sync="影之王发动了“扩大虚无之门”" />
+  <a time="570.0" text="扩大虚无之门" sync="影之王发动了“扩大虚无之门”" notice="光速黄昏相位" />
   <a time="577.0" text="影之王命" sync="影之王发动了“影之王命”" />
-  <a time="585.3" text="踩塔" />
+  <a time="585.3" text="踩塔" notice="天星天宫相位" />
   <a time="589.5" text="地火" />
   <a time="594.8" text="近线" />
   <a time="600.4" text="踩塔" notice="踩塔" />
-  <a time="612.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑" />
+  <a time="612.0" text="本影爆碎" sync="影之王发动了“本影爆碎”" notice="死刑 地星" />
   <a time="622.0" text="分摊or正面AOE" sync="影之王发动了“(影之斩击|释影)”" />
-  <a time="629.0" text="本影球" sync="影之王发动了“本影球”" />
+  <a time="629.0" text="本影球" sync="影之王发动了“本影球”" notice="罩子" />
   <a time="631.8" text="击退" sync="影之王 starts using 影之狂吠 on 影之王." notice="击退。" />
   <a time="639.0" text="球判定" />
-  <a time="649.0" text="深影新星" notice="AOE" />
+  <a time="649.0" text="深影新星" notice="AOE 光速" />
   <a time="661.0" text="深影新星" notice="AOE" />
   <a time="672.0" text="深影新星" notice="AOE" />
   <a time="707.4" text="狂暴" />

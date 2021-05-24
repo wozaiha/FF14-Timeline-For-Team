@@ -246,12 +246,13 @@
   </t>
 
   <a time="000.0" sync="就凭你的力量，无法打破我这坚固的守护！" />
+  <a time="000.0" text="黄昏天星天宫，18秒AOE" />
   <a time="017.0" text="元素破" sync="绝命战士发动了“元素破”" />
 
-  <a time="033.0" text="燃烧击" sync="绝命战士发动了“燃烧击”" />
+  <a time="033.0" text="燃烧击" sync="绝命战士发动了“燃烧击”" notice="地星"/>
   <a time="040.3" text="点名" />
   <a time="046.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" />
-  <a time="060.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="060.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 天星天宫罩子" />
   <a time="070.0" text="爆印铭刻" sync="绝命战士发动了“爆印铭刻”" />
   <a time="078.0" text="光轮召唤" icon="Check.png" sync="绝命战士发动了“光轮召唤”" notice-o="-7" notice="双色环" />
   <a time="080.0" sync="光轮中能够感到强大的力量！" />
@@ -259,7 +260,7 @@
   <a time="089.6" text="爆印判定" />
   <a time="090.0" text="光轮判定" />
   
-  <a time="104.0" text="燃烧击" sync="绝命战士发动了“燃烧击”" notice-o="-10" notice="">
+  <a time="104.0" text="燃烧击" sync="绝命战士发动了“燃烧击”" notice-o="-10" notice="光速地星">
     <v-notice
       text="禁止防击退" 
       duration="6"
@@ -267,9 +268,9 @@
       icon="Check.png" />
   </a>
   <a time="111.0" text="点名" />
-  <a time="117.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" />
+  <a time="117.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" notice="黄昏天宫"/>
 
-  <a time="133.0" text="元素破" sync="绝命战士发动了“元素破”" />
+  <a time="133.0" text="元素破" sync="绝命战士发动了“元素破”" notice="天星"/>
   <a time="139.0" sync="让我看看你的力量究竟有多强！" notice-o="-3" notice="至天绝技。" />
   <a time="147.0" text="至天绝技" icon="Check.png" sync="绝命战士发动了“至天绝技”" />
 
@@ -285,14 +286,14 @@
   </a>
   <a time="176.0" text="火燃烧击" />
 
-  <a time="192.0" text="元素破" sync="绝命战士发动了“元素破”" />
-  <a time="204.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="192.0" text="元素破" sync="绝命战士发动了“元素破”" notice="天宫地星"/>
+  <a time="204.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 天星罩子" />
   <a time="214.0" sync="绝命战士:こいつを試すとしよう。" />
-  <a time="221.0" text="光元素破" sync="绝命战士发动了“元素破”" />
+  <a time="221.0" text="光元素破" sync="绝命战士发动了“元素破”" notice="光速"/>
   <a time="238.0" text="光燃烧击" sync="绝命战士发动了“燃烧击”" />
   <a time="244.9" text="点名" />
   <a time="251.0" text="光罪壤刺" sync="绝命战士发动了“罪壤刺”" />
-  <a time="265.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="265.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="地星 光焰圆光 黄昏天星天宫罩子" />
   <a time="275.0" text="爆印铭刻" sync="绝命战士发动了“爆印铭刻”" />
   <a time="283.0" text="四天召唤第一次" icon="Check.png" sync="绝命战士发动了“四天召唤”" notice-o="-6" notice="4门。" />
   <a time="294.1" text="爆印判定" />
@@ -306,29 +307,29 @@
       icon="Check.png" />
   </a>
   <a time="316.0" text="点名" />
-  <a time="322.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" />
-  <a time="337.0" text="元素破" sync="绝命战士发动了“元素破”" />
+  <a time="322.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" notice="罩子"/>
+  <a time="337.0" text="元素破" sync="绝命战士发动了“元素破”" notice="地星光速天宫"/>
 
   <a time="343.0" name="堕狱绝技准备" notice-o="0" notice="堕狱绝技准备" />
   <a time="352.0" text="堕狱绝技" icon="Check.png" sync="绝命战士发动了“堕狱绝技”" />
-  <a time="359.8" text="击退" />
+  <a time="359.8" text="击退" notice="天星"/>
   <a time="361.8" text="点名" sync="^1A:10048B6B:[pc] gains the effect of 标记 from" />
   <a time="368.0" text="闪光" />
-  <a time="369.0" text="罪壤刺x2" sync="绝命战士的幻影发动了“罪壤刺”" />
+  <a time="369.0" text="罪壤刺x2" sync="绝命战士的幻影发动了“罪壤刺”" notice="相位"/>
   <a time="377.0" text="光燃烧击" notice="光强击。" />
   <a time="381.0" text="雷燃烧击" />
   <a time="384.0" text="火燃烧击" />
 
-  <a time="398.0" text="元素破" sync="绝命战士发动了“元素破”" />
-  <a time="410.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="398.0" text="元素破" sync="绝命战士发动了“元素破”" notice="地星"/>
+  <a time="410.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 黄昏罩子" />
   <a time="417.0" sync="真的要一条路走到底吗……" notice-o="0" notice="双色环、8方分散。" />
   <a time="428.0" text="光轮召唤" sync="绝命战士发动了“光轮召唤”" />
-  <a time="439.0" text="元素破" sync="绝命战士发动了“元素破”" />
+  <a time="439.0" text="元素破" sync="绝命战士发动了“元素破”" notice="光速天宫天星"/>
   <a time="440.0" text="光轮判定" />
 
   <a time="451.0" text="爆印铭刻" sync="绝命战士发动了“爆印铭刻”" />
   <a time="459.0" text="四天召唤第二次" icon="Check.png" sync="绝命战士发动了“四天召唤”" notice-o="-7" notice="4门。" />
-  <a time="470.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" />
+  <a time="470.0" text="罪壤刺" sync="绝命战士发动了“罪壤刺”" notice="地星罩子"/>
   <a time="472.0" text="闪光" />
 
   <a time="491.0" sync="这道光芒是我的希望……" notice="隐身准备" />
@@ -337,9 +338,9 @@
     <dump name="prismatic_invisible" target="Position" />
   </a>
   <a time="515.0" text="爆破１" />
-  <a time="533.0" text="爆破２" />
+  <a time="533.0" text="爆破２" notice-o="0" notice="地星天宫"/>
 
-  <a time="550.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="550.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 天星罩子" />
   <a time="551.0" name="连续剑阶段开始">
     <expressions>
       <set name="renzokuken" value="true" />
@@ -352,7 +353,7 @@
   <a time="572.0" text="元素破" />
   <a time="576.4" text="燃烧击" />
   <a time="584.0" text="罪壤刺"  />
-  <a time="598.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="598.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 地星天星天宫" />
 
   <a time="602.0" sync="是时候做个了断了。" notice-o="-3" notice="连续剑第二次" />
   <a time="602.8" text="点名" />
@@ -360,14 +361,14 @@
   <a time="610.0" text="元素破" />
   <a time="614.0" text="燃烧击" />
   <a time="621.0" text="罪壤刺" />
-  <a time="635.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光" />
+  <a time="635.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 黄昏罩子" />
 
   <a time="639.0" sync="我将使出所有力量！" notice-o="-3" notice="连续剑第三次" />
   <a time="640.7" text="点名" />
   <a time="647.0" text="魔装连续剑" sync="绝命战士发动了“魔装连续剑”" />
   <a time="648.0" text="元素破" />
   <a time="652.0" text="燃烧击" />
-  <a time="660.0" text="罪壤刺" />
-  <a time="675.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="AOE" />
+  <a time="660.0" text="罪壤刺" notice="地星"/>
+  <a time="675.0" text="光焰圆光" sync="绝命战士发动了“光焰圆光”" notice="光焰圆光 天星天宫" />
   <a time="691.0" text="狂暴" />
 </timeline>

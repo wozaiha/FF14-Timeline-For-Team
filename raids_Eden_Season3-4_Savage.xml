@@ -153,7 +153,7 @@
 
       for (int i = 0; i < 2; i++) {
         // 事前判定から通知までのディレイを設定する
-        var delay = i == 0 ? 0.0d : 34.4d;
+        var delay = i == 0 ? 0.0d : 30.0d;
 
         // 通常判定（その場で通知）と遅延通知のキーワードを設定する
         var keyword = i == 0 ? StockTakingNoticeNow : StockTakingNoticeDelay;
@@ -494,7 +494,7 @@
     <a time="046.0" sync="记忆会被夸大，会被改变！" />
 
     <a time="046.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
-    <a time="046.4" name="储存技能">
+    <a time="046.4" name="Trigger">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
     <a time="053.0" text="释放" sync="伊甸之约发动了“释放”" />
@@ -542,7 +542,7 @@
     <a time="239.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
 
     <a time="252.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
-    <a time="252.4" name="储存技能">
+    <a time="252.4" name="Trigger">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
     <a time="259.0" text="释放" sync="伊甸之约发动了“释放”" />
@@ -558,6 +558,10 @@
       </expressions>
     </a>
 
+    <a time="278.0" text="储存" sync="伊甸之约正在发动“储存”" />
+    <a time="278.1" name="Trigger">
+      <dump target="Log" log="@StockTakingNoticeDelay" />
+    </a>
     <a time="283.0" text="储存" sync="伊甸之约发动了“储存”" />
     <a time="288.0" text="创造巨兵" sync="被创造的男性发动了“创造巨兵”" />
     <a time="299.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
@@ -567,9 +571,6 @@
     <a time="310.0" text="拒绝之手" sync="伊甸守卫发动了“拒绝之手”" />
 
     <a time="310.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
-    <a time="310.4" name="储存技能">
-      <dump target="Log" log="@StockTakingNoticeNow" />
-    </a>
     <a time="317.0" text="施放" sync="伊甸之约发动了“施放”" />
     <a time="318.0" name="清除">
       <expressions>
@@ -584,15 +585,15 @@
     <a time="347.0" sync="你们将会消失在我们记忆的彼岸！" />
 
     <a time="352.0" text="储存" sync="伊甸之约发动了“储存”" />
+    <a time="352.1" name="Trigger">
+      <dump target="Log" log="@StockTakingNoticeDelay" />
+    </a>
     <a time="363.0" text="愉悦之手" sync="伊甸之约发动了“愉悦之手”" />
     <a time="371.0" text="激射眼" sync="伊甸守卫发动了“激射眼”" />
     <a time="372.0" sync="在自己的记忆中受苦吧！" />
     <a time="375.0" text="狮子喷火" />
 
     <a time="373.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
-    <a time="373.4" name="储存技能">
-      <dump target="Log" log="@StockTakingNoticeNow" />
-    </a>
     <a time="380.0" text="施放" sync="伊甸之约发动了“施放”" />
     <a time="381.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
@@ -603,27 +604,25 @@
     <a time="402.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="AOE" />
     <a time="410.0" sync="回忆都是既脆弱又短暂的……" />
 
+    <a time="411.0" name="施放事前判定">
+      <dump target="Log" log="@StockTakingNoticeDelay" />
+    </a>
     <a time="415.0" text="储存" sync="伊甸之约发动了“储存”" >
       <expressions>
         <set name="second_branch" value="true" />
       </expressions>
     </a>
-
-    <a time="420.0" name="施放事前判定">
-      <dump target="Log" log="@StockTakingNoticeDelay" />
-    </a>
-    <a time="421.0" name="清除">
+    <a time="420.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
     <a time="425.0" text="融合" sync="伊甸之约发动了“融合：" />
-
     <a time="427.3" name="释放开始" sync="伊甸之约正在发动“释放”" />
-    <a time="427.4" name="储存技能">
+    <a time="427.4" name="Trigger">
       <dump target="Log" log="@StockTakingNoticeNow" />
     </a>
     <a time="434.0" text="释放" sync="伊甸之约发动了“释放”" />
-    <a time="435.0" name="清除">
+    <a time="434.0" name="清除">
       <dump target="Log" log="@ClearStocks" />
     </a>
 
@@ -634,7 +633,9 @@
     <!-- ここの施放は事前判定によって遅延通知される -->
     <a time="456.3" name="施放开始" sync="伊甸之约正在发动“施放”" />
     <a time="463.0" text="施放" sync="伊甸之约发动了“施放”" />
-    
+    <a time="463.0" name="清除">
+      <dump target="Log" log="@ClearStocks" />
+    </a>
     <a time="479.0" text="天罚波动１" sync="伊甸之约发动了“天罚波动”" notice="死刑。" />
     <a time="481.0" text="天罚波动２" />
     <a time="490.0" text="邪法" sync="伊甸之约发动了“邪法”" notice="全体攻撃2回。" />
